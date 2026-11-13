@@ -138,6 +138,17 @@
   <button onclick="toggleLanguage()" id="btn-lang" style="background: #152B5E; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-size: 1rem; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">🇬🇧 English</button>
 </div>
 
+
+
+
+
+  <!-- PAGE ACCUEIL -->
+  <div id="page-accueil" class="page active">
+<style>
+  .ldo-stats-grid.three { grid-template-columns:repeat(3,1fr); max-width:820px; }
+  .ldo-stat-sub { margin-top:6px; font-size:0.78rem; color:#9BB8D4; }
+  @media (max-width:560px) { .ldo-stats-grid.three { grid-template-columns:1fr; } }
+</style>
 <!-- === CHIFFRES CLES === -->
 <style>
   .ldo-stats { position:relative; overflow:hidden; padding:34px 20px 38px; background:linear-gradient(180deg,#152B5E 0%,#0E1E45 100%); }
@@ -194,24 +205,19 @@
   <div class="ldo-stats-note"><span class="fr">* Mise à jour des chiffres : novembre 2026</span><span class="en" style="display:none;">* Figures updated: November 2026</span></div>
 </div>
 <!-- === FIN CHIFFRES CLES === -->
-
-
-
-  <!-- PAGE ACCUEIL -->
-  <div id="page-accueil" class="page active">
 <!-- === CERTIFICATION VISEE === -->
 <style>
-  .ldo-certif { position:relative; margin:28px 16px 8px; padding:26px 28px; border-radius:20px; display:flex; align-items:center; gap:24px; flex-wrap:wrap;
-    background:linear-gradient(135deg,#FFFFFF 0%,#FFF8EA 100%); border:2px solid #F5A623; box-shadow:0 10px 28px rgba(21,43,94,0.12); overflow:hidden; }
-  .ldo-certif::after { content:"★"; position:absolute; right:22px; top:10px; font-size:70px; color:rgba(245,166,35,0.12); }
-  .ldo-certif-seal { flex-shrink:0; width:96px; height:96px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:42px;
-    background:radial-gradient(circle at 35% 30%,#FFE29A 0%,#F5A623 55%,#C9820F 100%); border:4px solid #152B5E; box-shadow:0 0 0 5px rgba(245,166,35,0.25), 0 8px 18px rgba(0,0,0,0.2); }
-  .ldo-certif-body { flex:1 1 300px; position:relative; z-index:1; }
-  .ldo-certif-kicker { display:inline-block; font-size:0.8rem; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#ffffff; background:#152B5E; padding:5px 14px; border-radius:20px; }
-  .ldo-certif-name { font-family:Georgia,"Times New Roman",serif; font-size:1.75rem; font-weight:700; color:#152B5E; line-height:1.25; margin:10px 0 12px; }
-  .ldo-certif-tags { display:flex; flex-wrap:wrap; gap:8px; }
-  .ldo-certif-tag { font-size:0.85rem; font-weight:700; color:#8A6A2E; background:rgba(245,166,35,0.15); border:1px solid rgba(245,166,35,0.5); padding:5px 12px; border-radius:20px; }
-  @media (max-width:600px) { .ldo-certif { justify-content:center; text-align:center; } .ldo-certif-tags { justify-content:center; } .ldo-certif-name { font-size:1.35rem; } }
+  .ldo-certif { position:relative; max-width:640px; margin:22px auto 8px; padding:14px 20px; border-radius:16px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+    background:linear-gradient(135deg,#FFE29A 0%,#F5A623 60%,#E09415 100%); border:1px solid #C9820F; box-shadow:0 6px 18px rgba(201,130,15,0.30); overflow:hidden; }
+  .ldo-certif::after { content:"★"; position:absolute; right:14px; top:2px; font-size:46px; color:rgba(255,255,255,0.25); }
+  .ldo-certif-seal { flex-shrink:0; width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:26px;
+    background:#152B5E; border:3px solid #ffffff; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+  .ldo-certif-body { flex:1 1 260px; position:relative; z-index:1; }
+  .ldo-certif-kicker { display:inline-block; font-size:0.68rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:#ffffff; background:#152B5E; padding:3px 10px; border-radius:20px; }
+  .ldo-certif-name { font-family:Georgia,"Times New Roman",serif; font-size:1.15rem; font-weight:700; color:#152B5E; line-height:1.25; margin:6px 0 8px; }
+  .ldo-certif-tags { display:flex; flex-wrap:wrap; gap:6px; }
+  .ldo-certif-tag { font-size:0.75rem; font-weight:700; color:#152B5E; background:rgba(255,255,255,0.55); border:1px solid rgba(21,43,94,0.15); padding:3px 9px; border-radius:20px; }
+  @media (max-width:600px) { .ldo-certif { margin:18px 12px 8px; justify-content:center; text-align:center; } .ldo-certif-tags { justify-content:center; } .ldo-certif-name { font-size:1.05rem; } }
 </style>
 <div class="ldo-certif">
   <div class="ldo-certif-seal">🎓</div>
@@ -320,7 +326,7 @@
     <div style="margin: 0 0 32px; background: linear-gradient(135deg, #f8faff 0%, #eef3fb 100%); border-radius: 16px; padding: 28px; border: 1px solid #c5d3ea;">
       <div style="text-align:center; margin-bottom:18px;">
         <div style="font-size:1.6rem; font-weight:800; color:#152B5E;"><span class="fr">🎓 Nos diplômés à l'honneur&nbsp;!</span><span class="en" style="display:none;">🎓 Celebrating our graduates!</span></div>
-        <div style="display:inline-block; margin-top:10px; background:#152B5E; color:#fff; font-style:italic; padding:6px 20px; border-radius:20px;"><span class="fr">Remise des diplômes de la promotion 2025 · Siège CDG10 · 14 octobre 2026</span><span class="en" style="display:none;">2025 class graduation ceremony · CDG10 headquarters · 14 October 2026</span></div>
+        <div style="display:inline-block; margin-top:10px; background:#152B5E; color:#fff; font-style:italic; padding:6px 20px; border-radius:20px;"><span class="fr">Remise des diplômes de la promotion 2025 · Siège d'Amazon France · 14 octobre 2026</span><span class="en" style="display:none;">2025 class graduation ceremony · Amazon France headquarters · 14 October 2026</span></div>
       </div>
       <style>
         .ldo-evt-intro { display:flex; align-items:stretch; gap:0; margin:0 0 22px; border-radius:18px; overflow:hidden; background:#ffffff; border:2px solid #F5A623; box-shadow:0 10px 26px rgba(21,43,94,0.14); }
@@ -341,49 +347,59 @@
           <div class="ldo-evt-year">2026</div>
         </div>
         <div class="ldo-evt-text">
-          <p class="fr" style="margin:0;"><strong>Le 14 octobre 2026</strong>, le siège de <strong>CDG10</strong> a accueilli la cérémonie de remise des diplômes de nos apprentis. Nos trainers ont fait le déplacement aux côtés de leurs apprenants diplômés pour célébrer ensemble des mois d'engagement, d'apprentissage et de réussite. <strong>Un moment convivial et plein d'émotion</strong>, qui récompense le parcours de chacun et la fierté de toute l'équipe du CFA Amazon&nbsp;!</p>
-          <p class="en" style="display:none; margin:0;"><strong>On 14 October 2026</strong>, the <strong>CDG10</strong> headquarters hosted the graduation ceremony for our apprentices. Our trainers travelled alongside their graduating learners to celebrate months of commitment, learning and success together. <strong>A warm and emotional moment</strong>, rewarding each person's journey and the pride of the whole CFA Amazon team!</p>
+          <p class="fr" style="margin:0;"><strong>Le 14 octobre 2026</strong>, le <strong>siège d'Amazon France</strong> a accueilli la cérémonie de remise des diplômes de nos apprentis. Nos trainers ont fait le déplacement aux côtés de leurs apprenants diplômés pour célébrer ensemble des mois d'engagement, d'apprentissage et de réussite. <strong>Un moment convivial et plein d'émotion</strong>, qui récompense le parcours de chacun et la fierté de toute l'équipe du CFA Amazon&nbsp;!</p>
+          <p class="en" style="display:none; margin:0;"><strong>On 14 October 2026</strong>, <strong>Amazon France's headquarters</strong> hosted the graduation ceremony for our apprentices. Our trainers travelled alongside their graduating learners to celebrate months of commitment, learning and success together. <strong>A warm and emotional moment</strong>, rewarding each person's journey and the pride of the whole CFA Amazon team!</p>
         </div>
       </div>
-      <div style="text-align:center; margin-bottom:16px;">
-        <img src="IMG_7226.jpg" alt="Trainers et apprentis diplômés lors de la remise des diplômes 2025 au siège CDG10" style="width:100%; max-width:450px; height:auto; border-radius:12px; box-shadow:0 3px 12px rgba(0,0,0,0.12);">
+      <style>
+  .ldo-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 28px; }
+  .ldo-gallery figure { margin:0; overflow:hidden; border-radius:14px; aspect-ratio:4 / 3; background:#0E1E45; box-shadow:0 6px 16px rgba(21,43,94,0.15); }
+  .ldo-gallery img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+  .ldo-gallery figure:hover img { transform:scale(1.06); }
+  .ldo-gallery figure.contain img { object-fit:contain; }
+  .ldo-trainers { margin:8px 0 0; padding:28px; border-radius:20px; background:linear-gradient(135deg,#FFF8EA 0%,#FDEFD3 100%); border:1px solid rgba(245,166,35,0.45); }
+  .ldo-trainers-title { text-align:center; font-family:Georgia,"Times New Roman",serif; font-size:1.6rem; font-weight:700; color:#152B5E; margin-bottom:20px; }
+  .ldo-trainers-title em { font-style:normal; color:#C9820F; }
+  .ldo-trainers-grid { display:flex; gap:28px; align-items:center; flex-wrap:wrap; }
+  .ldo-trainers-photo { flex:0 0 300px; max-width:100%; margin:0 auto; text-align:center; }
+  .ldo-trainers-photo img { display:block; width:100%; height:auto; border-radius:16px; border:5px solid #ffffff; box-shadow:0 10px 24px rgba(21,43,94,0.2); transform:rotate(-2deg); }
+  .ldo-trainers-photo p { margin:14px 0 0; font-style:italic; color:#152B5E; font-weight:600; }
+  .ldo-bubbles { flex:1 1 320px; display:flex; flex-direction:column; gap:16px; }
+  .ldo-bubble { position:relative; background:#ffffff; border-radius:18px; padding:16px 20px 14px 22px; box-shadow:0 4px 14px rgba(21,43,94,0.10); border-left:4px solid #F5A623; }
+  .ldo-bubble::before { content:""; position:absolute; left:-14px; top:22px; border-width:9px 10px 9px 0; border-style:solid; border-color:transparent #F5A623 transparent transparent; }
+  .ldo-bubble-q { margin:0; font-family:Georgia,"Times New Roman",serif; font-style:italic; font-size:1.05rem; line-height:1.5; color:#1f2d45; }
+  .ldo-bubble-who { margin-top:8px; text-align:right; font-weight:800; color:#152B5E; font-size:0.95rem; }
+  .ldo-bubble-who span { font-weight:600; color:#8A6A2E; }
+  @media (max-width:700px) { .ldo-gallery { grid-template-columns:1fr; } .ldo-trainers { padding:20px 16px; } .ldo-bubble::before { display:none; } }
+</style>
+      <div class="ldo-gallery">
+        <figure><img src="IMG_7226.jpg" alt="Trainers et apprentis diplômés lors de la remise des diplômes 2025 au siège CDG10"></figure>
+        <figure class="contain"><img src="cc3724b4-e94b-4357-9999-d2e27e2d086f.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 2"></figure>
+        <figure><img src="IMG_7211.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 3"></figure>
       </div>
-      <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:24px;">
-          <img src="cc3724b4-e94b-4357-9999-d2e27e2d086f.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 2" style="width:45%; max-width:280px; min-width:140px; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="IMG_7211.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 3" style="width:45%; max-width:280px; min-width:140px; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      </div>
-      <div class="section-title-bar"><div class="stbar-text"><span class="fr">💬 Paroles de trainers</span><span class="en" style="display:none;">💬 Trainers' words</span></div><div class="stbar-line"></div></div>
-      <div style="text-align:center; margin:8px 0 16px;">
-        <img src="IMG_0813.jpg" alt="Amandine, Pierrick et M'Paly, trainers du CFA Amazon, à la remise des diplômes" style="width:100%; max-width:360px; height:auto; border-radius:12px; box-shadow:0 3px 12px rgba(0,0,0,0.12);">
-        <p style="margin-top:10px; font-style:italic; color:#555;"><span class="fr">Amandine, Pierrick et M'Paly, nos trainers 💙</span><span class="en" style="display:none;">Amandine, Pierrick and M'Paly, our trainers 💙</span></p>
-      </div>
-        <div class="card cfa" style="margin-top:12px;">
-          <div class="profile-row">
-            <img src="amandine.png" alt="Amandine" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
-            <div><div class="profile-name">Amandine</div><div class="profile-detail"><span class="fr">Trainer · CFA Amazon LIL1</span><span class="en" style="display:none;">Trainer · CFA Amazon LIL1</span></div></div>
+      <div class="ldo-trainers">
+        <div class="ldo-trainers-title"><span class="fr">💬 Paroles de <em>trainers</em></span><span class="en" style="display:none;">💬 <em>Trainers'</em> words</span></div>
+        <div class="ldo-trainers-grid">
+          <div class="ldo-trainers-photo">
+            <img src="IMG_0813.jpg" alt="Amandine, Pierrick et M'Paly, trainers du CFA Amazon, à la remise des diplômes">
+            <p><span class="fr">Amandine, Pierrick et M'Paly, nos trainers 💙</span><span class="en" style="display:none;">Amandine, Pierrick and M'Paly, our trainers 💙</span></p>
           </div>
-          <div class="quote-box purple">
-            <p class="quote-text"><span class="fr">«&nbsp;Voir nos apprentis recevoir leur diplôme, c'est la plus belle des récompenses. Quelle fierté de partager ce moment avec eux&nbsp;!&nbsp;»</span><span class="en" style="display:none;">"Seeing our apprentices receive their diploma is the greatest reward. So proud to share this moment with them!"</span></p>
+          <div class="ldo-bubbles">
+        <div class="ldo-bubble">
+          <p class="ldo-bubble-q"><span class="fr">«&nbsp;Voir nos apprentis recevoir leur diplôme, c'est la plus belle des récompenses. Quelle fierté de partager ce moment avec eux&nbsp;!&nbsp;»</span><span class="en" style="display:none;">"Seeing our apprentices receive their diploma is the greatest reward. So proud to share this moment with them!"</span></p>
+          <div class="ldo-bubble-who">— Amandine <span>· LIL1</span></div>
+        </div>
+        <div class="ldo-bubble">
+          <p class="ldo-bubble-q"><span class="fr">«&nbsp;Une journée conviviale et pleine d'émotion : chaque sourire sur scène racontait des mois d'efforts. Bravo à tous&nbsp;!&nbsp;»</span><span class="en" style="display:none;">"A warm and emotional day: every smile on stage told the story of months of hard work. Well done, everyone!"</span></p>
+          <div class="ldo-bubble-who">— Pierrick <span>· BVA1</span></div>
+        </div>
+        <div class="ldo-bubble">
+          <p class="ldo-bubble-q"><span class="fr">«&nbsp;Ce diplôme, ils l'ont mérité. Les accompagner jusqu'à CDG10 pour le célébrer ensemble, c'était un moment inoubliable.&nbsp;»</span><span class="en" style="display:none;">"They truly earned this diploma. Accompanying them to CDG10 to celebrate together was an unforgettable moment."</span></p>
+          <div class="ldo-bubble-who">— M'Paly <span>· ORY4</span></div>
+        </div>
           </div>
         </div>
-        <div class="card cfa" style="margin-top:12px;">
-          <div class="profile-row">
-            <img src="pierrick.png" alt="Pierrick" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
-            <div><div class="profile-name">Pierrick</div><div class="profile-detail"><span class="fr">Trainer · CFA Amazon BVA1</span><span class="en" style="display:none;">Trainer · CFA Amazon BVA1</span></div></div>
-          </div>
-          <div class="quote-box purple">
-            <p class="quote-text"><span class="fr">«&nbsp;Une journée conviviale et pleine d'émotion : chaque sourire sur scène racontait des mois d'efforts. Bravo à tous&nbsp;!&nbsp;»</span><span class="en" style="display:none;">"A warm and emotional day: every smile on stage told the story of months of hard work. Well done, everyone!"</span></p>
-          </div>
-        </div>
-        <div class="card cfa" style="margin-top:12px;">
-          <div class="profile-row">
-            <img src="mpaly.png" alt="M'Paly" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
-            <div><div class="profile-name">M'Paly</div><div class="profile-detail"><span class="fr">Trainer · CFA Amazon ORY4</span><span class="en" style="display:none;">Trainer · CFA Amazon ORY4</span></div></div>
-          </div>
-          <div class="quote-box purple">
-            <p class="quote-text"><span class="fr">«&nbsp;Ce diplôme, ils l'ont mérité. Les accompagner jusqu'à CDG10 pour le célébrer ensemble, c'était un moment inoubliable.&nbsp;»</span><span class="en" style="display:none;">"They truly earned this diploma. Accompanying them to CDG10 to celebrate together was an unforgettable moment."</span></p>
-          </div>
-        </div>
+      </div>
     </div>
 <!-- === FIN ENCART EVENEMENT === -->
     
@@ -402,6 +418,33 @@
 
 <!-- PAGE LIL1 -->
   <div id="page-LIL1" class="page">
+<!-- === CHIFFRES LIL1 === -->
+<div class="ldo-stats">
+  <div class="ldo-stats-head">
+    <div class="ldo-stats-title"><span class="fr">LIL1 <em>en chiffres</em><sup class="ldo-star">*</sup></span><span class="en" style="display:none;">LIL1 <em>in numbers</em><sup class="ldo-star">*</sup></span></div>
+    <div class="ldo-stats-line"></div>
+  </div>
+  <div class="ldo-stats-grid three">
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">👥</div>
+      <div class="ldo-stat-num">82<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Apprenants présents</span><span class="en" style="display:none;">Learners present</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">📅</div>
+      <div class="ldo-stat-num">5<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Sessions</span><span class="en" style="display:none;">Sessions</span></div>
+      <div class="ldo-stat-sub"><span class="fr">✅ 3 terminées · 🔄 2 en cours</span><span class="en" style="display:none;">✅ 3 completed · 🔄 2 ongoing</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">🎓</div>
+      <div class="ldo-stat-num">100<span>%</span></div>
+      <div class="ldo-stat-label"><span class="fr">Taux de réussite</span><span class="en" style="display:none;">Success rate</span></div>
+    </div>
+  </div>
+  <div class="ldo-stats-note"><span class="fr">* Mise à jour des chiffres : novembre 2026</span><span class="en" style="display:none;">* Figures updated: November 2026</span></div>
+</div>
+<!-- === FIN CHIFFRES LIL1 === -->
     <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display:none;">← Back</span></button>
     <div class="site-page-title">📍 LIL1</div>
 
@@ -592,12 +635,41 @@
          
   <!-- PAGE BVA1 -->
   <div id="page-BVA1" class="page">
+<!-- === CHIFFRES BVA1 === -->
+<div class="ldo-stats">
+  <div class="ldo-stats-head">
+    <div class="ldo-stats-title"><span class="fr">BVA1 <em>en chiffres</em><sup class="ldo-star">*</sup></span><span class="en" style="display:none;">BVA1 <em>in numbers</em><sup class="ldo-star">*</sup></span></div>
+    <div class="ldo-stats-line"></div>
+  </div>
+  <div class="ldo-stats-grid three">
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">👥</div>
+      <div class="ldo-stat-num">94<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Apprentis accueillis depuis 2024</span><span class="en" style="display:none;">Apprentices welcomed since 2024</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">📅</div>
+      <div class="ldo-stat-num">6<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Sessions</span><span class="en" style="display:none;">Sessions</span></div>
+      <div class="ldo-stat-sub"><span class="fr">✅ 4 terminées · 🔄 2 en cours</span><span class="en" style="display:none;">✅ 4 completed · 🔄 2 ongoing</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">🎓</div>
+      <div class="ldo-stat-num">90<span>%</span></div>
+      <div class="ldo-stat-label"><span class="fr">Taux de réussite</span><span class="en" style="display:none;">Success rate</span></div>
+    </div>
+  </div>
+  <div class="ldo-stats-note"><span class="fr">* Mise à jour des chiffres : novembre 2026</span><span class="en" style="display:none;">* Figures updated: November 2026</span></div>
+</div>
+<!-- === FIN CHIFFRES BVA1 === -->
     <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display:none;">← Back</span></button>
     <div class="site-page-title">📍 BVA1</div>
 <!-- Photo diplômés BVA1 2025 -->
-    <div class="card" style="text-align:center; padding:20px;">
-      <img src="bva1diplome.png" alt="Apprentis diplômés de la première promotion 2025 de BVA1" style="width:190px; max-width:100%; height:auto; border-radius:8px;">
-      <p style="margin-top:10px; font-style:italic; color:#555;"><span class="fr">Nos apprentis de la première promotion 2025 de BVA1, diplômés et aujourd'hui en CDI chez Amazon 🎓</span><span class="en" style="display:none;">Our apprentices from BVA1's first 2025 class, now qualified and on permanent contracts at Amazon 🎓</span></p>
+    <div style="margin:1.5rem 1rem; padding:26px 20px 20px; text-align:center; border-radius:20px; background:linear-gradient(135deg,#152B5E 0%,#1E3C7E 100%); box-shadow:0 10px 26px rgba(21,43,94,0.18);">
+      <div style="display:inline-block; padding:8px; background:#ffffff; border-radius:16px; border:3px solid #F5A623; box-shadow:0 6px 16px rgba(0,0,0,0.25);">
+        <img src="bva1diplome.png" alt="Apprentis diplômés de la première promotion 2025 de BVA1" style="display:block; width:250px; max-width:100%; height:auto; border-radius:10px;">
+      </div>
+      <p style="margin:14px auto 0; max-width:520px; font-style:italic; color:#ffffff; font-size:1.05rem;"><span class="fr">Nos apprentis de la première promotion 2025 de BVA1, diplômés et aujourd'hui en CDI chez Amazon 🎓</span><span class="en" style="display:none;">Our apprentices from BVA1's first 2025 class, now qualified and on permanent contracts at Amazon 🎓</span></p>
     </div>
 <!-- BVA1 — Paroles de Maîtres d'Apprentissage -->
 <div class="section-title-bar">
@@ -732,10 +804,10 @@
       <div class="profile-name"><span class="fr">💡 Qu'est-ce qu'une POEI&nbsp;?</span><span class="en" style="display:none;">💡 What is a POEI?</span></div>
       <div class="quote-box purple">
         <div class="fr">
-          <p>La <strong>POEI</strong> (Préparation Opérationnelle à l'Emploi Individuelle) est un dispositif de France Travail. Il permet à des demandeurs d'emploi de suivre une formation sur mesure <strong>avant leur embauche</strong>, afin d'acquérir les compétences nécessaires au poste proposé. À l'issue de la formation, l'entreprise s'engage à recruter les participants. Pour le CFA Amazon, c'est une nouvelle porte d'entrée vers nos métiers : les apprenants découvrent le site, se forment aux gestes professionnels et démarrent leur parcours chez Amazon dans les meilleures conditions.</p>
+          <p>La <strong>POEI</strong> (Préparation Opérationnelle à l'Emploi Individuelle) est un dispositif de France Travail. Il permet à des demandeurs d'emploi de suivre une formation sur mesure <strong>avant leur embauche</strong>, afin d'acquérir les compétences nécessaires au poste proposé. Pour le CFA Amazon, c'est une nouvelle porte d'entrée vers nos métiers : les apprenants découvrent le site, se forment aux gestes professionnels et démarrent leur parcours chez Amazon dans les meilleures conditions.</p>
         </div>
         <div class="en" style="display:none;">
-          <p><strong>POEI</strong> (Individual Operational Preparation for Employment) is a France Travail scheme. It allows jobseekers to follow tailored training <strong>before being hired</strong>, so they can gain the skills needed for the role on offer. At the end of the training, the company commits to recruiting the participants. For CFA Amazon, it is a new gateway into our professions: learners discover the site, train in professional skills and start their journey at Amazon in the best possible conditions.</p>
+          <p><strong>POEI</strong> (Individual Operational Preparation for Employment) is a France Travail scheme. It allows jobseekers to follow tailored training <strong>before being hired</strong>, so they can gain the skills needed for the role on offer. For CFA Amazon, it is a new gateway into our professions: learners discover the site, train in professional skills and start their journey at Amazon in the best possible conditions.</p>
         </div>
       </div>
     </div>
@@ -762,6 +834,33 @@
   
   <!-- PAGE ETZ2 -->
   <div id="page-ETZ2" class="page">
+<!-- === CHIFFRES ETZ2 === -->
+<div class="ldo-stats">
+  <div class="ldo-stats-head">
+    <div class="ldo-stats-title"><span class="fr">ETZ2 <em>en chiffres</em><sup class="ldo-star">*</sup></span><span class="en" style="display:none;">ETZ2 <em>in numbers</em><sup class="ldo-star">*</sup></span></div>
+    <div class="ldo-stats-line"></div>
+  </div>
+  <div class="ldo-stats-grid three">
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">👥</div>
+      <div class="ldo-stat-num">93<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Apprenants présents</span><span class="en" style="display:none;">Learners present</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">📅</div>
+      <div class="ldo-stat-num">6<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Sessions</span><span class="en" style="display:none;">Sessions</span></div>
+      <div class="ldo-stat-sub"><span class="fr">✅ 3 terminées · 🔄 3 en cours</span><span class="en" style="display:none;">✅ 3 completed · 🔄 3 ongoing</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">🎓</div>
+      <div class="ldo-stat-num">80<span>%</span></div>
+      <div class="ldo-stat-label"><span class="fr">Taux de réussite</span><span class="en" style="display:none;">Success rate</span></div>
+    </div>
+  </div>
+  <div class="ldo-stats-note"><span class="fr">* Mise à jour des chiffres : novembre 2026</span><span class="en" style="display:none;">* Figures updated: November 2026</span></div>
+</div>
+<!-- === FIN CHIFFRES ETZ2 === -->
     <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display:none;">← Back</span></button>
     <div class="site-page-title">📍 ETZ2</div>
     <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole des partenaires</span><span class="en" style="display:none;">Partner's voices</span></div><div class="stbar-line"></div></div>
@@ -827,31 +926,42 @@
 </p>
 
 
-<div class="card cfa" style="border-top-color: #F5A623; background: rgba(245, 166, 35, 0.06);">
-
-
-  <p style="margin-bottom: 1.5em;"><strong>HUMBERT Lorraine</strong><br/>
-    <span class="fr">« Être maitre d'apprentissage est une réelle opportunité pour rencontrer et accompagner de nouvelles personnes dans des conditions optimales et se sentir utile. Le fait de pouvoir avoir un suivi individuel est une vraie chance, pour se découvrir et s'adapter au mieux aux besoins de chacune des personnes que l'on suit. Je me suis rendue compte que la plupart du temps l'accompagnement était surtout centré sur le fait de donner confiance à l'apprenti en face de moi. Réussir à faire comprendre à quelqu'un qu'il a déjà toutes les cartes en main et qu'il doit juste se faire confiance, ça dépasse l'aspect professionnel et c'est humainement bien plus gratifiant. »</span>
-    <span class="en" style="display:none;">"Being an apprenticeship mentor is a real opportunity to meet and support new people in optimal conditions and feel useful. Being able to provide individual follow-up is a true chance, to discover oneself and adapt as best as possible to the needs of each person we support. I realised that most of the time, mentoring was mainly focused on giving confidence to the apprentice in front of me. Helping someone understand that they already have all the cards in hand and just need to trust themselves goes beyond the professional aspect and is humanly far more rewarding."</span>
-  </p>
-
-  <p style="margin-bottom: 1.5em;"><strong>DAVID Chloé</strong><br/>
-    <span class="fr">« Ce qui me plaît dans le rôle de maître d'apprentissage, c'est de pouvoir accompagner une personne tout au long de son parcours chez Amazon jusqu'à l'obtention de son diplôme, en l'aidant du mieux possible. Je suis également fière de voir mes apprentis réussir leur examen. Pour moi, être un bon maître d'apprentissage, c'est être à l'écoute de son apprenti, comprendre ses besoins et savoir s'adapter afin de l'accompagner au mieux vers la réussite. »</span>
-    <span class="en" style="display:none;">"What I enjoy about the role of apprenticeship mentor is being able to support a person throughout their journey at Amazon until they obtain their qualification, helping them as best I can. I am also proud to see my apprentices pass their exam. For me, being a good apprenticeship mentor means listening to your apprentice, understanding their needs and knowing how to adapt in order to best guide them towards success."</span>
-  </p>
-
-  <p style="margin-bottom: 1.5em;"><strong>D'AMICO Nadine</strong><br/>
-    <span class="fr">« Ce qui m'apporte d'être MA et de transmettre mes connaissances, aider et aussi la satisfaction de l'apprentie. Ce qui me plait c'est de les accompagner tout au long de leurs apprentissage. »</span>
-    <span class="en" style="display:none;">"What being an apprenticeship mentor brings me is transmitting my knowledge, helping, and also the apprentice's satisfaction. What I enjoy is supporting them throughout their apprenticeship."</span>
-  </p>
-
-
-  <p style="margin-bottom: 1.5em;"><strong>TELLEZ MEDINA Monica</strong><br/>
-    <span class="fr">« Je suis reconnaissant d'avoir eu l'opportunité de participer au programme CFA car j'ai acquis de nouvelles compétences et j'ai eu la chance de rencontrer des personnes incroyables que je peux maintenant appeler mes amis. »</span>
-    <span class="en" style="display:none;">"I am grateful to have had the opportunity to participate in the CFA programme because I acquired new skills and was lucky enough to meet incredible people that I can now call my friends."</span>
-  </p>
-
-
+<style>
+  .ldo-ma-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:0 1rem 1.5rem; }
+  .ldo-ma { display:flex; flex-direction:column; gap:12px; background:#ffffff; border-radius:16px; padding:18px; border-top:4px solid #F5A623; box-shadow:0 2px 10px rgba(21,43,94,0.08); }
+  .ldo-ma-head { display:flex; align-items:center; gap:12px; }
+  .ldo-ma .quote-box { flex:1; }
+  @media (max-width:700px) { .ldo-ma-grid { grid-template-columns:1fr; } }
+</style>
+<div class="ldo-ma-grid">
+  <div class="ldo-ma">
+    <div class="ldo-ma-head">
+      <div class="avatar employeur">LH</div>
+      <div><div class="profile-name">Lorraine Humbert</div><div class="profile-detail"><span class="fr">Maître d'apprentissage · ETZ2</span><span class="en" style="display:none;">Apprenticeship Mentor · ETZ2</span></div></div>
+    </div>
+    <div class="quote-box orange" style="margin:0;"><p class="quote-text"><span class="fr">« Être maitre d'apprentissage est une réelle opportunité pour rencontrer et accompagner de nouvelles personnes dans des conditions optimales et se sentir utile. Le fait de pouvoir avoir un suivi individuel est une vraie chance, pour se découvrir et s'adapter au mieux aux besoins de chacune des personnes que l'on suit. Je me suis rendue compte que la plupart du temps l'accompagnement était surtout centré sur le fait de donner confiance à l'apprenti en face de moi. Réussir à faire comprendre à quelqu'un qu'il a déjà toutes les cartes en main et qu'il doit juste se faire confiance, ça dépasse l'aspect professionnel et c'est humainement bien plus gratifiant. »</span><span class="en" style="display:none;">"Being an apprenticeship mentor is a real opportunity to meet and support new people in optimal conditions and feel useful. Being able to provide individual follow-up is a true chance, to discover oneself and adapt as best as possible to the needs of each person we support. I realised that most of the time, mentoring was mainly focused on giving confidence to the apprentice in front of me. Helping someone understand that they already have all the cards in hand and just need to trust themselves goes beyond the professional aspect and is humanly far more rewarding."</span></p></div>
+  </div>
+  <div class="ldo-ma">
+    <div class="ldo-ma-head">
+      <div class="avatar employeur">CD</div>
+      <div><div class="profile-name">Chloé David</div><div class="profile-detail"><span class="fr">Maître d'apprentissage · ETZ2</span><span class="en" style="display:none;">Apprenticeship Mentor · ETZ2</span></div></div>
+    </div>
+    <div class="quote-box orange" style="margin:0;"><p class="quote-text"><span class="fr">« Ce qui me plaît dans le rôle de maître d'apprentissage, c'est de pouvoir accompagner une personne tout au long de son parcours chez Amazon jusqu'à l'obtention de son diplôme, en l'aidant du mieux possible. Je suis également fière de voir mes apprentis réussir leur examen. Pour moi, être un bon maître d'apprentissage, c'est être à l'écoute de son apprenti, comprendre ses besoins et savoir s'adapter afin de l'accompagner au mieux vers la réussite. »</span><span class="en" style="display:none;">"What I enjoy about the role of apprenticeship mentor is being able to support a person throughout their journey at Amazon until they obtain their qualification, helping them as best I can. I am also proud to see my apprentices pass their exam. For me, being a good apprenticeship mentor means listening to your apprentice, understanding their needs and knowing how to adapt in order to best guide them towards success."</span></p></div>
+  </div>
+  <div class="ldo-ma">
+    <div class="ldo-ma-head">
+      <div class="avatar employeur">ND</div>
+      <div><div class="profile-name">Nadine D'Amico</div><div class="profile-detail"><span class="fr">Maître d'apprentissage · ETZ2</span><span class="en" style="display:none;">Apprenticeship Mentor · ETZ2</span></div></div>
+    </div>
+    <div class="quote-box orange" style="margin:0;"><p class="quote-text"><span class="fr">« Ce qui m'apporte d'être MA et de transmettre mes connaissances, aider et aussi la satisfaction de l'apprentie. Ce qui me plait c'est de les accompagner tout au long de leurs apprentissage. »</span><span class="en" style="display:none;">"What being an apprenticeship mentor brings me is transmitting my knowledge, helping, and also the apprentice's satisfaction. What I enjoy is supporting them throughout their apprenticeship."</span></p></div>
+  </div>
+  <div class="ldo-ma">
+    <div class="ldo-ma-head">
+      <div class="avatar employeur">MT</div>
+      <div><div class="profile-name">Monica Tellez Medina</div><div class="profile-detail"><span class="fr">Maître d'apprentissage · ETZ2</span><span class="en" style="display:none;">Apprenticeship Mentor · ETZ2</span></div></div>
+    </div>
+    <div class="quote-box orange" style="margin:0;"><p class="quote-text"><span class="fr">« Je suis reconnaissant d'avoir eu l'opportunité de participer au programme CFA car j'ai acquis de nouvelles compétences et j'ai eu la chance de rencontrer des personnes incroyables que je peux maintenant appeler mes amis. »</span><span class="en" style="display:none;">"I am grateful to have had the opportunity to participate in the CFA programme because I acquired new skills and was lucky enough to meet incredible people that I can now call my friends."</span></p></div>
+  </div>
 </div>
 
 <!-- 📣 Parole des Coordinateurs Pédagogiques — ETZ2 -->
@@ -950,10 +1060,10 @@
 </div>
 
 <!-- Photos ETZ -->
-<div style="display:flex; gap:1em; justify-content:center; margin: 2em 0;">
-  <img src="ETZ.png" alt="ETZ" style="width:24%; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
-  <img src="ETZ2.png" alt="ETZ2" style="width:24%; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
-  <img src="ETZZ2.png" alt="ETZZ2" style="width:24%; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center; align-items:center; margin:2em 0;">
+  <img src="ETZ.png" alt="Équipe et apprentis du site ETZ2 – photo 1" style="width:200px; max-width:30%; height:auto; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"/>
+  <img src="ETZ2.png" alt="Équipe et apprentis du site ETZ2 – photo 2" style="width:200px; max-width:30%; height:auto; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"/>
+  <img src="ETZZ2.png" alt="Équipe et apprentis du site ETZ2 – photo 3" style="width:200px; max-width:30%; height:auto; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"/>
 </div>
 
 <!-- Bandeau Success Story -->
@@ -1014,6 +1124,33 @@
 
   <!-- PAGE ORY1 -->
   <div id="page-ORY1" class="page">
+<!-- === CHIFFRES ORY1 === -->
+<div class="ldo-stats">
+  <div class="ldo-stats-head">
+    <div class="ldo-stats-title"><span class="fr">ORY1 <em>en chiffres</em><sup class="ldo-star">*</sup></span><span class="en" style="display:none;">ORY1 <em>in numbers</em><sup class="ldo-star">*</sup></span></div>
+    <div class="ldo-stats-line"></div>
+  </div>
+  <div class="ldo-stats-grid three">
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">👥</div>
+      <div class="ldo-stat-num">54<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Apprenants présents</span><span class="en" style="display:none;">Learners present</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">📅</div>
+      <div class="ldo-stat-num">4<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Sessions</span><span class="en" style="display:none;">Sessions</span></div>
+      <div class="ldo-stat-sub"><span class="fr">✅ 2 terminées · 🔄 2 en cours</span><span class="en" style="display:none;">✅ 2 completed · 🔄 2 ongoing</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">🎓</div>
+      <div class="ldo-stat-num">90<span>%</span></div>
+      <div class="ldo-stat-label"><span class="fr">Taux de réussite</span><span class="en" style="display:none;">Success rate</span></div>
+    </div>
+  </div>
+  <div class="ldo-stats-note"><span class="fr">* Mise à jour des chiffres : novembre 2026</span><span class="en" style="display:none;">* Figures updated: November 2026</span></div>
+</div>
+<!-- === FIN CHIFFRES ORY1 === -->
     <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display:none;">← Back</span></button>
     <div class="site-page-title">📍 ORY1</div>
 
@@ -1164,6 +1301,33 @@
 
   <!-- PAGE ORY4 -->
   <div id="page-ORY4" class="page">
+<!-- === CHIFFRES ORY4 === -->
+<div class="ldo-stats">
+  <div class="ldo-stats-head">
+    <div class="ldo-stats-title"><span class="fr">ORY4 <em>en chiffres</em><sup class="ldo-star">*</sup></span><span class="en" style="display:none;">ORY4 <em>in numbers</em><sup class="ldo-star">*</sup></span></div>
+    <div class="ldo-stats-line"></div>
+  </div>
+  <div class="ldo-stats-grid three">
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">👥</div>
+      <div class="ldo-stat-num">91<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Apprenants présents</span><span class="en" style="display:none;">Learners present</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">📅</div>
+      <div class="ldo-stat-num">7<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Sessions</span><span class="en" style="display:none;">Sessions</span></div>
+      <div class="ldo-stat-sub"><span class="fr">✅ 4 terminées · 🔄 3 en cours</span><span class="en" style="display:none;">✅ 4 completed · 🔄 3 ongoing</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">🎓</div>
+      <div class="ldo-stat-num">80<span>%</span></div>
+      <div class="ldo-stat-label"><span class="fr">Taux de réussite</span><span class="en" style="display:none;">Success rate</span></div>
+    </div>
+  </div>
+  <div class="ldo-stats-note"><span class="fr">* Mise à jour des chiffres : novembre 2026</span><span class="en" style="display:none;">* Figures updated: November 2026</span></div>
+</div>
+<!-- === FIN CHIFFRES ORY4 === -->
     <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display:none;">← Back</span></button>
     <div class="site-page-title">📍 ORY4</div>
 <!-- ORY4 — Paroles des Coordinateurs de Formation -->
@@ -1286,6 +1450,33 @@
 
   <!-- PAGE LYS1 -->
   <div id="page-LYS1" class="page">
+<!-- === CHIFFRES LYS1 === -->
+<div class="ldo-stats">
+  <div class="ldo-stats-head">
+    <div class="ldo-stats-title"><span class="fr">LYS1 <em>en chiffres</em><sup class="ldo-star">*</sup></span><span class="en" style="display:none;">LYS1 <em>in numbers</em><sup class="ldo-star">*</sup></span></div>
+    <div class="ldo-stats-line"></div>
+  </div>
+  <div class="ldo-stats-grid three">
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">👥</div>
+      <div class="ldo-stat-num">66<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Apprenants présents à J1</span><span class="en" style="display:none;">Learners present on day 1</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">📅</div>
+      <div class="ldo-stat-num">5<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Sessions</span><span class="en" style="display:none;">Sessions</span></div>
+      <div class="ldo-stat-sub"><span class="fr">✅ 3 terminées · 🔄 2 en cours</span><span class="en" style="display:none;">✅ 3 completed · 🔄 2 ongoing</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">🎓</div>
+      <div class="ldo-stat-num">100<span>%</span></div>
+      <div class="ldo-stat-label"><span class="fr">Taux de réussite</span><span class="en" style="display:none;">Success rate</span></div>
+    </div>
+  </div>
+  <div class="ldo-stats-note"><span class="fr">* Mise à jour des chiffres : novembre 2026</span><span class="en" style="display:none;">* Figures updated: November 2026</span></div>
+</div>
+<!-- === FIN CHIFFRES LYS1 === -->
     <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display:none;">← Back</span></button>
     <div class="site-page-title">📍 LYS1</div>
 <!-- Photo nouvelle session LYS1 -->
