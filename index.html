@@ -1,11 +1,521 @@
-
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
+<html lang="fr"><head>
+<meta charset="UTF-8"><style id="qw-theme">:root {
+  --contextual-navbar-foreground-color: #000000 !important;
+  --connection-foreground-color: #FFFFFF !important;
+  --automation-foreground-color: #FFFFFF !important;
+  --global-navbar-background-color: #F3F3F7 !important;
+  --accent-foreground-color: #FFFFFF !important;
+  --primary-foreground-color: #000000 !important;
+  --measure-foreground-color: #CB7600 !important;
+  --dimension-foreground-color: #1B84BF !important;
+  --warning-background-color: #FF9800 !important;
+  --warning-foreground-color: #000000 !important;
+  --success-background-color: #27700E !important;
+  --info-foreground-color: #FFFFFF !important;
+  --secondary-foreground-color: #000000 !important;
+  --info-background-color: #2196F3 !important;
+  --measure-background-color: #FFF8EF !important;
+  --contextual-navbar-background-color: #FFFFFF !important;
+  --accent-background-color: #4200DB !important;
+  --visualization-background-color: #6842FF !important;
+  --connection-background-color: #FF4B14 !important;
+  --secondary-background-color: #F9F9FB !important;
+  --danger-background-color: #C82745 !important;
+  --automation-background-color: #D600BA !important;
+  --success-foreground-color: #FFFFFF !important;
+  --danger-foreground-color: #FFFFFF !important;
+  --dimension-background-color: #EEF8FF !important;
+  --insight-foreground-color: #FFFFFF !important;
+  --primary-background-color: #FFFFFF !important;
+  --insight-background-color: #78008A !important;
+  --visualization-foreground-color: #FFFFFF !important;
+  --global-navbar-foreground-color: #5A5A5B !important;
+  --color-bg: #faf9fc !important;
+  --color-navbar-bg: #f9f9fb !important;
+  --color-navbar-fg: #131920 !important;
+  --color-navbar-divider: rgba(0, 0, 0, .12) !important;
+  --color-leftnav-bg: #ffffff !important;
+  --color-bg-chat-view: #f9f9fb !important;
+  --color-bg-secondary: #ffffff !important;
+  --color-bg-tertiary: #f9fafb !important;
+  --color-bg-hover: #f3f4f6 !important;
+  --color-surface: #f9fafb !important;
+  --color-surface-hover: #f3f4f6 !important;
+  --color-surface-active: #e5e7eb !important;
+  --color-border: rgba(0, 0, 0, .12) !important;
+  --color-border-light: rgba(0, 0, 0, .06) !important;
+  --color-border-strong: #d1d5db !important;
+  --background-toggle-off-default: rgba(255, 255, 255, 0) !important;
+  --color-primary: #4200db !important;
+  --color-primary-dark: #35009e !important;
+  --color-primary-light: #8575ff !important;
+  --color-primary-bg: #e8e6ff !important;
+  --color-primary-hover-border: #35009e !important;
+  --color-nav-icon-active: #4200db !important;
+  --color-nav-hover-border: #4200db !important;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent) !important;
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent) !important;
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent) !important;
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent) !important;
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent) !important;
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent) !important;
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent) !important;
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent) !important;
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent) !important;
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-focus-ring: #4200db !important;
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-sidebar-hover-solid: color-mix(in srgb, #4200db 12%, #faf9fc) !important;
+  --block-selection-outline-offset: 2px !important;
+  --color-accent: #4200db !important;
+  --color-accent-foreground: #4200db !important;
+  --color-accent-dark: #35009e !important;
+  --color-accent-light: #e8e6ff !important;
+  --color-accent-inverse: #ffffff !important;
+  --color-link: #4200db !important;
+  --color-brand-ai-gradient-start: #6842ff !important;
+  --color-brand-ai-gradient-mid: #d600ba !important;
+  --color-brand-ai-gradient-end: #ff4b14 !important;
+  --color-brand-kiro: #9147ff !important;
+  --color-primary-gradient-end: #e8e6ff !important;
+  --color-primary-bg-solid: #e8e6ff !important;
+  --color-user-bubble: #F3F3F7 !important;
+  --color-user-bubble-text: #131920 !important;
+  --color-text: #131920 !important;
+  --color-text-secondary: #5e5e5e !important;
+  --color-text-tertiary: #656871 !important;
+  --color-text-muted: #656871 !important;
+  --color-text-on-primary: #ffffff !important;
+  --color-success: #00802f !important;
+  --color-success-dark: #00471e !important;
+  --color-success-light: #d9ffd6 !important;
+  --color-success-hover: #005c26 !important;
+  --color-success-bg: #e6f5eb !important;
+  --color-success-border: #b3d9bf !important;
+  --color-success-foreground: #00802f !important;
+  --color-success-dark-foreground: #00471e !important;
+  --color-success-text: #00471e !important;
+  --color-error: #db0000 !important;
+  --color-error-dark: #700000 !important;
+  --color-error-light: #ffe0e0 !important;
+  --color-error-hover: #ffe0e0 !important;
+  --color-error-bg: #fceaea !important;
+  --color-error-border: #f2cccc !important;
+  --color-error-active-border: #db0000 !important;
+  --color-error-foreground: #db0000 !important;
+  --color-error-dark-foreground: #700000 !important;
+  --color-error-inverse: #ffffff !important;
+  --color-error-text: #700000 !important;
+  --color-warning: #f2b100 !important;
+  --color-warning-dark: #573a00 !important;
+  --color-warning-light: #fffbbd !important;
+  --color-warning-hover: #db9200 !important;
+  --color-warning-bg: #fef7e6 !important;
+  --color-warning-border: #f9dfa3 !important;
+  --color-warning-foreground: #f2b100 !important;
+  --color-warning-dark-foreground: #573a00 !important;
+  --color-warning-inverse: #573a00 !important;
+  --color-surface-warning: #fffbbd !important;
+  --color-text-warning: #573a00 !important;
+  --color-info: #006ce0 !important;
+  --color-info-dark: #002a66 !important;
+  --color-info-light: #d1f1ff !important;
+  --color-info-hover: #003b8f !important;
+  --color-info-bg: #ebf3fc !important;
+  --color-info-border: #b3d1f0 !important;
+  --color-info-foreground: #006ce0 !important;
+  --color-info-dark-foreground: #002a66 !important;
+  --color-info-inverse: #ffffff !important;
+  --color-overlay: rgba(0, 0, 0, .5) !important;
+  --color-shadow: rgba(0, 0, 0, .08) !important;
+  --color-hover: rgba(0, 0, 0, .05) !important;
+  --color-tooltip-bg: rgba(0, 0, 0, .85) !important;
+  --color-tooltip-text: #ffffff !important;
+  --color-voice-purple: #8575ff !important;
+  --color-voice-purple-dark: #4200db !important;
+  --color-voice-purple-light: #8575ff !important;
+  --color-voice-red: #db0000 !important;
+  --color-voice-red-dark: #700000 !important;
+  --color-voice-amber: #f2b100 !important;
+  --color-voice-purple-glow: rgba(66, 0, 219, .4) !important;
+  --color-voice-red-glow: rgba(219, 0, 0, .4) !important;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace !important;
+  --text-2xs: .5625rem !important;
+  --text-xs: .625rem !important;
+  --text-sm: .6875rem !important;
+  --text-base: .75rem !important;
+  --text-md: .8125rem !important;
+  --text-lg: .875rem !important;
+  --text-xl: 1rem !important;
+  --text-2xl: 1.125rem !important;
+  --text-3xl: 1.25rem !important;
+  --text-4xl: 1.5rem !important;
+  --text-5xl: 2rem !important;
+  --spacing-1: calc(.25rem * 1) !important;
+  --spacing-1-5: calc(.25rem * 1.5) !important;
+  --spacing-2: calc(.25rem * 2) !important;
+  --spacing-3: calc(.25rem * 3) !important;
+  --spacing-4: calc(.25rem * 4) !important;
+  --spacing-5: calc(.25rem * 5) !important;
+  --spacing-6: calc(.25rem * 6) !important;
+  --spacing-7: calc(.25rem * 7) !important;
+  --spacing-8: calc(.25rem * 8) !important;
+  --spacing-9: calc(.25rem * 9) !important;
+  --spacing-10: calc(.25rem * 10) !important;
+  --border-radius-rounded-lg: 8px !important;
+  --radius-sm: 6px !important;
+  --radius-md: 10px !important;
+  --radius-card: 12px !important;
+  --radius-lg: 16px !important;
+  --radius-pill: 8px !important;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .05) !important;
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .08) !important;
+  --shadow-lg: 0 4px 16px 4px rgba(0, 0, 0, .16), 0 2px 6px 1px rgba(0, 0, 0, .16) !important;
+  --color-success-bg-solid: #d9ffd6 !important;
+  --color-error-bg-solid: #ffe0e0 !important;
+  --color-error-border-solid: #ffe0e0 !important;
+  --color-warning-bg-solid: #fffbbd !important;
+  --color-warning-text: #573a00 !important;
+  --color-info-bg-solid: #d1f1ff !important;
+  --color-info-bg-solid-alt: #d1f1ff !important;
+  --color-info-text: #002a66 !important;
+  --color-info-text-alt: #002a66 !important;
+  --color-emerald: #10b981 !important;
+  --color-teal: #4ecdc4 !important;
+  --color-code-bg: #F3F3F7 !important;
+  --color-code-header-bg: #f1f3f5 !important;
+  --color-code-text: #24292e !important;
+  --color-code-border: #e1e4e8 !important;
+  --color-code-muted: #6a737d !important;
+  --color-inline-code-bg: #F3F3F7 !important;
+  --color-inline-code-text: #24292e !important;
+  --color-inline-code-border: #e1e4e8 !important;
+  --color-scrollbar-thumb: #d1d5db !important;
+  --color-scrollbar-track: transparent !important;
+  --qs-data-cat-01: #4338CA !important;
+  --qs-data-cat-02: #D97706 !important;
+  --qs-data-cat-03: #0891B2 !important;
+  --qs-data-cat-04: #8B5CF6 !important;
+  --qs-data-cat-05: #15803D !important;
+  --qs-data-cat-06: #0C4A6E !important;
+  --qs-data-cat-07: #D946EF !important;
+  --qs-data-cat-08: #65A30D !important;
+  --qs-data-cat-09: #1D4ED8 !important;
+  --qs-data-cat-10: #831843 !important;
+  --qs-data-cat-11: #C2410C !important;
+  --qs-data-cat-12: #115E59 !important;
+  --qs-data-cat-other: #737373 !important;
+  --qs-content: #fff !important;
+  --qs-main: #f9f9fb !important;
+  --qs-primary-foreground: #131920 !important;
+  --qs-secondary-foreground: #656871 !important;
+  --qs-tertiary-foreground: #656871 !important;
+  --qs-placeholder-foreground: #656871 !important;
+  --qs-divider: #dedee3 !important;
+  --qs-default-border: #8c8c94 !important;
+  --qs-neutral-soft: #b4b4bb !important;
+  --qs-neutral-gray-50: #f9fafb !important;
+  --qs-tertiary-background: #f9fafb !important;
+  --qs-action-hover: #f3f3f7 !important;
+  --qs-primary-default: #4200db !important;
+  --qs-primary-dark: #35009e !important;
+  --qs-primary-medium: #8575ff !important;
+  --qs-primary-light: #e8e6ff !important;
+  --qs-primary-inverse: #fff !important;
+  --qs-success-default: #00802f !important;
+  --qs-success-dark: #00471e !important;
+  --qs-success-light: #d9ffd6 !important;
+  --qs-error-default: #db0000 !important;
+  --qs-error-dark: #700000 !important;
+  --qs-warning-default: #f2b100 !important;
+  --qs-warning-dark: #573a00 !important;
+  --qs-warning-light: #fffbbd !important;
+  --qs-info-default: #006ce0 !important;
+  --qs-info-dark: #002a66 !important;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --safe-top: 0.0px !important;
+  --safe-bottom: 0.0px !important;
+  --safe-left: 0.0px !important;
+  --safe-right: 0.0px !important;
+  --qs-action-active: #e8e6ff !important;
+  --qs-action-active-hover: #b2a8ff !important;
+  --qs-action-disabled: #f3f3f7 !important;
+  --qs-active-border: #4200db !important;
+  --qs-application-navbar: #4200db !important;
+  --qs-application-navbar-dark: #35009e !important;
+  --qs-application-navbar-foreground: #fff !important;
+  --qs-application-navbar-light: #e8e6ff !important;
+  --qs-automation-dark: #660052 !important;
+  --qs-automation-default: #d600ba !important;
+  --qs-automation-light: #ffe0fb !important;
+  --qs-automation-medium: #b3008f !important;
+  --qs-automation-soft: #ff94f1 !important;
+  --qs-avatar-blue-bg: #d1f1ff !important;
+  --qs-avatar-blue-fg: #002a66 !important;
+  --qs-avatar-fuchsia-bg: #fce6ff !important;
+  --qs-avatar-fuchsia-fg: #590066 !important;
+  --qs-avatar-green-bg: #d9ffd6 !important;
+  --qs-avatar-green-fg: #00471e !important;
+  --qs-avatar-neutral-bg: #dedee3 !important;
+  --qs-avatar-neutral-fg: #131920 !important;
+  --qs-avatar-orange-bg: #ffe0d6 !important;
+  --qs-avatar-orange-fg: #661800 !important;
+  --qs-avatar-pink-bg: #ffe0fb !important;
+  --qs-avatar-pink-fg: #660052 !important;
+  --qs-avatar-primary-bg: #e8e6ff !important;
+  --qs-avatar-primary-fg: #35009e !important;
+  --qs-avatar-red-bg: #ffe0e0 !important;
+  --qs-avatar-red-fg: #700000 !important;
+  --qs-avatar-violet-bg: #f2e5ff !important;
+  --qs-avatar-violet-fg: #45008a !important;
+  --qs-avatar-yellow-bg: #fffbbd !important;
+  --qs-avatar-yellow-fg: #573a00 !important;
+  --qs-blue-100: #e2ebff !important;
+  --qs-blue-1000: #060d27 !important;
+  --qs-blue-200: #c2d5ff !important;
+  --qs-blue-300: #9fbdff !important;
+  --qs-blue-400: #7ea0fc !important;
+  --qs-blue-50: #fafbff !important;
+  --qs-blue-500: #517df6 !important;
+  --qs-blue-600: #2d5fe8 !important;
+  --qs-blue-700: #1d3cb9 !important;
+  --qs-blue-800: #162c85 !important;
+  --qs-blue-900: #102165 !important;
+  --qs-blue-950: #0b1746 !important;
+  --qs-brand: #fff !important;
+  --qs-brand-foreground: #131920 !important;
+  --qs-brand-navbar: #131920 !important;
+  --qs-brand-navbar-dark: #000 !important;
+  --qs-brand-navbar-foreground: #fff !important;
+  --qs-brand-navbar-light: #dedee3 !important;
+  --qs-coachmark: #006ce0 !important;
+  --qs-connection-dark: #661800 !important;
+  --qs-connection-default: #db3300 !important;
+  --qs-connection-light: #ffe0d6 !important;
+  --qs-connection-soft: #ff997a !important;
+  --qs-content-inverse: #333843 !important;
+  --qs-content-inverse-active: #131920 !important;
+  --qs-contrast-foreground: #131920 !important;
+  --qs-control-selected-bg: #4200db !important;
+  --qs-control-selected-hover-bg: #35009e !important;
+  --qs-darkpurple1-100: #eee1ef !important;
+  --qs-darkpurple1-1000: #130b14 !important;
+  --qs-darkpurple1-200: #dcc0dd !important;
+  --qs-darkpurple1-300: #c99ecc !important;
+  --qs-darkpurple1-400: #b57ab8 !important;
+  --qs-darkpurple1-50: #f8f2f8 !important;
+  --qs-darkpurple1-500: #97529b !important;
+  --qs-darkpurple1-600: #754078 !important;
+  --qs-darkpurple1-700: #542e57 !important;
+  --qs-darkpurple1-800: #472749 !important;
+  --qs-darkpurple1-900: #341c35 !important;
+  --qs-darkpurple1-950: #241325 !important;
+  --qs-darkpurple2-100: #f1e3fc !important;
+  --qs-darkpurple2-1000: #1b042f !important;
+  --qs-darkpurple2-200: #e7d0fb !important;
+  --qs-darkpurple2-300: #d6b0f8 !important;
+  --qs-darkpurple2-400: #be81f3 !important;
+  --qs-darkpurple2-50: #f8f1fe !important;
+  --qs-darkpurple2-500: #a652ef !important;
+  --qs-darkpurple2-600: #8e24eb !important;
+  --qs-darkpurple2-700: #7413c9 !important;
+  --qs-darkpurple2-800: #580e98 !important;
+  --qs-darkpurple2-900: #36095d !important;
+  --qs-darkpurple2-950: #260642 !important;
+  --qs-data-categorical-01: #4338ca !important;
+  --qs-data-categorical-02: #d97706 !important;
+  --qs-data-categorical-03: #0891b2 !important;
+  --qs-data-categorical-04: #8b5cf6 !important;
+  --qs-data-categorical-05: #15803d !important;
+  --qs-data-categorical-06: #0c4a6e !important;
+  --qs-data-categorical-07: #d946ef !important;
+  --qs-data-categorical-08: #65a30d !important;
+  --qs-data-categorical-09: #1d4ed8 !important;
+  --qs-data-categorical-10: #831843 !important;
+  --qs-data-categorical-11: #c2410c !important;
+  --qs-data-categorical-12: #115e59 !important;
+  --qs-data-categorical-other: #737373 !important;
+  --qs-data-divergent-negative: #ea580c !important;
+  --qs-data-divergent-positive: #4f46e5 !important;
+  --qs-data-divergent-red-green-negative: #dc2626 !important;
+  --qs-data-divergent-red-green-positive: #16a34a !important;
+  --qs-data-missing: #d4d4d4 !important;
+  --qs-data-sentiment-neutral: #737373 !important;
+  --qs-data-sentiment-warning: #9e6900 !important;
+  --qs-data-sequential-duochromatic-high: #1e1b4b !important;
+  --qs-data-sequential-duochromatic-low: #8b5cf6 !important;
+  --qs-data-sequential-monochromatic-high: #4f46e5 !important;
+  --qs-default-badge: #b4b4bb !important;
+  --qs-default-badge-dot: #656871 !important;
+  --qs-dimension: #4200db !important;
+  --qs-dimension-experimental: #4200db !important;
+  --qs-dimension-experimental-foreground: #4200db !important;
+  --qs-dimension-foreground: #fff !important;
+  --qs-disabled: #8c8c94 !important;
+  --qs-disabled-border: #dedee3 !important;
+  --qs-disabled-foreground: #b4b4bb !important;
+  --qs-divider-light: #f3f3f7 !important;
+  --qs-error-active-border: #db0000 !important;
+  --qs-error-border: #ffe0e0 !important;
+  --qs-error-foreground: #db0000 !important;
+  --qs-error-inverse: #fff !important;
+  --qs-error-light: #ffe0e0 !important;
+  --qs-error-medium: #900 !important;
+  --qs-error-soft: #ff9e9e !important;
+  --qs-focus-offset: 1px !important;
+  --qs-font-base-letter-spacing: .15px !important;
+  --qs-font-display: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-gradient-automation-light-stop: #ffe0fb !important;
+  --qs-gradient-automation-medium-stop: #b3008f !important;
+  --qs-gradient-automation-stop: #d600ba !important;
+  --qs-gradient-connection-light-stop: #ffe0d6 !important;
+  --qs-gradient-connection-stop: #db3300 !important;
+  --qs-gradient-insight-light-stop: #fce6ff !important;
+  --qs-gradient-insight-stop: #a000b8 !important;
+  --qs-gradient-visualization-light-stop: #f2e5ff !important;
+  --qs-gradient-visualization-stop: #7300e5 !important;
+  --qs-green-100: #ccffd8 !important;
+  --qs-green-1000: #001409 !important;
+  --qs-green-200: #a9efba !important;
+  --qs-green-300: #84d39a !important;
+  --qs-green-400: #71c68c !important;
+  --qs-green-50: #f0fff3 !important;
+  --qs-green-500: #5bbe7a !important;
+  --qs-green-600: #3c955a !important;
+  --qs-green-700: #227340 !important;
+  --qs-green-800: #00441f !important;
+  --qs-green-900: #003317 !important;
+  --qs-green-950: #002410 !important;
+  --qs-grid-gap: 16px !important;
+  --qs-grid-gap-xl: 24px !important;
+  --qs-hero-banner-button-hover: color-mix(in srgb, #fff, transparent 60%) !important;
+  --qs-hover-border: #333843 !important;
+  --qs-info-inverse: #fff !important;
+  --qs-info-light: #d1f1ff !important;
+  --qs-info-medium: #003b8f !important;
+  --qs-info-soft: #75cfff !important;
+  --qs-insight-dark: #590066 !important;
+  --qs-insight-default: #a000b8 !important;
+  --qs-insight-light: #fce6ff !important;
+  --qs-insight-soft: #f299ff !important;
+  --qs-main-foreground: #131920 !important;
+  --qs-main-secondary-foreground: #656871 !important;
+  --qs-measure: #00802f !important;
+  --qs-measure-experimental: #f2b100 !important;
+  --qs-measure-experimental-foreground: #f2b100 !important;
+  --qs-measure-foreground: #fff !important;
+  --qs-neutral-0: #fff !important;
+  --qs-neutral-100: #f5f3ef !important;
+  --qs-neutral-1000: #0b0a0a !important;
+  --qs-neutral-200: #ece9e4 !important;
+  --qs-neutral-300: #e2dfda !important;
+  --qs-neutral-400: #cdc9c1 !important;
+  --qs-neutral-50: #faf9f7 !important;
+  --qs-neutral-500: #adaaa3 !important;
+  --qs-neutral-600: #94918b !important;
+  --qs-neutral-700: #7d7a73 !important;
+  --qs-neutral-800: #5e5b56 !important;
+  --qs-neutral-900: #302f2c !important;
+  --qs-neutral-950: #151310 !important;
+  --qs-neutral-black: #000 !important;
+  --qs-neutral-dark: #333843 !important;
+  --qs-neutral-deep: #656871 !important;
+  --qs-neutral-default: #dedee3 !important;
+  --qs-neutral-light: #f3f3f7 !important;
+  --qs-neutral-lightest: #f9f9fb !important;
+  --qs-neutral-medium: #8c8c94 !important;
+  --qs-neutral-strong: #131920 !important;
+  --qs-neutral-white: #fff !important;
+  --qs-overlay: color-mix(in srgb, #131920, transparent 50%) !important;
+  --qs-popover-border: transparent !important;
+  --qs-primary-inverse-foreground: #fff !important;
+  --qs-primary-soft: #b2a8ff !important;
+  --qs-progress-active: #4200db !important;
+  --qs-red-100: #ffe4e1 !important;
+  --qs-red-1000: #240004 !important;
+  --qs-red-200: #ffc7c2 !important;
+  --qs-red-300: #ffa099 !important;
+  --qs-red-400: #eb6560 !important;
+  --qs-red-50: #fff6f5 !important;
+  --qs-red-500: #c33c38 !important;
+  --qs-red-600: #aa2b2b !important;
+  --qs-red-700: #8a0f0f !important;
+  --qs-red-800: #6e000d !important;
+  --qs-red-900: #57000a !important;
+  --qs-red-950: #3d0007 !important;
+  --qs-secondary: #dedee3 !important;
+  --qs-secondary-dark: #b4b4bb !important;
+  --qs-secondary-light: #f3f3f7 !important;
+  --qs-shadow: #00000029 !important;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029 !important;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029 !important;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029 !important;
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029 !important;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029 !important;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029 !important;
+  --qs-spice: #ff9800 !important;
+  --qs-success-inverse: #fff !important;
+  --qs-success-medium: #005c26 !important;
+  --qs-success-soft: #aeffa8 !important;
+  --qs-tag-default: #dedee3 !important;
+  --qs-tag-soft-border: #b4b4bb !important;
+  --qs-toggle-tile-lg: calc(.25rem * 15) !important;
+  --qs-toggle-tile-md: calc(.25rem * 12) !important;
+  --qs-toggle-tile-sm: calc(.25rem * 8) !important;
+  --qs-transparent: transparent !important;
+  --qs-visualization-dark: #45008a !important;
+  --qs-visualization-default: #7300e5 !important;
+  --qs-visualization-light: #f2e5ff !important;
+  --qs-visualization-soft: #d4a8ff !important;
+  --qs-warning-experimental: #f2b100 !important;
+  --qs-warning-experimental-light: #fffbbd !important;
+  --qs-warning-experimental-light-foreground: #fffbbd !important;
+  --qs-warning-inverse: #573a00 !important;
+  --qs-warning-medium: #db9200 !important;
+  --qs-warning-soft: #ffed4d !important;
+  --qs-width-modal-lg: 1136px !important;
+  --qs-width-modal-md: 600px !important;
+  --qs-width-modal-sm: 384px !important;
+  --qs-yellow-100: #fff5cf !important;
+  --qs-yellow-1000: #1f1100 !important;
+  --qs-yellow-200: #ffe79e !important;
+  --qs-yellow-300: #fbd86f !important;
+  --qs-yellow-400: #facb3d !important;
+  --qs-yellow-50: #fffcf0 !important;
+  --qs-yellow-500: #e2ac36 !important;
+  --qs-yellow-600: #ca8d2b !important;
+  --qs-yellow-700: #9d672f !important;
+  --qs-yellow-800: #7a4c19 !important;
+  --qs-yellow-900: #522e00 !important;
+  --qs-yellow-950: #381f00 !important;
+  --qs-duration-reorder: .125s !important;
+  --qs-ease-reorder: ease-in-out !important;
+  --chat-column-base: 720px !important;
+  --chat-column-max: clamp(888px, 50vw, 1200px) !important;
+  --z-subtask-modal: 10000 !important;
+  --z-above-subtask-modal: 10001 !important;
+  --react-pdf-text-layer: 1 !important;
+  --highlight-bg-color: rgba(180, 0, 170, 1) !important;
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1) !important;
+  --react-pdf-annotation-layer: 1 !important;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>") !important;
+  --input-focus-border-color: Highlight !important;
+  --input-focus-outline: 1px solid Canvas !important;
+  --input-unfocused-border-color: transparent !important;
+  --input-disabled-border-color: transparent !important;
+  --input-hover-border-color: black !important;
+  --link-outline: none !important;
+  --flow-size-overview-canvas-min-height: 480px !important;
+}</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Livre d'Or — CFA Amazon</title>
-<style>
+<style nonce="81+/En+E3YprQxGAP69sjg==">
   * { box-sizing: border-box; margin: 0; padding: 0; }
   .wrap { font-family: 'Segoe UI', Arial, sans-serif; background: #F4F7FB; padding-bottom: 3rem; max-width: 100%; margin: 0; padding-left: 40px; padding-right: 40px; }
   .header { background: #152B5E; position: relative; overflow: hidden; padding: 1.5rem 1.5rem 2.5rem; }
@@ -89,7 +599,7 @@
 
 <div class="header" style="position: relative; overflow: hidden;">
     <!-- Mascotte en fond à droite, nette -->
-    <img src="mascotte_cfa.png" alt="" style="position: absolute; right: 60px; top: 50%; transform: translateY(-50%); width: 180px; height: auto; opacity: 1;">
+    <img src="mascotte_cfa.png" alt="Mascotte CFA Amazon" style="position: absolute; right: 60px; top: 50%; transform: translateY(-50%); width: 180px; height: auto; opacity: 1;">
     
     <div class="header-top" style="display: flex; align-items: center; gap: 20px;">
    <img class="logo-img" src="logo_cfa_amazon.png" alt="Logo CFA Amazon" style="width: 220px; height: auto;">
@@ -97,28 +607,28 @@
     </div>
 <div class="header-title" style="font-size: 2.4rem;">
   <div class="fr">Regards croisés<br>sur <span>l'apprentissage</span></div>
-  <div class="en" style="display:none;">Perspectives<br>on <span>apprenticeship</span></div>
+  <div class="en" style="display: none;">Perspectives<br>on <span>apprenticeship</span></div>
 </div>
 
       </div>
-<div style="text-align: center; margin: -10px 0 10px;">
-<span class="header-badge" style="font-size: 2.5rem; padding: 18px 44px; border-radius: 30px;"><span class="fr">⭐ LIVRE D'OR</span><span class="en" style="display:none;">⭐ GUESTBOOK</span></span>
+<div style="text-align: center; margin: -10px 0px 10px;">
+<span class="header-badge" style="font-size: 2.5rem; padding: 18px 44px; border-radius: 30px;"><span class="fr">⭐ LIVRE D'OR</span><span class="en" style="display: none;">⭐ GUESTBOOK</span></span>
      </div>
 <!-- Bouton traduction -->
 <div style="text-align: right; padding: 10px 20px;">
-  <button onclick="toggleLanguage()" id="btn-lang" style="background: #152B5E; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-size: 1rem; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">🇬🇧 English</button>
+  <button onclick="toggleLanguage()" id="btn-lang" style="background: rgb(21, 43, 94); color: white; border: medium; padding: 10px 20px; border-radius: 20px; font-size: 1rem; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;">🇬🇧 English</button>
 </div>
 
-<div style="text-align: center; padding: 16px 0 4px; background: #152B5E;">
-  <span class="fr" style="font-size: 1.1rem; color: #9BB8D4; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;">📊 Le CFA France en chiffres</span>
-  <span class="en" style="display:none; font-size: 1.1rem; color: #9BB8D4; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;">📊 The CFA France in numbers</span>
+<div style="text-align: center; padding: 16px 0px 4px; background: rgb(21, 43, 94);">
+  <span class="fr" style="font-size: 1.1rem; color: rgb(155, 184, 212); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;">📊 Le CFA France en chiffres</span>
+  <span class="en" style="display: none; font-size: 1.1rem; color: rgb(155, 184, 212); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;">📊 The CFA France in numbers</span>
 </div>
 
 <div class="stats-banner" style="grid-template-columns: repeat(4, 1fr); padding: 1.5rem 2rem 2rem;">
-    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">6</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Sites en France</div><div class="en" style="display:none;">Sites in France</div></div></div>
-    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">94%</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Taux de certification</div><div class="en" style="display:none;">Certification rate</div></div></div>
-    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">88%</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Taux d'insertion professionnelle</div><div class="en" style="display:none;">Professional integration rate</div></div></div>
-    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">98%</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Apprentis satisfaits</div><div class="en" style="display:none;">Apprentice satisfaction</div></div></div>
+    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">6</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Sites en France</div><div class="en" style="display: none;">Sites in France</div></div></div>
+    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">94%</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Taux de certification</div><div class="en" style="display: none;">Certification rate</div></div></div>
+    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">88%</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Taux d'insertion professionnelle</div><div class="en" style="display: none;">Professional integration rate</div></div></div>
+    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">98%</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Apprentis satisfaits</div><div class="en" style="display: none;">Apprentice satisfaction</div></div></div>
 </div>
 
 
@@ -128,58 +638,58 @@
 <div class="titre-pro-banner" style="padding: 18px 22px; gap: 16px;">
       <div style="font-size: 36px;">📦</div>
       <div>
-        <div class="titre-pro-label" style="font-size: 13px;"><div class="fr">Certification visée</div><div class="en" style="display:none;">Targeted certification</div></div>
-        <div class="titre-pro-name" style="font-size: 17px;"><div class="fr">Titre Professionnel Préparateur de Commandes en Entrepôt</div><div class="en" style="display:none;">Professional Certificate — Warehouse Order Picker</div></div>
-        <div class="titre-pro-rncp" style="font-size: 14px;"><div class="fr">Titre RNCP · Ministère du Travail · Niveau 3</div><div class="en" style="display:none;">RNCP Title · Ministry of Labour · Level 3</div></div>
+        <div class="titre-pro-label" style="font-size: 13px;"><div class="fr">Certification visée</div><div class="en" style="display: none;">Targeted certification</div></div>
+        <div class="titre-pro-name" style="font-size: 17px;"><div class="fr">Titre Professionnel Préparateur de Commandes en Entrepôt</div><div class="en" style="display: none;">Professional Certificate — Warehouse Order Picker</div></div>
+        <div class="titre-pro-rncp" style="font-size: 14px;"><div class="fr">Titre RNCP · Ministère du Travail · Niveau 3</div><div class="en" style="display: none;">RNCP Title · Ministry of Labour · Level 3</div></div>
       </div>
     </div>
 
-       <div style="text-align: center; margin: 24px 0; padding: 20px 32px; background: linear-gradient(135deg, #f8faff 0%, #eef3fb 100%); border-radius: 12px; border-left: 4px solid #152B5E;">
-  <div class="fr" style="font-size: 1.3rem; color: #152B5E; margin: 0; font-weight: 700;">🎤 Découvrez les témoignages de nos apprentis, de leurs managers et de l'équipe pédagogique, site par site</div>
-  <div class="en" style="display:none; font-size: 1.3rem; color: #152B5E; margin: 0; font-weight: 700;">🎤 Discover testimonials from our apprentices, their managers and the teaching team, site by site</div>
+       <div style="text-align: center; margin: 24px 0px; padding: 20px 32px; background: linear-gradient(135deg, rgb(248, 250, 255) 0%, rgb(238, 243, 251) 100%); border-radius: 12px; border-left: 4px solid rgb(21, 43, 94);">
+  <div class="fr" style="font-size: 1.3rem; color: rgb(21, 43, 94); margin: 0px; font-weight: 700;">🎤 Découvrez les témoignages de nos apprentis, de leurs managers et de l'équipe pédagogique, site par site</div>
+  <div class="en" style="display: none; font-size: 1.3rem; color: rgb(21, 43, 94); margin: 0px; font-weight: 700;">🎤 Discover testimonials from our apprentices, their managers and the teaching team, site by site</div>
 </div>
 
  <div class="sites-grid">
       <div class="site-card has-content" onclick="showPage('LIL1')">
         <div class="site-icon">📍</div>
         <div class="site-name">LIL1</div>
-        <div class="site-status"style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
+        <div class="site-status" style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display: none;">✓ Testimonials available</div></div>
       </div>
       <div class="site-card" onclick="showPage('BVA1')">
         <div class="site-icon">📍</div>
         <div class="site-name">BVA1</div>
-        <div class="site-status"><div class="fr">À venir</div><div class="en" style="display:none;">Coming soon</div></div>
+        <div class="site-status"><div class="fr">À venir</div><div class="en" style="display: none;">Coming soon</div></div>
       </div>
       <div class="site-card" onclick="showPage('ETZ2')">
         <div class="site-icon">📍</div>
         <div class="site-name">ETZ2</div>
-        <div class="site-status"style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
+        <div class="site-status" style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display: none;">✓ Testimonials available</div></div>
       </div>
       <div class="site-card" onclick="showPage('ORY1')">
         <div class="site-icon">📍</div>
         <div class="site-name">ORY1</div>
-        <div class="site-status"style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
+        <div class="site-status" style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display: none;">✓ Testimonials available</div></div>
       </div>
       <div class="site-card" onclick="showPage('ORY4')">
         <div class="site-icon">📍</div>
         <div class="site-name">ORY4</div>
-        <div class="site-status"><div class="fr">À venir</div><div class="en" style="display:none;">Coming soon</div></div>
+        <div class="site-status"><div class="fr">À venir</div><div class="en" style="display: none;">Coming soon</div></div>
       </div>
       <div class="site-card" onclick="showPage('LYS1')">
         <div class="site-icon">📍</div>
         <div class="site-name">LYS1</div>
-        <div class="site-status"><div class="fr">À venir</div><div class="en" style="display:none;">Coming soon</div></div>
+        <div class="site-status"><div class="fr">À venir</div><div class="en" style="display: none;">Coming soon</div></div>
       </div>
 
 </div>
 
 <!-- === ENCART INCLUSION EN ACTION === -->
-    <div style="margin: 32px 0; width: 100%;">
-                 <div style="width: 100%; background: linear-gradient(135deg, #f0fdf4 0%, #e8f5e9 100%); border-radius: 16px; padding: 32px; border: 1px solid #a5d6a7; background-image: url('mascottefelicite.png'); background-repeat: no-repeat; background-position: center top; background-size: 50% auto;">
+    <div style="margin: 32px 0px; width: 100%;">
+                 <div style="width: 100%; background: url(&quot;mascottefelicite.png&quot;) center top / 50% auto no-repeat; border-radius: 16px; padding: 32px; border: 1px solid rgb(165, 214, 167);">
 
                       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap;">
-          <span style="display: inline-block; background: #1b5e20; color: white; font-size: 1.3rem; font-weight: bold; padding: 10px 28px; border-radius: 30px; box-shadow: 0 3px 10px rgba(27,94,32,0.3);"><span class="fr">🌟 Inclusion en action au CFA LIL1 !</span><span class="en" style="display:none;">🌟 Inclusion in action at CFA LIL1!</span></span>
-          <span style="display: inline-block; color: white; font-style: italic; font-size: 1.1rem; background: #4a7a4f; padding: 6px 20px; border-radius: 20px;"><span class="fr">Première success story handicap du CFA Amazon France !</span><span class="en" style="display:none;">First disability success story at CFA Amazon France!</span></span>
+          <span style="display: inline-block; background: rgb(27, 94, 32); color: white; font-size: 1.3rem; font-weight: bold; padding: 10px 28px; border-radius: 30px; box-shadow: rgba(27, 94, 32, 0.3) 0px 3px 10px;"><span class="fr">🌟 Inclusion en action au CFA LIL1 !</span><span class="en" style="display: none;">🌟 Inclusion in action at CFA LIL1!</span></span>
+          <span style="display: inline-block; color: white; font-style: italic; font-size: 1.1rem; background: rgb(74, 122, 79); padding: 6px 20px; border-radius: 20px;"><span class="fr">Première success story handicap du CFA Amazon France !</span><span class="en" style="display: none;">First disability success story at CFA Amazon France!</span></span>
         </div>
 
         <!-- Photos accompagnants -->
@@ -189,52 +699,52 @@
         </div>
 
         <!-- Témoignage Nicolas -->
-        <div style="background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <div style="background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 48px; height: 48px; border-radius: 50%; background: #1b5e20; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">N</div>
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: rgb(27, 94, 32); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">N</div>
             <div>
-              <div style="font-weight: bold; color: #1b5e20;">Nicolas</div>
-              <div style="font-size: 0.85rem; color: #666;"><span class="fr">Apprenti Préparateur de Commandes · LIL1 · Premier apprenant malentendant du CFA France</span><span class="en" style="display:none;">Warehouse Order Picker Apprentice · LIL1 · First hearing-impaired learner at CFA Amazon France</span></div>
+              <div style="font-weight: bold; color: rgb(27, 94, 32);">Nicolas</div>
+              <div style="font-size: 0.85rem; color: rgb(102, 102, 102);"><span class="fr">Apprenti Préparateur de Commandes · LIL1 · Premier apprenant malentendant du CFA France</span><span class="en" style="display: none;">Warehouse Order Picker Apprentice · LIL1 · First hearing-impaired learner at CFA Amazon France</span></div>
             </div>
           </div>
           <div class="fr">
-            <p style="margin: 0 0 12px; color: #3a4a3a;">Je m'appelle Nicolas et je suis malentendant. J'avais presque abandonné l'idée qu'un lieu de travail puisse être différent.</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">Puis un ami proche, lui aussi malentendant et salarié chez Amazon, m'a parlé de son expérience avec un enthousiasme si sincère que j'ai pensé qu'il exagérait. Il m'a dit : « Tu devrais postuler. Cet endroit n'a rien à voir avec ce que tu as connu avant. »</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">Dès le premier jour au CFA, tout a changé. Les autres apprentis ne voyaient pas ma surdité comme un obstacle. Il y a un esprit d'entraide dans notre groupe que je n'avais jamais connu ailleurs.</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">La qualité de l'accompagnement dépasse tout ce que j'aurais pu imaginer : interprètes en LSF présents et professionnels, adaptations pédagogiques pensées par la Mission Handicap. Tout est conçu pour que j'apprenne au même rythme que les autres.</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">Ce que j'apprécie aussi profondément, c'est l'autonomie qu'on me donne. On me fait confiance.</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">Et maintenant ? Je dors bien la nuit. Je ne redoute pas le lendemain, je l'attends avec impatience. Ce programme ne m'a pas seulement donné un parcours de qualification. Il m'a rendu ma confiance.</p>
-            <p style="margin: 0; font-weight: bold; font-style: italic; color: #1b5e20;">Il m'a montré qu'un lieu de travail peut être un endroit où l'on s'épanouit.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">Je m'appelle Nicolas et je suis malentendant. J'avais presque abandonné l'idée qu'un lieu de travail puisse être différent.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">Puis un ami proche, lui aussi malentendant et salarié chez Amazon, m'a parlé de son expérience avec un enthousiasme si sincère que j'ai pensé qu'il exagérait. Il m'a dit : « Tu devrais postuler. Cet endroit n'a rien à voir avec ce que tu as connu avant. »</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">Dès le premier jour au CFA, tout a changé. Les autres apprentis ne voyaient pas ma surdité comme un obstacle. Il y a un esprit d'entraide dans notre groupe que je n'avais jamais connu ailleurs.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">La qualité de l'accompagnement dépasse tout ce que j'aurais pu imaginer : interprètes en LSF présents et professionnels, adaptations pédagogiques pensées par la Mission Handicap. Tout est conçu pour que j'apprenne au même rythme que les autres.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">Ce que j'apprécie aussi profondément, c'est l'autonomie qu'on me donne. On me fait confiance.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">Et maintenant ? Je dors bien la nuit. Je ne redoute pas le lendemain, je l'attends avec impatience. Ce programme ne m'a pas seulement donné un parcours de qualification. Il m'a rendu ma confiance.</p>
+            <p style="margin: 0px; font-weight: bold; font-style: italic; color: rgb(27, 94, 32);">Il m'a montré qu'un lieu de travail peut être un endroit où l'on s'épanouit.</p>
           </div>
-          <div class="en" style="display:none;">
-            <p style="margin: 0 0 12px; color: #3a4a3a;">My name is Nicolas and I am hard of hearing. I had almost given up believing that a workplace could be different.</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">Then a close friend of mine, also hard of hearing and working at Amazon, told me about his experience with such genuine enthusiasm that I thought he was exaggerating. He said: "You should apply. This place is nothing like what you've known before."</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">From the very first day at the CFA, everything changed. The other apprentices didn't see my hearing impairment as a barrier. There is a spirit of mutual support in our group that I had never experienced anywhere else.</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">The quality of support goes beyond anything I could have imagined: French Sign Language interpreters present and professional, pedagogical adaptations designed by the Disability Mission Team. Everything is set up so that I can learn at the same pace as everyone else.</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">What I also deeply appreciate is the autonomy I'm given. I'm trusted.</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">And now? I sleep well at night. I don't dread the next day — I look forward to it. This programme didn't just give me a qualification path. It gave me back my confidence.</p>
-            <p style="margin: 0; font-weight: bold; font-style: italic; color: #1b5e20;">It showed me that a workplace can be a place where you thrive.</p>
+          <div class="en" style="display: none;">
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">My name is Nicolas and I am hard of hearing. I had almost given up believing that a workplace could be different.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">Then a close friend of mine, also hard of hearing and working at Amazon, told me about his experience with such genuine enthusiasm that I thought he was exaggerating. He said: "You should apply. This place is nothing like what you've known before."</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">From the very first day at the CFA, everything changed. The other apprentices didn't see my hearing impairment as a barrier. There is a spirit of mutual support in our group that I had never experienced anywhere else.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">The quality of support goes beyond anything I could have imagined: French Sign Language interpreters present and professional, pedagogical adaptations designed by the Disability Mission Team. Everything is set up so that I can learn at the same pace as everyone else.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">What I also deeply appreciate is the autonomy I'm given. I'm trusted.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">And now? I sleep well at night. I don't dread the next day — I look forward to it. This programme didn't just give me a qualification path. It gave me back my confidence.</p>
+            <p style="margin: 0px; font-weight: bold; font-style: italic; color: rgb(27, 94, 32);">It showed me that a workplace can be a place where you thrive.</p>
           </div>
         </div>
 
         <!-- Témoignage Amandine -->
-        <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 48px; height: 48px; border-radius: 50%; background: #152B5E; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">AR</div>
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: rgb(21, 43, 94); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">AR</div>
             <div>
-              <div style="font-weight: bold; color: #152B5E;">Amandine Raout</div>
-              <div style="font-size: 0.85rem; color: #666;"><span class="fr">Coordinatrice Pédagogique · CFA Amazon LIL1</span><span class="en" style="display:none;">Educational Coordinator · CFA Amazon LIL1</span></div>
+              <div style="font-weight: bold; color: rgb(21, 43, 94);">Amandine Raout</div>
+              <div style="font-size: 0.85rem; color: rgb(102, 102, 102);"><span class="fr">Coordinatrice Pédagogique · CFA Amazon LIL1</span><span class="en" style="display: none;">Educational Coordinator · CFA Amazon LIL1</span></div>
             </div>
           </div>
           <div class="fr">
-            <p style="margin: 0 0 12px; color: #3a4a3a;">Je suis immensément fière que notre site soit le premier à démontrer la faisabilité de notre programme CFA aux côtés d'un handicap. Le parcours de Nicolas est la preuve vivante que l'inclusion n'est pas qu'un mot sur le papier — ça fonctionne, ici et maintenant.</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">Nicolas est un apprenti véritablement remarquable : attentif, engagé, et incroyablement efficace dans tout ce qu'il entreprend. Sa capacité d'écoute et son investissement inspirent non seulement ses camarades mais tous ceux qui l'accompagnent sur ce chemin.</p>
-            <p style="margin: 0; color: #3a4a3a;">J'espère sincèrement que son histoire touchera d'autres personnes qui cherchent encore un foyer professionnel, un endroit où elles sont vues, valorisées et soutenues pour ce qu'elles sont. Nicolas a ouvert une porte, et j'espère que beaucoup d'autres la franchiront après lui.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">Je suis immensément fière que notre site soit le premier à démontrer la faisabilité de notre programme CFA aux côtés d'un handicap. Le parcours de Nicolas est la preuve vivante que l'inclusion n'est pas qu'un mot sur le papier — ça fonctionne, ici et maintenant.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">Nicolas est un apprenti véritablement remarquable : attentif, engagé, et incroyablement efficace dans tout ce qu'il entreprend. Sa capacité d'écoute et son investissement inspirent non seulement ses camarades mais tous ceux qui l'accompagnent sur ce chemin.</p>
+            <p style="margin: 0px; color: rgb(58, 74, 58);">J'espère sincèrement que son histoire touchera d'autres personnes qui cherchent encore un foyer professionnel, un endroit où elles sont vues, valorisées et soutenues pour ce qu'elles sont. Nicolas a ouvert une porte, et j'espère que beaucoup d'autres la franchiront après lui.</p>
           </div>
-          <div class="en" style="display:none;">
-            <p style="margin: 0 0 12px; color: #3a4a3a;">I am immensely proud that our site is the first to demonstrate the feasibility of our CFA programme alongside a disability. Nicolas's journey is the living proof that inclusion is not just a word on paper — it works, here and now.</p>
-            <p style="margin: 0 0 12px; color: #3a4a3a;">Nicolas is a truly remarkable apprentice: attentive, engaged, and incredibly efficient in everything he takes on. His willingness to listen and his dedication inspire not only his classmates but all of us who accompany him on this path.</p>
-            <p style="margin: 0; color: #3a4a3a;">It is my sincere hope that his story will reach other people out there who are still searching for a professional home, a place where they are seen, valued, and supported for exactly who they are. Nicolas has opened a door, and I hope many others will walk through it after him.</p>
+          <div class="en" style="display: none;">
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">I am immensely proud that our site is the first to demonstrate the feasibility of our CFA programme alongside a disability. Nicolas's journey is the living proof that inclusion is not just a word on paper — it works, here and now.</p>
+            <p style="margin: 0px 0px 12px; color: rgb(58, 74, 58);">Nicolas is a truly remarkable apprentice: attentive, engaged, and incredibly efficient in everything he takes on. His willingness to listen and his dedication inspire not only his classmates but all of us who accompany him on this path.</p>
+            <p style="margin: 0px; color: rgb(58, 74, 58);">It is my sincere hope that his story will reach other people out there who are still searching for a professional home, a place where they are seen, valued, and supported for exactly who they are. Nicolas has opened a door, and I hope many others will walk through it after him.</p>
                     </div>
         </div>
       </div>
@@ -249,21 +759,21 @@
         <div class="stars-row">
           <span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span>
         </div>
-        <div style="font-size:12px;color:#9BB8D4;margin-top:6px;">Vous êtes l'avenir !</div>
+        <div style="font-size: 12px; color: rgb(155, 184, 212); margin-top: 6px;">Vous êtes l'avenir !</div>
       </div>
     </div>
   </div>
 
 <!-- PAGE LIL1 -->
   <div id="page-LIL1" class="page">
-    <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display:none;">← Back</span></button>
+    <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display: none;">← Back</span></button>
     <div class="site-page-title">📍 LIL1</div>
 
 <!-- === ENCART MAÎTRES D'APPRENTISSAGE LIL1 === -->
-<div style="background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%); border-radius: 16px; padding: 32px; margin: 32px 0; border: 1px solid #c2d6f2;">
+<div style="background: linear-gradient(135deg, rgb(240, 244, 255) 0%, rgb(232, 240, 254) 100%); border-radius: 16px; padding: 32px; margin: 32px 0px; border: 1px solid rgb(194, 214, 242);">
 
-  <h3 style="text-align: center; color: #1a3c6e; margin-bottom: 8px;"><span class="fr">🎓 Nos Maîtres d'Apprentissage — LIL1</span><span class="en" style="display:none;">🎓 Our Apprenticeship Mentors — LIL1</span></h3>
-  <p style="text-align: center; color: #5a6a7a; font-style: italic; margin-bottom: 24px;"><span class="fr">Celles et ceux qui accompagnent nos apprentis au quotidien</span><span class="en" style="display:none;">Those who support our apprentices on a daily basis</span></p>
+  <h3 style="text-align: center; color: rgb(26, 60, 110); margin-bottom: 8px;"><span class="fr">🎓 Nos Maîtres d'Apprentissage — LIL1</span><span class="en" style="display: none;">🎓 Our Apprenticeship Mentors — LIL1</span></h3>
+  <p style="text-align: center; color: rgb(90, 106, 122); font-style: italic; margin-bottom: 24px;"><span class="fr">Celles et ceux qui accompagnent nos apprentis au quotidien</span><span class="en" style="display: none;">Those who support our apprentices on a daily basis</span></p>
 
    <!-- Photos MA LIL1 -->
   <div style="display: flex; justify-content: center; gap: 48px; margin-bottom: 28px; flex-wrap: wrap;">
@@ -274,97 +784,97 @@
   <!-- Témoignages MA -->
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
 
-    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-      <strong style="color: #1a3c6e;">OUMIRA Hocine</strong>
-      <p style="margin: 8px 0 0; font-style: italic; color: #3a4a5a;"><span class="fr">"Fier d'être aux côtés de mon équipe CFA, une expérience enrichissante au quotidien"</span><span class="en" style="display:none;">"Proud to stand alongside my CFA team, an enriching experience every day"</span></p>
+    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
+      <strong style="color: rgb(26, 60, 110);">OUMIRA Hocine</strong>
+      <p style="margin: 8px 0px 0px; font-style: italic; color: rgb(58, 74, 90);"><span class="fr">"Fier d'être aux côtés de mon équipe CFA, une expérience enrichissante au quotidien"</span><span class="en" style="display: none;">"Proud to stand alongside my CFA team, an enriching experience every day"</span></p>
     </div>
 
-    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-      <strong style="color: #1a3c6e;">SLINKAERT Laurie</strong>
-      <p style="margin: 8px 0 0; font-style: italic; color: #3a4a5a;"><span class="fr">"Une expérience humaine incroyable"</span><span class="en" style="display:none;">"An incredible human experience"</span></p>
+    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
+      <strong style="color: rgb(26, 60, 110);">SLINKAERT Laurie</strong>
+      <p style="margin: 8px 0px 0px; font-style: italic; color: rgb(58, 74, 90);"><span class="fr">"Une expérience humaine incroyable"</span><span class="en" style="display: none;">"An incredible human experience"</span></p>
     </div>
 
-    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-      <strong style="color: #1a3c6e;">BOUCHENTOUF Sonia</strong>
-      <p style="margin: 8px 0 0; font-style: italic; color: #3a4a5a;"><span class="fr">"Faire partie du CFA a été une expérience enrichissante, me permettant d'accompagner et de conseiller les apprentis tout en partageant mon expérience"</span><span class="en" style="display:none;">"Being part of the CFA has been an enriching experience, allowing me to support and advise apprentices while sharing my own experience"</span></p>
+    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
+      <strong style="color: rgb(26, 60, 110);">BOUCHENTOUF Sonia</strong>
+      <p style="margin: 8px 0px 0px; font-style: italic; color: rgb(58, 74, 90);"><span class="fr">"Faire partie du CFA a été une expérience enrichissante, me permettant d'accompagner et de conseiller les apprentis tout en partageant mon expérience"</span><span class="en" style="display: none;">"Being part of the CFA has been an enriching experience, allowing me to support and advise apprentices while sharing my own experience"</span></p>
     </div>
 
-    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-      <strong style="color: #1a3c6e;">LEFEBVRE Laurence</strong>
-      <p style="margin: 8px 0 0; font-style: italic; color: #3a4a5a;"><span class="fr">"Une très belle aventure avec une équipe formidable, ravie de faire partie de ce groupe et d'accompagner, d'aider nos apprentis"</span><span class="en" style="display:none;">"A wonderful adventure with an amazing team, delighted to be part of this group and to support and help our apprentices"</span></p>
+    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
+      <strong style="color: rgb(26, 60, 110);">LEFEBVRE Laurence</strong>
+      <p style="margin: 8px 0px 0px; font-style: italic; color: rgb(58, 74, 90);"><span class="fr">"Une très belle aventure avec une équipe formidable, ravie de faire partie de ce groupe et d'accompagner, d'aider nos apprentis"</span><span class="en" style="display: none;">"A wonderful adventure with an amazing team, delighted to be part of this group and to support and help our apprentices"</span></p>
     </div>
 
-    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-      <strong style="color: #1a3c6e;">LANVIN Océane</strong>
-      <p style="margin: 8px 0 0; font-style: italic; color: #3a4a5a;"><span class="fr">"Accompagner, transmettre, faire grandir : l'aventure des Maîtres d'apprentissages"</span><span class="en" style="display:none;">"Supporting, passing on knowledge, helping grow: the apprenticeship mentors' adventure"</span></p>
+    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
+      <strong style="color: rgb(26, 60, 110);">LANVIN Océane</strong>
+      <p style="margin: 8px 0px 0px; font-style: italic; color: rgb(58, 74, 90);"><span class="fr">"Accompagner, transmettre, faire grandir : l'aventure des Maîtres d'apprentissages"</span><span class="en" style="display: none;">"Supporting, passing on knowledge, helping grow: the apprenticeship mentors' adventure"</span></p>
     </div>
 
-    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-      <strong style="color: #1a3c6e;">LEQUINT Pamela</strong>
-      <p style="margin: 8px 0 0; font-style: italic; color: #3a4a5a;"><span class="fr">"Expérience qui fait grandir, tant pour les apprentis que pour les maîtres d'apprentissage"</span><span class="en" style="display:none;">"An experience that helps everyone grow, both apprentices and mentors alike"</span></p>
+    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
+      <strong style="color: rgb(26, 60, 110);">LEQUINT Pamela</strong>
+      <p style="margin: 8px 0px 0px; font-style: italic; color: rgb(58, 74, 90);"><span class="fr">"Expérience qui fait grandir, tant pour les apprentis que pour les maîtres d'apprentissage"</span><span class="en" style="display: none;">"An experience that helps everyone grow, both apprentices and mentors alike"</span></p>
     </div>
 
-    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-      <strong style="color: #1a3c6e;">STEEMANS Emilie</strong>
-      <p style="margin: 8px 0 0; font-style: italic; color: #3a4a5a;"><span class="fr">"Une expérience extraordinaire qui change notre quotidien. En tant que maître d'apprentissage cela nous apprend à grandir"</span><span class="en" style="display:none;">"An extraordinary experience that changes our daily life. As an apprenticeship mentor, it teaches us to grow"</span></p>
+    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
+      <strong style="color: rgb(26, 60, 110);">STEEMANS Emilie</strong>
+      <p style="margin: 8px 0px 0px; font-style: italic; color: rgb(58, 74, 90);"><span class="fr">"Une expérience extraordinaire qui change notre quotidien. En tant que maître d'apprentissage cela nous apprend à grandir"</span><span class="en" style="display: none;">"An extraordinary experience that changes our daily life. As an apprenticeship mentor, it teaches us to grow"</span></p>
     </div>
 
-    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-      <strong style="color: #1a3c6e;">BOSQUET Etienne</strong>
-      <p style="margin: 8px 0 0; font-style: italic; color: #3a4a5a;"><span class="fr">"C'est en faisant grandir les autres que l'on grandit soi-même. C'est une très bonne expérience, enrichissante humainement et techniquement"</span><span class="en" style="display:none;">"It is by helping others grow that we grow ourselves. It's a great experience, enriching both humanly and technically"</span></p>
+    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
+      <strong style="color: rgb(26, 60, 110);">BOSQUET Etienne</strong>
+      <p style="margin: 8px 0px 0px; font-style: italic; color: rgb(58, 74, 90);"><span class="fr">"C'est en faisant grandir les autres que l'on grandit soi-même. C'est une très bonne expérience, enrichissante humainement et techniquement"</span><span class="en" style="display: none;">"It is by helping others grow that we grow ourselves. It's a great experience, enriching both humanly and technically"</span></p>
     </div>
 
-    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-      <strong style="color: #1a3c6e;">SOBIERAJSKI Stéphane</strong>
-      <p style="margin: 8px 0 0; font-style: italic; color: #3a4a5a;"><span class="fr">"Une expérience professionnelle et personnelle magnifique. J'espère continuer à partager notre savoir-faire. Merci pour cette belle aventure 😁"</span><span class="en" style="display:none;">"A magnificent professional and personal experience. I hope to continue sharing our expertise. Thank you for this wonderful adventure 😁"</span></p>
+    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
+      <strong style="color: rgb(26, 60, 110);">SOBIERAJSKI Stéphane</strong>
+      <p style="margin: 8px 0px 0px; font-style: italic; color: rgb(58, 74, 90);"><span class="fr">"Une expérience professionnelle et personnelle magnifique. J'espère continuer à partager notre savoir-faire. Merci pour cette belle aventure 😁"</span><span class="en" style="display: none;">"A magnificent professional and personal experience. I hope to continue sharing our expertise. Thank you for this wonderful adventure 😁"</span></p>
     </div>
 
-    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-      <strong style="color: #1a3c6e;">SEL Sarah</strong>
-      <p style="margin: 8px 0 0; font-style: italic; color: #3a4a5a;"><span class="fr">"Heureuse de faire partie de cette équipe! Une aventure qui permet de partager nos savoirs et d'aider. Expérience très enrichissante humainement et professionnellement"</span><span class="en" style="display:none;">"Happy to be part of this team! An adventure that allows us to share our knowledge and help. A very enriching experience both humanly and professionally"</span></p>
+    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;">
+      <strong style="color: rgb(26, 60, 110);">SEL Sarah</strong>
+      <p style="margin: 8px 0px 0px; font-style: italic; color: rgb(58, 74, 90);"><span class="fr">"Heureuse de faire partie de cette équipe! Une aventure qui permet de partager nos savoirs et d'aider. Expérience très enrichissante humainement et professionnellement"</span><span class="en" style="display: none;">"Happy to be part of this team! An adventure that allows us to share our knowledge and help. A very enriching experience both humanly and professionally"</span></p>
     </div>
 
   </div>
 </div>
 <!-- === FIN ENCART MA LIL1 === -->
 
-<div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display:none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
+<div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display: none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
     <div class="card apprenti">
       <div class="profile-row">
-        <img src="Photo Allison.jpg" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;" alt="Allison Cambien">
-        <div><div class="profile-name">Allison Cambier</div><div class="profile-detail"><span class="fr">Apprentie Préparatrice de Commandes · Session Octobre 2025</span><span class="en" style="display:none;">Warehouse Order Picker Apprentice · October 2025 Session</span></div></div>
+        <img src="Photo Allison.jpg" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;" alt="Allison Cambier">
+        <div><div class="profile-name">Allison Cambier</div><div class="profile-detail"><span class="fr">Apprentie Préparatrice de Commandes · Session Octobre 2025</span><span class="en" style="display: none;">Warehouse Order Picker Apprentice · October 2025 Session</span></div></div>
       </div>
       <div class="tags-row">
-        <span class="tag green"><span class="fr">✓ CDI obtenu</span><span class="en" style="display:none;">✓ Permanent contract</span></span>
-        <span class="tag green"><span class="fr">✓ Titre Pro décroché</span><span class="en" style="display:none;">✓ Professional Certificate obtained</span></span>
-        <span class="tag navy"><span class="fr">Associate Préparatrice de Commandes</span><span class="en" style="display:none;">Warehouse Order Picker Associate</span></span>
+        <span class="tag green"><span class="fr">✓ CDI obtenu</span><span class="en" style="display: none;">✓ Permanent contract</span></span>
+        <span class="tag green"><span class="fr">✓ Titre Pro décroché</span><span class="en" style="display: none;">✓ Professional Certificate obtained</span></span>
+        <span class="tag navy"><span class="fr">Associate Préparatrice de Commandes</span><span class="en" style="display: none;">Warehouse Order Picker Associate</span></span>
       </div>
       <div class="quote-box blue">
-        <p class="quote-text"><span class="fr">"Cette formation a été une expérience particulièrement enrichissante et marquante. Elle m'a permis d'acquérir de nouvelles compétences tout en renforçant mes connaissances."</span><span class="en" style="display:none;">"This training was a particularly enriching and memorable experience. It allowed me to acquire new skills while strengthening my existing knowledge."</span></p>
+        <p class="quote-text"><span class="fr">"Cette formation a été une expérience particulièrement enrichissante et marquante. Elle m'a permis d'acquérir de nouvelles compétences tout en renforçant mes connaissances."</span><span class="en" style="display: none;">"This training was a particularly enriching and memorable experience. It allowed me to acquire new skills while strengthening my existing knowledge."</span></p>
       </div>
       <div class="fr">
         <p class="story-text">Durant la formation nous avons été accompagnés de A à Z. Notre formatrice Amandine a vraiment été présente tout au long de la formation. Je recommande vivement de réaliser un contrat d'apprentissage chez Amazon. C'est une excellente opportunité pour acquérir une expérience professionnelle, développer de nouvelles compétences et évoluer dans un environnement dynamique. Cette expérience permet de découvrir le fonctionnement d'une grande entreprise tout en bénéficiant d'un accompagnement qui favorise l'apprentissage et le développement professionnel. Grâce à ce titre professionnel j'ai pu signer un CDI.</p>
         <p class="story-text" style="font-style: italic; margin-top: 12px;">En vous souhaitant une bonne réussite et une bonne continuation.</p>
       </div>
-      <div class="en" style="display:none;">
+      <div class="en" style="display: none;">
         <p class="story-text">Throughout the training we were supported from A to Z. Our trainer Amandine was truly present throughout the entire programme. I highly recommend taking on an apprenticeship contract at Amazon. It's an excellent opportunity to gain professional experience, develop new skills and grow in a dynamic environment. This experience allows you to discover how a large company operates while benefiting from support that fosters learning and professional development. Thanks to this professional certificate, I was able to sign a permanent contract.</p>
         <p class="story-text" style="font-style: italic; margin-top: 12px;">Wishing you great success and all the best for the future.</p>
       </div>
     </div>
-    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole de l'employeur</span><span class="en" style="display:none;">Employer's voice</span></div><div class="stbar-line"></div></div>
-    <div class="card employeur" style="text-align:center; padding:40px;">
-      <p style="font-size:2rem;">🎙️</p>
-      <p class="story-text" style="font-style:italic; color:#666;"><span class="fr">Témoignage en cours de collecte... Bientôt disponible !</span><span class="en" style="display:none;">Testimonial being collected... Coming soon!</span></p>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole de l'employeur</span><span class="en" style="display: none;">Employer's voice</span></div><div class="stbar-line"></div></div>
+    <div class="card employeur" style="text-align: center; padding: 40px;">
+      <p style="font-size: 2rem;">🎙️</p>
+      <p class="story-text" style="font-style: italic; color: rgb(102, 102, 102);"><span class="fr">Témoignage en cours de collecte... Bientôt disponible !</span><span class="en" style="display: none;">Testimonial being collected... Coming soon!</span></p>
     </div>
 
-    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole du CFA</span><span class="en" style="display:none;">CFA's voice</span></div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole du CFA</span><span class="en" style="display: none;">CFA's voice</span></div><div class="stbar-line"></div></div>
     <div class="card cfa">
       <div class="profile-row">
-       <img src="amandine.png" alt="Amandine" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
-        <div><div class="profile-name">Amandine Raout</div><div class="profile-detail"><span class="fr">Coordinatrice Pédagogique · CFA Amazon LIL1</span><span class="en" style="display:none;">Educational Coordinator · CFA Amazon LIL1</span></div></div>
+       <img src="amandine.png" alt="Amandine" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+        <div><div class="profile-name">Amandine Raout</div><div class="profile-detail"><span class="fr">Coordinatrice Pédagogique · CFA Amazon LIL1</span><span class="en" style="display: none;">Educational Coordinator · CFA Amazon LIL1</span></div></div>
       </div>
       <div class="quote-box blue">
-        <p class="quote-text"><span class="fr">"Accompagner Allison a été un vrai plaisir. Dès le premier jour, elle avait le bon mindset : sérieuse, impliquée, toujours volontaire. La voir décrocher son titre et intégrer l'équipe en CDI, c'est une immense fierté. C'est exactement pour ces réussites qu'on fait ce métier."</span><span class="en" style="display:none;">"Supporting Allison was a true pleasure. From day one, she had the right mindset: serious, committed, always willing. Seeing her obtain her certificate and join the team on a permanent contract is an immense source of pride. This is exactly why we do this job."</span></p>
+        <p class="quote-text"><span class="fr">"Accompagner Allison a été un vrai plaisir. Dès le premier jour, elle avait le bon mindset : sérieuse, impliquée, toujours volontaire. La voir décrocher son titre et intégrer l'équipe en CDI, c'est une immense fierté. C'est exactement pour ces réussites qu'on fait ce métier."</span><span class="en" style="display: none;">"Supporting Allison was a true pleasure. From day one, she had the right mindset: serious, committed, always willing. Seeing her obtain her certificate and join the team on a permanent contract is an immense source of pride. This is exactly why we do this job."</span></p>
       </div>
     </div>
   </div>
@@ -377,7 +887,7 @@
 <!-- BVA1 — Paroles de Maîtres d'Apprentissage -->
 <div class="section-title-bar">
   <div class="stbar-line"></div>
-  <div class="stbar-text"><span class="fr">🎓 Paroles de Maîtres d'Apprentissage</span><span class="en" style="display:none;">🎓 Apprenticeship Mentors' Words</span></div>
+  <div class="stbar-text"><span class="fr">🎓 Paroles de Maîtres d'Apprentissage</span><span class="en" style="display: none;">🎓 Apprenticeship Mentors' Words</span></div>
   <div class="stbar-line"></div>
 </div>
 
@@ -387,13 +897,13 @@
     <div class="avatar employeur">D</div>
     <div>
       <div class="profile-name">Delphine</div>
-      <div class="profile-detail"><span class="fr">Maître d'apprentissage · BVA1</span><span class="en" style="display:none;">Apprenticeship Mentor · BVA1</span></div>
+      <div class="profile-detail"><span class="fr">Maître d'apprentissage · BVA1</span><span class="en" style="display: none;">Apprenticeship Mentor · BVA1</span></div>
     </div>
   </div>
   <div class="quote-box orange">
     <p class="quote-text">
       <span class="fr">« En tant que maître d'apprentissage, j'ai aimé former et guider des apprentis en combinant pédagogie, la sagesse du geste juste et du conseil au moment opportun. Ainsi que les encouragements pour les aider à progresser et s'épanouir dans leur formation. Je recommencerais avec plaisir ! 😉 À bientôt ! »</span>
-      <span class="en" style="display:none;">"As an apprenticeship mentor, I loved training and guiding apprentices by combining pedagogy, the wisdom of the right gesture and advice at the right time. As well as encouragement to help them progress and thrive in their training. I would do it again with pleasure! 😉 See you soon!"</span>
+      <span class="en" style="display: none;">"As an apprenticeship mentor, I loved training and guiding apprentices by combining pedagogy, the wisdom of the right gesture and advice at the right time. As well as encouragement to help them progress and thrive in their training. I would do it again with pleasure! 😉 See you soon!"</span>
     </p>
   </div>
 </div>
@@ -404,13 +914,13 @@
     <div class="avatar employeur">SC</div>
     <div>
       <div class="profile-name">Stéphanie Capron</div>
-      <div class="profile-detail"><span class="fr">Maître d'apprentissage · BVA1</span><span class="en" style="display:none;">Apprenticeship Mentor · BVA1</span></div>
+      <div class="profile-detail"><span class="fr">Maître d'apprentissage · BVA1</span><span class="en" style="display: none;">Apprenticeship Mentor · BVA1</span></div>
     </div>
   </div>
   <div class="quote-box orange">
     <p class="quote-text">
       <span class="fr">« La plus grande satisfaction c'est de savoir que ces apprentis ont eu leur diplôme et qu'on y est un petit peu pour quelque chose. »</span>
-      <span class="en" style="display:none;">"The greatest satisfaction is knowing that these apprentices got their diploma and that we had a little something to do with it."</span>
+      <span class="en" style="display: none;">"The greatest satisfaction is knowing that these apprentices got their diploma and that we had a little something to do with it."</span>
     </p>
   </div>
 </div>
@@ -421,13 +931,13 @@
     <div class="avatar employeur">GT</div>
     <div>
       <div class="profile-name">Grégory Touverey</div>
-      <div class="profile-detail"><span class="fr">Maître d'apprentissage · BVA1</span><span class="en" style="display:none;">Apprenticeship Mentor · BVA1</span></div>
+      <div class="profile-detail"><span class="fr">Maître d'apprentissage · BVA1</span><span class="en" style="display: none;">Apprenticeship Mentor · BVA1</span></div>
     </div>
   </div>
   <div class="quote-box orange">
     <p class="quote-text">
       <span class="fr">« Si je devais décrire mon expérience en qualité de maître d'apprentissage je dirais : Enrichissant. Aider et accompagner les CFA, être disponible et leurs donner des conseils ont été un plaisir. Ma récompense sera toujours dans leurs yeux quand ils me croisent ou dans leurs mots lorsqu'ils me parlent. Je ne regrette pas mon expérience et je recommencerai l'aventure sans hésiter. Merci pour m'avoir accordé cette opportunité. »</span>
-      <span class="en" style="display:none;">"If I had to describe my experience as an apprenticeship mentor, I would say: Enriching. Helping and supporting the apprentices, being available and giving them advice was a pleasure. My reward will always be in their eyes when they see me or in their words when they speak to me. I do not regret my experience and I would start the adventure again without hesitation. Thank you for giving me this opportunity."</span>
+      <span class="en" style="display: none;">"If I had to describe my experience as an apprenticeship mentor, I would say: Enriching. Helping and supporting the apprentices, being available and giving them advice was a pleasure. My reward will always be in their eyes when they see me or in their words when they speak to me. I do not regret my experience and I would start the adventure again without hesitation. Thank you for giving me this opportunity."</span>
     </p>
   </div>
 </div>
@@ -438,13 +948,13 @@
     <div class="avatar employeur">CB</div>
     <div>
       <div class="profile-name">Chloé Bocquet</div>
-      <div class="profile-detail"><span class="fr">Maître d'apprentissage · BVA1</span><span class="en" style="display:none;">Apprenticeship Mentor · BVA1</span></div>
+      <div class="profile-detail"><span class="fr">Maître d'apprentissage · BVA1</span><span class="en" style="display: none;">Apprenticeship Mentor · BVA1</span></div>
     </div>
   </div>
   <div class="quote-box orange">
     <p class="quote-text">
       <span class="fr">« Accompagner Océanne a été une expérience enrichissante, remplie de bons moments, de progrès et de sourires. Je lui souhaite une très belle réussite pour la suite ! »</span>
-      <span class="en" style="display:none;">"Supporting Océanne was an enriching experience, filled with good moments, progress and smiles. I wish her great success for the future!"</span>
+      <span class="en" style="display: none;">"Supporting Océanne was an enriching experience, filled with good moments, progress and smiles. I wish her great success for the future!"</span>
     </p>
   </div>
 </div>
@@ -455,13 +965,13 @@
     <div class="avatar employeur">ND</div>
     <div>
       <div class="profile-name">Nadine Dilly</div>
-      <div class="profile-detail"><span class="fr">Maître d'apprentissage · BVA1</span><span class="en" style="display:none;">Apprenticeship Mentor · BVA1</span></div>
+      <div class="profile-detail"><span class="fr">Maître d'apprentissage · BVA1</span><span class="en" style="display: none;">Apprenticeship Mentor · BVA1</span></div>
     </div>
   </div>
   <div class="quote-box orange">
     <p class="quote-text">
       <span class="fr">« Une expérience unique, humaine. J'ai aimé voir mon apprenti prendre de l'assurance et s'épanouir dans son travail. »</span>
-      <span class="en" style="display:none;">"A unique, human experience. I loved seeing my apprentice gain confidence and thrive in their work."</span>
+      <span class="en" style="display: none;">"A unique, human experience. I loved seeing my apprentice gain confidence and thrive in their work."</span>
     </p>
   </div>
 </div>
@@ -470,75 +980,75 @@
 <!-- Pierrick — Responsable Campus BVA1 -->
 <div class="section-title-bar">
   <div class="stbar-line"></div>
-  <div class="stbar-text"><span class="fr">🏫 Mot du Responsable Campus</span><span class="en" style="display:none;">🏫 Campus Manager's Message</span></div>
+  <div class="stbar-text"><span class="fr">🏫 Mot du Responsable Campus</span><span class="en" style="display: none;">🏫 Campus Manager's Message</span></div>
   <div class="stbar-line"></div>
 </div>
 
-<div class="card cfa" style="border-top-color: #152B5E;">
+<div class="card cfa" style="border-top-color: rgb(21, 43, 94);">
   <div class="profile-row">
-    <img src="pierrick.png" alt="Pierrick" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
+    <img src="pierrick.png" alt="Pierrick" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
     <div>
       <div class="profile-name">Pierrick</div>
-      <div class="profile-detail"><span class="fr">Responsable Campus · BVA1</span><span class="en" style="display:none;">Campus Manager · BVA1</span></div>
+      <div class="profile-detail"><span class="fr">Responsable Campus · BVA1</span><span class="en" style="display: none;">Campus Manager · BVA1</span></div>
     </div>
   </div>
-  <div class="quote-box purple" style="border-left-color: #152B5E; background: #F0F3FA;">
+  <div class="quote-box purple" style="border-left-color: rgb(21, 43, 94); background: rgb(240, 243, 250);">
     <p class="quote-text">
       <span class="fr">« Former un apprenti, c'est voir grandir un futur collègue — et parfois devenir expert en réponses à des questions inattendues ! 😄 Le CFA, c'est un peu comme une boîte de chocolats : chaque apprenti est unique et apporte son lot de surprises. La meilleure récompense ? Voir nos apprentis gagner en confiance et en autonomie au fil des mois. Une aventure riche en échanges, en défis et en belles réussites. Je recommencerais sans hésiter ! »</span>
-      <span class="en" style="display:none;">"Training an apprentice is watching a future colleague grow — and sometimes becoming an expert at answering unexpected questions! 😄 The CFA is a bit like a box of chocolates: each apprentice is unique and brings their share of surprises. The best reward? Seeing our apprentices gain confidence and independence over the months. An adventure rich in exchanges, challenges and great achievements. I would do it again without hesitation!"</span>
+      <span class="en" style="display: none;">"Training an apprentice is watching a future colleague grow — and sometimes becoming an expert at answering unexpected questions! 😄 The CFA is a bit like a box of chocolates: each apprentice is unique and brings their share of surprises. The best reward? Seeing our apprentices gain confidence and independence over the months. An adventure rich in exchanges, challenges and great achievements. I would do it again without hesitation!"</span>
     </p>
   </div>
 </div>
 
-        <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display:none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
-    <div class="card apprenti" style="text-align:center; padding:40px;">
-      <p style="font-size:2rem;">🎓</p>
-      <p class="story-text" style="font-style:italic; color:#666;"><span class="fr">Témoignage en cours de collecte... Bientôt disponible !</span><span class="en" style="display:none;">Testimonial being collected... Coming soon!</span></p>
+        <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display: none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
+    <div class="card apprenti" style="text-align: center; padding: 40px;">
+      <p style="font-size: 2rem;">🎓</p>
+      <p class="story-text" style="font-style: italic; color: rgb(102, 102, 102);"><span class="fr">Témoignage en cours de collecte... Bientôt disponible !</span><span class="en" style="display: none;">Testimonial being collected... Coming soon!</span></p>
     </div>
 
-    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole de l'employeur</span><span class="en" style="display:none;">Employer's voice</span></div><div class="stbar-line"></div></div>
-    <div class="card employeur" style="text-align:center; padding:40px;">
-      <p style="font-size:2rem;">🎙️</p>
-      <p class="story-text" style="font-style:italic; color:#666;"><span class="fr">Témoignage en cours de collecte... Bientôt disponible !</span><span class="en" style="display:none;">Testimonial being collected... Coming soon!</span></p>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole de l'employeur</span><span class="en" style="display: none;">Employer's voice</span></div><div class="stbar-line"></div></div>
+    <div class="card employeur" style="text-align: center; padding: 40px;">
+      <p style="font-size: 2rem;">🎙️</p>
+      <p class="story-text" style="font-style: italic; color: rgb(102, 102, 102);"><span class="fr">Témoignage en cours de collecte... Bientôt disponible !</span><span class="en" style="display: none;">Testimonial being collected... Coming soon!</span></p>
     </div>
 
-    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole du CFA</span><span class="en" style="display:none;">CFA's voice</span></div><div class="stbar-line"></div></div>
-    <div class="card cfa" style="text-align:center; padding:40px;">
-      <p style="font-size:2rem;">📘</p>
-      <p class="story-text" style="font-style:italic; color:#666;"><span class="fr">Témoignage en cours de collecte... Bientôt disponible !</span><span class="en" style="display:none;">Testimonial being collected... Coming soon!</span></p>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole du CFA</span><span class="en" style="display: none;">CFA's voice</span></div><div class="stbar-line"></div></div>
+    <div class="card cfa" style="text-align: center; padding: 40px;">
+      <p style="font-size: 2rem;">📘</p>
+      <p class="story-text" style="font-style: italic; color: rgb(102, 102, 102);"><span class="fr">Témoignage en cours de collecte... Bientôt disponible !</span><span class="en" style="display: none;">Testimonial being collected... Coming soon!</span></p>
     </div>
   </div>
 
   
   <!-- PAGE ETZ2 -->
   <div id="page-ETZ2" class="page">
-    <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display:none;">← Back</span></button>
+    <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display: none;">← Back</span></button>
     <div class="site-page-title">📍 ETZ2</div>
-    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole des partenaires</span><span class="en" style="display:none;">Partner's voices</span></div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole des partenaires</span><span class="en" style="display: none;">Partner's voices</span></div><div class="stbar-line"></div></div>
     <div class="card partenaire">
       <div class="profile-row">
-        <img src="AFPA.jpeg" alt="Équipe AFPA Yutz-Thionville" class="profile-photo" style="width: 180px; height: auto; border-radius: 8px;" />
-        <div><div class="profile-name"><span class="fr">Équipe AFPA Yutz-Thionville</span><span class="en" style="display:none;">AFPA Yutz-Thionville Team</span></div><div class="profile-detail"><span class="fr">Partenaire formation · CFA Amazon ETZ2</span><span class="en" style="display:none;">Training Partner · CFA Amazon ETZ2</span></div></div>
+        <img src="AFPA.jpeg" alt="Équipe AFPA Yutz-Thionville" class="profile-photo" style="width: 180px; height: auto; border-radius: 8px;">
+        <div><div class="profile-name"><span class="fr">Équipe AFPA Yutz-Thionville</span><span class="en" style="display: none;">AFPA Yutz-Thionville Team</span></div><div class="profile-detail"><span class="fr">Partenaire formation · CFA Amazon ETZ2</span><span class="en" style="display: none;">Training Partner · CFA Amazon ETZ2</span></div></div>
       </div>
       <div class="quote-box blue">
         <div class="fr">
           <p>«&nbsp;Nous accompagnons avec plaisir les apprentis du CFA Amazon. Les échanges avec l'équipe pédagogique Amazon sont fluides et nous faisons ensemble le maximum pour garantir la réussite des apprentis et améliorer l'efficacité du dispositif. Avant chaque entrée, nous échangeons pour sécuriser le parcours de formation des apprenants. Nous apprécions tout autant le partenariat avec les trainers que la motivation et l'implication des apprentis du CFA Amazon.&nbsp;»</p>
         </div>
-        <div class="en" style="display:none;">
+        <div class="en" style="display: none;">
           <p>"We are delighted to support the apprentices of CFA Amazon. Communication with the Amazon teaching team is seamless, and together we do our utmost to ensure the apprentices' success and improve the programme's effectiveness. Before each intake, we exchange to secure the learners' training pathway. We equally value the partnership with the trainers and the motivation and commitment of the CFA Amazon apprentices."</p>
         </div>
       </div>
       <div class="photo-caption">
         <div class="fr">
           <p><strong>En photo :</strong></p>
-          <p>Bernard Gerlei, formateur Préparateur de commandes, TLE, TSMEL<br/>
-          Ludovic Fresneau, formateur Préparateur de commandes, magasinier, cariste d'entrepôt<br/>
+          <p>Bernard Gerlei, formateur Préparateur de commandes, TLE, TSMEL<br>
+          Ludovic Fresneau, formateur Préparateur de commandes, magasinier, cariste d'entrepôt<br>
           Sandra Baduel-Rotter, Responsable de formation</p>
         </div>
-        <div class="en" style="display:none;">
+        <div class="en" style="display: none;">
           <p><strong>In the photo:</strong></p>
-          <p>Bernard Gerlei, Warehouse Order Picker, TLE, TSMEL Trainer<br/>
-          Ludovic Fresneau, Warehouse Order Picker, Warehouse Operative, Forklift Operator Trainer<br/>
+          <p>Bernard Gerlei, Warehouse Order Picker, TLE, TSMEL Trainer<br>
+          Ludovic Fresneau, Warehouse Order Picker, Warehouse Operative, Forklift Operator Trainer<br>
           Sandra Baduel-Rotter, Training Manager</p>
         </div>
     </div>
@@ -549,17 +1059,17 @@
     <!-- Parole du partenaire — France Travail Montigny-lès-Metz -->
     <div class="card partenaire">
       <div class="profile-row">
-        <img src="francetravail.png" alt="France Travail Montigny-lès-Metz" class="profile-photo" style="width: 180px; height: auto; border-radius: 8px;" />
+        <img src="francetravail.png" alt="France Travail Montigny-lès-Metz" class="profile-photo" style="width: 180px; height: auto; border-radius: 8px;">
         <div>
-          <div class="profile-name"><span class="fr">Caroline PEVILLER</span><span class="en" style="display:none;">Caroline PEVILLER</span></div>
-          <div class="profile-detail"><span class="fr">Responsable d'équipe Entreprise · France Travail Montigny-lès-Metz</span><span class="en" style="display:none;">Enterprise Team Manager · France Travail Montigny-lès-Metz</span></div>
+          <div class="profile-name"><span class="fr">Caroline PEVILLER</span><span class="en" style="display: none;">Caroline PEVILLER</span></div>
+          <div class="profile-detail"><span class="fr">Responsable d'équipe Entreprise · France Travail Montigny-lès-Metz</span><span class="en" style="display: none;">Enterprise Team Manager · France Travail Montigny-lès-Metz</span></div>
         </div>
       </div>
       <div class="quote-box blue">
         <div class="fr">
           <p>«&nbsp;Quelle collaboration enrichissante avec le CFA Amazon et nos partenaires&nbsp;! Le sourcing des candidats a demandé un investissement important de la part de chacun, nous avons rencontré de nombreux demandeurs d'emploi motivés et pleinement engagés dans leur projet. Nous avons désormais hâte de les voir aller au bout de leur parcours et obtenir leur diplôme.&nbsp;»</p>
         </div>
-        <div class="en" style="display:none;">
+        <div class="en" style="display: none;">
           <p>"What an enriching collaboration with CFA Amazon and our partners! Sourcing candidates required a significant investment from everyone involved. We met many motivated jobseekers who were fully committed to their project. We now look forward to seeing them complete their journey and obtain their qualification."</p>
         </div>
       </div>
@@ -568,37 +1078,37 @@
 <!-- 🎓 Nos Maîtres d'Apprentissage — ETZ2 -->
 <div class="section-title-bar">
   <div class="stbar-line"></div>
-  <div class="stbar-text"><span class="fr">🎓 Nos Maîtres d'Apprentissage — ETZ2</span><span class="en" style="display:none;">🎓 Our Apprenticeship Mentors — ETZ2</span></div>
+  <div class="stbar-text"><span class="fr">🎓 Nos Maîtres d'Apprentissage — ETZ2</span><span class="en" style="display: none;">🎓 Our Apprenticeship Mentors — ETZ2</span></div>
   <div class="stbar-line"></div>
 </div>
-<p style="text-align:center; font-style:italic; color:#232F3E; font-size:1.05em; margin-top:0.3em; margin-bottom:1.2em;">
+<p style="text-align: center; font-style: italic; color: rgb(35, 47, 62); font-size: 1.05em; margin-top: 0.3em; margin-bottom: 1.2em;">
   <span class="fr">✨ Celles et ceux qui accompagnent nos apprentis au quotidien ✨</span>
-  <span class="en" style="display:none;">✨ Those who support our apprentices on a daily basis ✨</span>
+  <span class="en" style="display: none;">✨ Those who support our apprentices on a daily basis ✨</span>
 </p>
 
 
-<div class="card cfa" style="border-top-color: #F5A623; background: rgba(245, 166, 35, 0.06);">
+<div class="card cfa" style="border-top-color: rgb(245, 166, 35); background: rgba(245, 166, 35, 0.06);">
 
 
-  <p style="margin-bottom: 1.5em;"><strong>HUMBERT Lorraine</strong><br/>
+  <p style="margin-bottom: 1.5em;"><strong>HUMBERT Lorraine</strong><br>
     <span class="fr">« Être maitre d'apprentissage est une réelle opportunité pour rencontrer et accompagner de nouvelles personnes dans des conditions optimales et se sentir utile. Le fait de pouvoir avoir un suivi individuel est une vraie chance, pour se découvrir et s'adapter au mieux aux besoins de chacune des personnes que l'on suit. Je me suis rendue compte que la plupart du temps l'accompagnement était surtout centré sur le fait de donner confiance à l'apprenti en face de moi. Réussir à faire comprendre à quelqu'un qu'il a déjà toutes les cartes en main et qu'il doit juste se faire confiance, ça dépasse l'aspect professionnel et c'est humainement bien plus gratifiant. »</span>
-    <span class="en" style="display:none;">"Being an apprenticeship mentor is a real opportunity to meet and support new people in optimal conditions and feel useful. Being able to provide individual follow-up is a true chance, to discover oneself and adapt as best as possible to the needs of each person we support. I realised that most of the time, mentoring was mainly focused on giving confidence to the apprentice in front of me. Helping someone understand that they already have all the cards in hand and just need to trust themselves goes beyond the professional aspect and is humanly far more rewarding."</span>
+    <span class="en" style="display: none;">"Being an apprenticeship mentor is a real opportunity to meet and support new people in optimal conditions and feel useful. Being able to provide individual follow-up is a true chance, to discover oneself and adapt as best as possible to the needs of each person we support. I realised that most of the time, mentoring was mainly focused on giving confidence to the apprentice in front of me. Helping someone understand that they already have all the cards in hand and just need to trust themselves goes beyond the professional aspect and is humanly far more rewarding."</span>
   </p>
 
-  <p style="margin-bottom: 1.5em;"><strong>DAVID Chloé</strong><br/>
+  <p style="margin-bottom: 1.5em;"><strong>DAVID Chloé</strong><br>
     <span class="fr">« Ce qui me plaît dans le rôle de maître d'apprentissage, c'est de pouvoir accompagner une personne tout au long de son parcours chez Amazon jusqu'à l'obtention de son diplôme, en l'aidant du mieux possible. Je suis également fière de voir mes apprentis réussir leur examen. Pour moi, être un bon maître d'apprentissage, c'est être à l'écoute de son apprenti, comprendre ses besoins et savoir s'adapter afin de l'accompagner au mieux vers la réussite. »</span>
-    <span class="en" style="display:none;">"What I enjoy about the role of apprenticeship mentor is being able to support a person throughout their journey at Amazon until they obtain their qualification, helping them as best I can. I am also proud to see my apprentices pass their exam. For me, being a good apprenticeship mentor means listening to your apprentice, understanding their needs and knowing how to adapt in order to best guide them towards success."</span>
+    <span class="en" style="display: none;">"What I enjoy about the role of apprenticeship mentor is being able to support a person throughout their journey at Amazon until they obtain their qualification, helping them as best I can. I am also proud to see my apprentices pass their exam. For me, being a good apprenticeship mentor means listening to your apprentice, understanding their needs and knowing how to adapt in order to best guide them towards success."</span>
   </p>
 
-  <p style="margin-bottom: 1.5em;"><strong>D'AMICO Nadine</strong><br/>
+  <p style="margin-bottom: 1.5em;"><strong>D'AMICO Nadine</strong><br>
     <span class="fr">« Ce qui m'apporte d'être MA et de transmettre mes connaissances, aider et aussi la satisfaction de l'apprentie. Ce qui me plait c'est de les accompagner tout au long de leurs apprentissage. »</span>
-    <span class="en" style="display:none;">"What being an apprenticeship mentor brings me is transmitting my knowledge, helping, and also the apprentice's satisfaction. What I enjoy is supporting them throughout their apprenticeship."</span>
+    <span class="en" style="display: none;">"What being an apprenticeship mentor brings me is transmitting my knowledge, helping, and also the apprentice's satisfaction. What I enjoy is supporting them throughout their apprenticeship."</span>
   </p>
 
 
-  <p style="margin-bottom: 1.5em;"><strong>TELLEZ MEDINA Monica</strong><br/>
+  <p style="margin-bottom: 1.5em;"><strong>TELLEZ MEDINA Monica</strong><br>
     <span class="fr">« Je suis reconnaissant d'avoir eu l'opportunité de participer au programme CFA car j'ai acquis de nouvelles compétences et j'ai eu la chance de rencontrer des personnes incroyables que je peux maintenant appeler mes amis. »</span>
-    <span class="en" style="display:none;">"I am grateful to have had the opportunity to participate in the CFA programme because I acquired new skills and was lucky enough to meet incredible people that I can now call my friends."</span>
+    <span class="en" style="display: none;">"I am grateful to have had the opportunity to participate in the CFA programme because I acquired new skills and was lucky enough to meet incredible people that I can now call my friends."</span>
   </p>
 
 
@@ -607,35 +1117,35 @@
 <!-- 📣 Parole des Coordinateurs Pédagogiques — ETZ2 -->
 <div class="section-title-bar">
   <div class="stbar-line"></div>
-  <div class="stbar-text"><span class="fr">📣 Parole des Coordinateurs Pédagogiques — ETZ2</span><span class="en" style="display:none;">📣 Educational Coordinators' Voice — ETZ2</span></div>
+  <div class="stbar-text"><span class="fr">📣 Parole des Coordinateurs Pédagogiques — ETZ2</span><span class="en" style="display: none;">📣 Educational Coordinators' Voice — ETZ2</span></div>
   <div class="stbar-line"></div>
 </div>
 
 
-<div class="card cfa" style="border-top-color: #152B5E; background: rgba(21, 43, 94, 0.06);">
+<div class="card cfa" style="border-top-color: rgb(21, 43, 94); background: rgba(21, 43, 94, 0.06);">
 
   <div class="profile-row">
-   <img src="laetitia.png" alt="Laetitia Pernet" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
+   <img src="laetitia.png" alt="Laetitia Pernet" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
     <div>
-      <strong><span class="fr">Laetitia Pernet</span><span class="en" style="display:none;">Laetitia Pernet</span></strong><br/>
-      <span class="fr">Coordinatrice Pédagogique · CFA Amazon ETZ2</span><span class="en" style="display:none;">Educational Coordinator · CFA Amazon ETZ2</span>
+      <strong><span class="fr">Laetitia Pernet</span><span class="en" style="display: none;">Laetitia Pernet</span></strong><br>
+      <span class="fr">Coordinatrice Pédagogique · CFA Amazon ETZ2</span><span class="en" style="display: none;">Educational Coordinator · CFA Amazon ETZ2</span>
     </div>
   </div>
   <div class="profile-row">
-    <img src="ludovic.png" alt="Ludovic Rhim" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
+    <img src="ludovic.png" alt="Ludovic Rhim" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
     <div>
-      <strong><span class="fr">Ludovic Rhim</span><span class="en" style="display:none;">Ludovic Rhim</span></strong><br/>
-      <span class="fr">Coordinateur Pédagogique · CFA Amazon ETZ2</span><span class="en" style="display:none;">Educational Coordinator · CFA Amazon ETZ2</span>
+      <strong><span class="fr">Ludovic Rhim</span><span class="en" style="display: none;">Ludovic Rhim</span></strong><br>
+      <span class="fr">Coordinateur Pédagogique · CFA Amazon ETZ2</span><span class="en" style="display: none;">Educational Coordinator · CFA Amazon ETZ2</span>
     </div>
   </div>
   <blockquote>
-    <span class="fr">« Mon plus grand plaisir, c'est de vous voir monter en compétences jour après jour. De la première hésitation au premier réflexe maîtrisé, chaque progrès est une victoire — la vôtre, mais aussi un peu la mienne.<br/><br/>
-    Vous accompagner jusqu'à l'obtention de votre diplôme, c'est un chemin qu'on parcourt ensemble. Les doutes, les efforts, les révisions… tout ça prend sens le jour où vous tenez votre titre entre les mains.<br/><br/>
-    Et puis il y a ce moment où je vous vois réussir et intégrer le marché du travail, prêts, confiants, autonomes. C'est là que je me dis que tout en valait la peine.<br/><br/>
+    <span class="fr">« Mon plus grand plaisir, c'est de vous voir monter en compétences jour après jour. De la première hésitation au premier réflexe maîtrisé, chaque progrès est une victoire — la vôtre, mais aussi un peu la mienne.<br><br>
+    Vous accompagner jusqu'à l'obtention de votre diplôme, c'est un chemin qu'on parcourt ensemble. Les doutes, les efforts, les révisions… tout ça prend sens le jour où vous tenez votre titre entre les mains.<br><br>
+    Et puis il y a ce moment où je vous vois réussir et intégrer le marché du travail, prêts, confiants, autonomes. C'est là que je me dis que tout en valait la peine.<br><br>
     Bravo à chacune et chacun d'entre vous. Vous êtes la preuve que l'apprentissage ouvre des portes — et que vous avez su les pousser. »</span>
-    <span class="en" style="display:none;">"My greatest pleasure is seeing you grow in skills day after day. From the first hesitation to the first mastered reflex, every bit of progress is a victory — yours, but also a little bit mine.<br/><br/>
-    Supporting you until you obtain your qualification is a path we walk together. The doubts, the efforts, the revisions… all of it makes sense the day you hold your certificate in your hands.<br/><br/>
-    And then there is that moment when I see you succeed and enter the job market, ready, confident, autonomous. That's when I tell myself it was all worth it.<br/><br/>
+    <span class="en" style="display: none;">"My greatest pleasure is seeing you grow in skills day after day. From the first hesitation to the first mastered reflex, every bit of progress is a victory — yours, but also a little bit mine.<br><br>
+    Supporting you until you obtain your qualification is a path we walk together. The doubts, the efforts, the revisions… all of it makes sense the day you hold your certificate in your hands.<br><br>
+    And then there is that moment when I see you succeed and enter the job market, ready, confident, autonomous. That's when I tell myself it was all worth it.<br><br>
     Well done to each and every one of you. You are the proof that apprenticeship opens doors — and that you knew how to push them open."</span>
   </blockquote>
 </div>
@@ -644,28 +1154,28 @@
 <!-- Newsletter ETZ2 — Mot de la Directrice -->
 <div class="section-title-bar">
   <div class="stbar-line"></div>
-  <div class="stbar-text"><span class="fr">📰 Newsletter CFA — Mot de la Directrice</span><span class="en" style="display:none;">📰 CFA Newsletter — Director's Message</span></div>
+  <div class="stbar-text"><span class="fr">📰 Newsletter CFA — Mot de la Directrice</span><span class="en" style="display: none;">📰 CFA Newsletter — Director's Message</span></div>
   <div class="stbar-line"></div>
 </div>
 
-<div class="card cfa" style="border-top-color: #152B5E;">
+<div class="card cfa" style="border-top-color: rgb(21, 43, 94);">
   <div class="profile-row">
-    <img src="veronica.png" alt="Veronica Tucker" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
+    <img src="veronica.png" alt="Veronica Tucker" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
     <div>
       <div class="profile-name">Veronica Tucker</div>
-      <div class="profile-detail"><span class="fr">Directrice, CFA Amazon France</span><span class="en" style="display:none;">Director, CFA Amazon France</span></div>
+      <div class="profile-detail"><span class="fr">Directrice, CFA Amazon France</span><span class="en" style="display: none;">Director, CFA Amazon France</span></div>
     </div>
   </div>
 
   <div class="tags-row">
-    <span class="tag navy"><span class="fr">📰 Newsletter ETZ2</span><span class="en" style="display:none;">📰 Newsletter ETZ2</span></span>
-    <span class="tag green"><span class="fr">Résultats site</span><span class="en" style="display:none;">Site results</span></span>
+    <span class="tag navy"><span class="fr">📰 Newsletter ETZ2</span><span class="en" style="display: none;">📰 Newsletter ETZ2</span></span>
+    <span class="tag green"><span class="fr">Résultats site</span><span class="en" style="display: none;">Site results</span></span>
   </div>
 
-  <div class="quote-box purple" style="border-left-color: #152B5E; background: #F0F3FA;">
+  <div class="quote-box purple" style="border-left-color: rgb(21, 43, 94); background: rgb(240, 243, 250);">
     <p class="quote-text">
       <span class="fr">« Je suis extrêmement fière des résultats de notre CFA à ETZ2. »</span>
-      <span class="en" style="display:none;">"I am extremely proud of our CFA results at ETZ2."</span>
+      <span class="en" style="display: none;">"I am extremely proud of our CFA results at ETZ2."</span>
     </p>
   </div>
 
@@ -679,11 +1189,11 @@
       <br>
       <p>Cette approche est en parfaite cohérence avec notre convention Upskilling Pledge conclu avec France Travail en 2024. Ensemble, nous formons des personnes éloignées de l'emploi et des demandeurs d'emploi, en leur offrant une qualification concrète et valorisée. Amazon s'engage ainsi activement dans la montée en compétences de la communauté locale — un engagement qui dépasse les murs de nos sites.</p>
       <br>
-      <p>Je tiens à remercier chaleureusement l'ensemble de l'équipe CFA, nos maîtres d'apprentissage, ainsi que tous les stakeholders qui rendent ce programme possible : les Ops Managers, le L&D, le PXT, le Safety, le WFS, et bien d'autres encore. Sans votre implication et votre soutien au quotidien, ces résultats ne seraient pas possibles. C'est un véritable travail d'équipe, et chaque contribution compte.</p>
+      <p>Je tiens à remercier chaleureusement l'ensemble de l'équipe CFA, nos maîtres d'apprentissage, ainsi que tous les stakeholders qui rendent ce programme possible : les Ops Managers, le L&amp;D, le PXT, le Safety, le WFS, et bien d'autres encore. Sans votre implication et votre soutien au quotidien, ces résultats ne seraient pas possibles. C'est un véritable travail d'équipe, et chaque contribution compte.</p>
       <br>
       <p><strong>Veronica Tucker</strong><br>Directrice, CFA Amazon France</p>
     </div>
-    <div class="en" style="display:none;">
+    <div class="en" style="display: none;">
       <p>I am extremely proud of our CFA results at ETZ2. With a 94% success rate on the Professional Certificate and a 91.5% satisfaction rate, we demonstrate that our primary mission is fully accomplished: delivering a state-recognised certification to our apprentices.</p>
       <br>
       <p>This is at the very heart of our purpose. The CFA's role is above all to enable our apprentices to obtain the Professional Certificate — Warehouse Order Picker — a qualification registered in the RNCP, recognised across the entire job market. This certification makes our apprentices employable and offers them genuine professional mobility, whether at Amazon or elsewhere. It is a major asset, sought after by many companies in the logistics sector.</p>
@@ -692,7 +1202,7 @@
       <br>
       <p>This approach is fully aligned with our Upskilling Pledge agreement signed with France Travail in 2024. Together, we train people who are distant from employment and jobseekers, offering them a concrete and valued qualification. Amazon is thus actively committed to upskilling the local community — a commitment that goes beyond the walls of our sites.</p>
       <br>
-      <p>I would like to warmly thank the entire CFA team, our apprenticeship mentors, and all the stakeholders who make this programme possible: the Ops Managers, L&D, PXT, Safety, WFS, and many others. Without your involvement and daily support, these results would not be possible. It is a true team effort, and every contribution counts.</p>
+      <p>I would like to warmly thank the entire CFA team, our apprenticeship mentors, and all the stakeholders who make this programme possible: the Ops Managers, L&amp;D, PXT, Safety, WFS, and many others. Without your involvement and daily support, these results would not be possible. It is a true team effort, and every contribution counts.</p>
       <br>
       <p><strong>Veronica Tucker</strong><br>Director, CFA Amazon France</p>
     </div>
@@ -700,59 +1210,59 @@
 </div>
 
 <!-- Photos ETZ -->
-<div style="display:flex; gap:1em; justify-content:center; margin: 2em 0;">
-  <img src="ETZ.png" alt="ETZ" style="width:24%; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
-  <img src="ETZ2.png" alt="ETZ2" style="width:24%; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
-  <img src="ETZZ2.png" alt="ETZZ2" style="width:24%; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<div style="display: flex; gap: 1em; justify-content: center; margin: 2em 0px;">
+  <img src="ETZ.png" alt="ETZ" style="width: 24%; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;">
+  <img src="ETZ2.png" alt="ETZ2" style="width: 24%; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;">
+  <img src="ETZZ2.png" alt="ETZZ2" style="width: 24%; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;">
 </div>
 
 <!-- Bandeau Success Story -->
-<div style="background:#4a4a4a; color:#ffffff; text-align:center; padding:0.8em 1em; margin:2em 0; border-radius:6px; font-size:1.3em; font-weight:bold; letter-spacing:1px;">
+<div style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
   🌟 SUCCESS STORY 🌟
 </div>
 
-    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display:none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display: none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
     <div class="card apprenti">
       <div class="profile-row">
         <div class="placeholder-photo">👤</div>
-        <div><div class="profile-name"><span class="fr">Prénom Nom</span><span class="en" style="display:none;">First Name Last Name</span></div><div class="profile-detail"><span class="fr">Apprenti·e Préparateur·rice de Commandes · Promo 20XX–20XX</span><span class="en" style="display:none;">Warehouse Order Picker Apprentice · Class of 20XX–20XX</span></div></div>
+        <div><div class="profile-name"><span class="fr">Prénom Nom</span><span class="en" style="display: none;">First Name Last Name</span></div><div class="profile-detail"><span class="fr">Apprenti·e Préparateur·rice de Commandes · Promo 20XX–20XX</span><span class="en" style="display: none;">Warehouse Order Picker Apprentice · Class of 20XX–20XX</span></div></div>
       </div>
-      <div class="quote-box blue"><p class="placeholder-text"><span class="fr">Témoignage à venir...</span><span class="en" style="display:none;">Testimonial coming soon...</span></p></div>
+      <div class="quote-box blue"><p class="placeholder-text"><span class="fr">Témoignage à venir...</span><span class="en" style="display: none;">Testimonial coming soon...</span></p></div>
     </div>
 
-    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole de l'employeur</span><span class="en" style="display:none;">Employer's voice</span></div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole de l'employeur</span><span class="en" style="display: none;">Employer's voice</span></div><div class="stbar-line"></div></div>
     <div class="card employeur">
       <div class="profile-row">
         <div class="placeholder-photo">👤</div>
-        <div><div class="profile-name"><span class="fr">Prénom Nom</span><span class="en" style="display:none;">First Name Last Name</span></div><div class="profile-detail"><span class="fr">Manager / RH / Tuteur · Site ETZ2</span><span class="en" style="display:none;">Manager / HR / Tutor · Site ETZ2</span></div></div>
+        <div><div class="profile-name"><span class="fr">Prénom Nom</span><span class="en" style="display: none;">First Name Last Name</span></div><div class="profile-detail"><span class="fr">Manager / RH / Tuteur · Site ETZ2</span><span class="en" style="display: none;">Manager / HR / Tutor · Site ETZ2</span></div></div>
       </div>
-      <div class="quote-box orange"><p class="placeholder-text"><span class="fr">Témoignage à venir...</span><span class="en" style="display:none;">Testimonial coming soon...</span></p></div>
+      <div class="quote-box orange"><p class="placeholder-text"><span class="fr">Témoignage à venir...</span><span class="en" style="display: none;">Testimonial coming soon...</span></p></div>
     </div>
 
-    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole du CFA</span><span class="en" style="display:none;">CFA's voice</span></div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole du CFA</span><span class="en" style="display: none;">CFA's voice</span></div><div class="stbar-line"></div></div>
     <div class="card cfa">
       <div class="profile-row">
         <div class="placeholder-photo">👤</div>
-        <div><div class="profile-name"><span class="fr">Prénom Nom</span><span class="en" style="display:none;">First Name Last Name</span></div><div class="profile-detail"><span class="fr">Directrice / Responsable pédagogique · CFA Amazon</span><span class="en" style="display:none;">Director / Head of Education · CFA Amazon</span></div></div>
+        <div><div class="profile-name"><span class="fr">Prénom Nom</span><span class="en" style="display: none;">First Name Last Name</span></div><div class="profile-detail"><span class="fr">Directrice / Responsable pédagogique · CFA Amazon</span><span class="en" style="display: none;">Director / Head of Education · CFA Amazon</span></div></div>
       </div>
-      <div class="quote-box purple"><p class="placeholder-text"><span class="fr">Témoignage à venir...</span><span class="en" style="display:none;">Testimonial coming soon...</span></p></div>
+      <div class="quote-box purple"><p class="placeholder-text"><span class="fr">Témoignage à venir...</span><span class="en" style="display: none;">Testimonial coming soon...</span></p></div>
     </div>
   </div>
 
   <!-- PAGE ORY1 -->
   <div id="page-ORY1" class="page">
-    <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display:none;">← Back</span></button>
+    <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display: none;">← Back</span></button>
     <div class="site-page-title">📍 ORY1</div>
 
-    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display:none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display: none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
        <div class="card apprenti">
       <div class="profile-row">
-        <img src="Photo Jackeline.jpg" alt="Jackline - ORY1" style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
-        <div><div class="profile-name">Nazziwa Jackline</div><div class="profile-detail"><span class="fr">Ancienne Apprentie Préparatrice de Commandes en Entrepôt · Promo 2025 - En CDI à ORY1 !</span><span class="en" style="display:none;">Former Warehouse Order Picker Apprentice · Class of 2025 - Now on permanent contract at ORY1!</span></div></div>
+        <img src="Photo Jackeline.jpg" alt="Jackeline - ORY1" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+        <div><div class="profile-name">Nazziwa Jackeline</div><div class="profile-detail"><span class="fr">Ancienne Apprentie Préparatrice de Commandes en Entrepôt · Promo 2025 - En CDI à ORY1 !</span><span class="en" style="display: none;">Former Warehouse Order Picker Apprentice · Class of 2025 - Now on permanent contract at ORY1!</span></div></div>
       </div>
       <div class="quote-box blue">
         <div class="fr">
-          <p>Je m'appelle Jackline et mon histoire avec Amazon a commencé bien avant que je devienne salariée de l'entreprise. En 2024, je me suis présentée chez Amazon avec mon fils dans sa poussette. J'étais une maman célibataire à la recherche d'une opportunité et d'un meilleur avenir pour nous deux. Je ne savais pas par où commencer et ce jour-là, je suis simplement repartie sans avoir pu entrer. Mais je n'ai pas abandonné.</p>
+          <p>Je m'appelle Jackeline et mon histoire avec Amazon a commencé bien avant que je devienne salariée de l'entreprise. En 2024, je me suis présentée chez Amazon avec mon fils dans sa poussette. J'étais une maman célibataire à la recherche d'une opportunité et d'un meilleur avenir pour nous deux. Je ne savais pas par où commencer et ce jour-là, je suis simplement repartie sans avoir pu entrer. Mais je n'ai pas abandonné.</p>
           <p>Quelques temps plus tard, j'ai postulé en ligne et j'ai obtenu un poste de nuit. Mon fils n'avait alors que 8 mois. J'ai dû le confier à une assistante maternelle, ce qui a été l'une des décisions les plus difficiles que j'aie eu à prendre. Malheureusement, après seulement trois jours, mon contrat a pris fin. Je me souviens être rentrée chez moi déçue et en larmes.</p>
           <p>Pourtant, malgré cette expérience, quelque chose me disait que ma place était chez Amazon. J'ai postulé une fois, puis deux fois, puis trois fois sans succès. J'aurais pu abandonner, mais j'ai conservé mon énergie pour persévérer jusqu'à ce qu'une opportunité finisse par se présenter.</p>
           <p>Cette opportunité est arrivée lorsque j'ai intégré le tout nouveau CFA d'Amazon. J'aimais l'environnement, l'énergie et les possibilités que je voyais dans cette entreprise. J'ai poursuivi mon parcours en suivant une formation ADVF (Assistante de vie aux familles). Cette expérience m'a beaucoup apporté, mais je ne me sentais pas réellement à ma place. Alors j'ai décidé de retenter ma chance chez Amazon.</p>
@@ -762,8 +1272,8 @@
           <p>Si mon histoire peut inspirer quelqu'un, j'aimerais qu'elle montre qu'un refus n'est pas une fin. Parfois, la réussite arrive après plusieurs tentatives, grâce à la persévérance, à la patience et à la confiance en soi. Chaque étape de ce parcours, je l'ai accomplie en pensant à mon fils. Il a été ma motivation pour continuer à avancer, même dans les moments difficiles.</p>
           <p><strong>Si une jeune maman célibataire avec une poussette et un rêve a pu continuer malgré les obstacles, alors d'autres peuvent le faire aussi. Merci.</strong></p>
         </div>
-        <div class="en" style="display:none;">
-          <p>My name is Jackline and my story with Amazon began long before I became an employee. In 2024, I showed up at Amazon with my son in his pushchair. I was a single mother looking for an opportunity and a better future for both of us. I didn't know where to start, and that day I simply left without being able to get in. But I didn't give up.</p>
+        <div class="en" style="display: none;">
+          <p>My name is Jackeline and my story with Amazon began long before I became an employee. In 2024, I showed up at Amazon with my son in his pushchair. I was a single mother looking for an opportunity and a better future for both of us. I didn't know where to start, and that day I simply left without being able to get in. But I didn't give up.</p>
           <p>Some time later, I applied online and got a night shift position. My son was only 8 months old. I had to leave him with a childminder, which was one of the hardest decisions I ever had to make. Unfortunately, after only three days, my contract ended. I remember coming home disappointed and in tears.</p>
           <p>Yet, despite this experience, something told me that my place was at Amazon. I applied once, then twice, then three times without success. I could have given up, but I kept my energy to persevere until an opportunity finally came along.</p>
           <p>That opportunity came when I joined Amazon's brand new CFA. I loved the environment, the energy and the possibilities I could see in this company. I continued my journey by doing an ADVF training (Family Life Assistant). This experience gave me a lot, but I didn't really feel in my place. So I decided to try my luck at Amazon again.</p>
@@ -777,7 +1287,7 @@
     </div>
     <div class="section-title-bar">
       <div class="stbar-line"></div>
-      <div class="stbar-text"><span class="fr">💼 Parole du Manager</span><span class="en" style="display:none;">💼 Manager's Words</span></div>
+      <div class="stbar-text"><span class="fr">💼 Parole du Manager</span><span class="en" style="display: none;">💼 Manager's Words</span></div>
       <div class="stbar-line"></div>
     </div>
 
@@ -786,17 +1296,17 @@
         <div class="avatar employeur">YZ</div>
         <div>
           <div class="profile-name">Yousra Zhar</div>
-          <div class="profile-detail"><span class="fr">Manager · Maître d'apprentissage · ORY1</span><span class="en" style="display:none;">Manager · Apprenticeship Mentor · ORY1</span></div>
+          <div class="profile-detail"><span class="fr">Manager · Maître d'apprentissage · ORY1</span><span class="en" style="display: none;">Manager · Apprenticeship Mentor · ORY1</span></div>
         </div>
       </div>
       <div class="tags-row">
-        <span class="tag orange"><span class="fr">Maître d'apprentissage</span><span class="en" style="display:none;">Apprenticeship Mentor</span></span>
-        <span class="tag green"><span class="fr">✓ Embauche CDI</span><span class="en" style="display:none;">✓ Permanent contract</span></span>
+        <span class="tag orange"><span class="fr">Maître d'apprentissage</span><span class="en" style="display: none;">Apprenticeship Mentor</span></span>
+        <span class="tag green"><span class="fr">✓ Embauche CDI</span><span class="en" style="display: none;">✓ Permanent contract</span></span>
       </div>
       <div class="quote-box orange">
         <p class="quote-text">
           <span class="fr">« Jackeline a rejoint Amazon une première fois en tant qu'apprentie dans le cadre de son parcours avec le CFA. Dès ses premiers jours, elle s'est distinguée par sa motivation, sa curiosité et sa volonté d'apprendre. »</span>
-          <span class="en" style="display:none;">"Jackeline first joined Amazon as an apprentice as part of her journey with the CFA. From her very first days, she stood out through her motivation, curiosity and willingness to learn."</span>
+          <span class="en" style="display: none;">"Jackeline first joined Amazon as an apprentice as part of her journey with the CFA. From her very first days, she stood out through her motivation, curiosity and willingness to learn."</span>
         </p>
       </div>
       <div class="story-text" style="margin-top: 1rem;">
@@ -809,7 +1319,7 @@
           <br>
           <p>Accompagner des apprentis comme Jackeline et les voir évoluer est une véritable fierté. Son parcours montre que l'alternance est bien plus qu'une expérience de formation : c'est un tremplin vers l'avenir.</p>
         </div>
-        <div class="en" style="display:none;">
+        <div class="en" style="display: none;">
           <p>Jackeline first joined Amazon as an apprentice as part of her journey with the CFA. From her very first days, she stood out through her motivation, curiosity and willingness to learn.</p>
           <br>
           <p>Throughout her apprenticeship, she demonstrated great rigour, constant commitment and a remarkable ability to progress. Thanks to her dedication and professionalism, she rose to the challenges entrusted to her and fully integrated into our team.</p>
@@ -821,45 +1331,45 @@
       </div>
       <div class="outcome-row green" style="margin-top: 1rem;">
         <span style="font-size: 20px;">🎉</span>
-        <span class="outcome-text green"><span class="fr">Issue : embauche en CDI chez Amazon</span><span class="en" style="display:none;">Outcome: permanent contract at Amazon</span></span>
+        <span class="outcome-text green"><span class="fr">Issue : embauche en CDI chez Amazon</span><span class="en" style="display: none;">Outcome: permanent contract at Amazon</span></span>
       </div>
        </div>
-    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole du CFA</span><span class="en" style="display:none;">CFA's voice</span></div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole du CFA</span><span class="en" style="display: none;">CFA's voice</span></div><div class="stbar-line"></div></div>
     <div class="card cfa">
       <div class="profile-row">
         <div class="avatar cfa">JB</div>
-        <div><div class="profile-name">Jordan Boulet</div><div class="profile-detail"><span class="fr">Coordinateur Pédagogique · CFA Amazon ORY1</span><span class="en" style="display:none;">Educational Coordinator · CFA Amazon ORY1</span></div></div>
+        <div><div class="profile-name">Jordan Boulet</div><div class="profile-detail"><span class="fr">Coordinateur Pédagogique · CFA Amazon ORY1</span><span class="en" style="display: none;">Educational Coordinator · CFA Amazon ORY1</span></div></div>
       </div>
       <div class="quote-box blue">
         <div class="fr">
-          <p>Durant l'été 2024, j'occupais le poste de coordinateur de formation pour l'entreprise Amazon. Parmi les nombreuses personnes que j'ai accompagnées durant mon parcours, j'ai pu faire la connaissance de Jackline qui venait de rejoindre l'entreprise pour suivre ses premiers jours de formation sur la tâche du picking.</p>
-          <p>J'ai tout de suite vu que Jackline était une personne déterminée et impliquée mais malheureusement, sa formation n'a pas abouti car Jackline avait besoin de plus de temps pour se familiariser avec la complexité des outils d'Amazon.</p>
-          <p>1 an plus tard, j'ai occupé le poste de coordinateur pédagogique pour l'école Amazon. J'ai eu la surprise d'accueillir de nouveau Jackline dans cette première promotion d'apprentissage pour Amazon. J'ai tout de suite compris que Jackline était parfaitement à sa place dans ce programme. Cette formation était pour elle l'opportunité d'avoir le temps et la pédagogie pour apprendre les tâches complexes d'Amazon.</p>
-          <p>Dans les débuts de sa formation, j'ai tout de suite ressenti les difficultés auxquelles Jackline faisait face. La barrière de la langue étant la principale cause pour réussir à surmonter les nombreux défis auxquels elle faisait face. Et pourtant, malgré les difficultés, j'ai aussi vu la détermination, la motivation et l'implication sans faille de Jackline. Elle avait besoin de temps, et d'accompagnement, mais une fois l'autonomie acquise, Jackline devenait particulièrement compétente sur les différentes tâches qui lui étaient attribuées.</p>
-          <p>Après 6 mois en formation dans l'école, un CDI a été proposé à Jackline suite à son engagement sans faille.</p>
-          <p>Quelle satisfaction cela a été pour moi… Voir une personne comme Jackline qui n'a pas pu rejoindre Amazon dans un premier temps, puis qui a eu de nombreux défis à relever durant son apprentissage, finir avec un CDI et les félicitations de toute l'équipe !</p>
-          <p>Le métier de coordinateur pour le CFA n'est pas toujours facile, et par moment nous avons du mal à percevoir les fruits de notre travail mais des parcours comme celui de Jackline nous rappellent à quel point nous pouvons aider des personnes à se former et trouver un emploi stable.</p>
-          <p><strong>Toutes mes félicitations Jackline ! J'ai le sentiment que cet exploit de ta part n'est qu'un premier pas chez Amazon et que de nombreux autres pas t'attendent encore.</strong></p>
+          <p>Durant l'été 2024, j'occupais le poste de coordinateur de formation pour l'entreprise Amazon. Parmi les nombreuses personnes que j'ai accompagnées durant mon parcours, j'ai pu faire la connaissance de Jackeline qui venait de rejoindre l'entreprise pour suivre ses premiers jours de formation sur la tâche du picking.</p>
+          <p>J'ai tout de suite vu que Jackeline était une personne déterminée et impliquée mais malheureusement, sa formation n'a pas abouti car Jackeline avait besoin de plus de temps pour se familiariser avec la complexité des outils d'Amazon.</p>
+          <p>1 an plus tard, j'ai occupé le poste de coordinateur pédagogique pour l'école Amazon. J'ai eu la surprise d'accueillir de nouveau Jackeline dans cette première promotion d'apprentissage pour Amazon. J'ai tout de suite compris que Jackeline était parfaitement à sa place dans ce programme. Cette formation était pour elle l'opportunité d'avoir le temps et la pédagogie pour apprendre les tâches complexes d'Amazon.</p>
+          <p>Dans les débuts de sa formation, j'ai tout de suite ressenti les difficultés auxquelles Jackeline faisait face. La barrière de la langue étant la principale cause pour réussir à surmonter les nombreux défis auxquels elle faisait face. Et pourtant, malgré les difficultés, j'ai aussi vu la détermination, la motivation et l'implication sans faille de Jackeline. Elle avait besoin de temps, et d'accompagnement, mais une fois l'autonomie acquise, Jackeline devenait particulièrement compétente sur les différentes tâches qui lui étaient attribuées.</p>
+          <p>Après 6 mois en formation dans l'école, un CDI a été proposé à Jackeline suite à son engagement sans faille.</p>
+          <p>Quelle satisfaction cela a été pour moi… Voir une personne comme Jackeline qui n'a pas pu rejoindre Amazon dans un premier temps, puis qui a eu de nombreux défis à relever durant son apprentissage, finir avec un CDI et les félicitations de toute l'équipe !</p>
+          <p>Le métier de coordinateur pour le CFA n'est pas toujours facile, et par moment nous avons du mal à percevoir les fruits de notre travail mais des parcours comme celui de Jackeline nous rappellent à quel point nous pouvons aider des personnes à se former et trouver un emploi stable.</p>
+          <p><strong>Toutes mes félicitations Jackeline ! J'ai le sentiment que cet exploit de ta part n'est qu'un premier pas chez Amazon et que de nombreux autres pas t'attendent encore.</strong></p>
         </div>
-        <div class="en" style="display:none;">
-          <p>During the summer of 2024, I held the position of training coordinator for Amazon. Among the many people I supported during my career, I had the opportunity to meet Jackline who had just joined the company to follow her first days of training on the picking task.</p>
-          <p>I immediately saw that Jackline was a determined and committed person, but unfortunately her training did not lead to success as Jackline needed more time to familiarise herself with the complexity of Amazon's tools.</p>
-          <p>One year later, I took on the role of educational coordinator for the Amazon school. I was surprised to welcome Jackline once again into this first apprenticeship promotion for Amazon. I immediately understood that Jackline was perfectly suited for this programme. This training was her opportunity to have the time and pedagogical support to learn Amazon's complex tasks.</p>
-          <p>In the early stages of her training, I immediately sensed the difficulties Jackline was facing. The language barrier was the main cause in overcoming the many challenges she faced. And yet, despite the difficulties, I also saw Jackline's unwavering determination, motivation and commitment. She needed time and support, but once she gained autonomy, Jackline became particularly competent on the various tasks assigned to her.</p>
-          <p>After 6 months of training in the school, a permanent contract was offered to Jackline following her unwavering commitment.</p>
-          <p>What satisfaction that was for me… To see someone like Jackline who was unable to join Amazon at first, then who had many challenges to overcome during her apprenticeship, end up with a permanent contract and congratulations from the entire team!</p>
-          <p>The job of coordinator for the CFA is not always easy, and at times we struggle to see the fruits of our labour, but journeys like Jackline's remind us how much we can help people to train and find stable employment.</p>
-          <p><strong>Congratulations Jackline! I have the feeling that this achievement of yours is only a first step at Amazon and that many more steps await you.</strong></p>
+        <div class="en" style="display: none;">
+          <p>During the summer of 2024, I held the position of training coordinator for Amazon. Among the many people I supported during my career, I had the opportunity to meet Jackeline who had just joined the company to follow her first days of training on the picking task.</p>
+          <p>I immediately saw that Jackeline was a determined and committed person, but unfortunately her training did not lead to success as Jackeline needed more time to familiarise herself with the complexity of Amazon's tools.</p>
+          <p>One year later, I took on the role of educational coordinator for the Amazon school. I was surprised to welcome Jackeline once again into this first apprenticeship promotion for Amazon. I immediately understood that Jackeline was perfectly suited for this programme. This training was her opportunity to have the time and pedagogical support to learn Amazon's complex tasks.</p>
+          <p>In the early stages of her training, I immediately sensed the difficulties Jackeline was facing. The language barrier was the main cause in overcoming the many challenges she faced. And yet, despite the difficulties, I also saw Jackeline's unwavering determination, motivation and commitment. She needed time and support, but once she gained autonomy, Jackeline became particularly competent on the various tasks assigned to her.</p>
+          <p>After 6 months of training in the school, a permanent contract was offered to Jackeline following her unwavering commitment.</p>
+          <p>What satisfaction that was for me… To see someone like Jackeline who was unable to join Amazon at first, then who had many challenges to overcome during her apprenticeship, end up with a permanent contract and congratulations from the entire team!</p>
+          <p>The job of coordinator for the CFA is not always easy, and at times we struggle to see the fruits of our labour, but journeys like Jackeline's remind us how much we can help people to train and find stable employment.</p>
+          <p><strong>Congratulations Jackeline! I have the feeling that this achievement of yours is only a first step at Amazon and that many more steps await you.</strong></p>
         </div>
       </div>
 	</div>
 <!-- Bandeau Success Story -->
-<div style="background:#4a4a4a; color:#ffffff; text-align:center; padding:0.8em 1em; margin:2em 0; border-radius:6px; font-size:1.3em; font-weight:bold; letter-spacing:1px;">
+<div style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
   🌟 SUCCESS STORY 🌟
 </div>
-    <div class="card" style="text-align:center; padding:20px;">
-      <img src="Photo Jackeline.jpg" alt="Jackline et l'équipe ORY1" style="width:100%; max-width:600px; border-radius:8px;">
-      <p style="margin-top:10px; font-style:italic; color:#555;"><span class="fr">Jackline et l'équipe ORY1 🎉</span><span class="en" style="display:none;">Jackline and the ORY1 team 🎉</span></p>
+    <div class="card" style="text-align: center; padding: 20px;">
+      <img src="Photo Jackeline.jpg" alt="Jackeline et l'équipe ORY1" style="width: 100%; max-width: 600px; border-radius: 8px;">
+      <p style="margin-top: 10px; font-style: italic; color: rgb(85, 85, 85);"><span class="fr">Jackeline et l'équipe ORY1 🎉</span><span class="en" style="display: none;">Jackeline and the ORY1 team 🎉</span></p>
     </div>
   </div>
 
@@ -870,27 +1380,27 @@
 <!-- ORY4 — Paroles des Coordinateurs de Formation -->
 <div class="section-title-bar">
   <div class="stbar-line"></div>
-  <div class="stbar-text"><span class="fr">🎓 Paroles des Coordinateurs de Formation</span><span class="en" style="display:none;">🎓 Training Coordinators' Words</span></div>
+  <div class="stbar-text"><span class="fr">🎓 Paroles des Coordinateurs de Formation</span><span class="en" style="display: none;">🎓 Training Coordinators' Words</span></div>
   <div class="stbar-line"></div>
 </div>
 
 <!-- Astrid -->
 <div class="card cfa">
   <div class="profile-row">
-   <img src="astrid.png" alt="Astrid" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
+   <img src="astrid.png" alt="Astrid" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
     <div>
       <div class="profile-name">Astrid</div>
-      <div class="profile-detail"><span class="fr">Coordinatrice de Formation · ORY4</span><span class="en" style="display:none;">Training Coordinator · ORY4</span></div>
+      <div class="profile-detail"><span class="fr">Coordinatrice de Formation · ORY4</span><span class="en" style="display: none;">Training Coordinator · ORY4</span></div>
     </div>
   </div>
   <div class="tags-row">
-    <span class="tag purple"><span class="fr">Coordination pédagogique</span><span class="en" style="display:none;">Training coordination</span></span>
-    <span class="tag green"><span class="fr">Accompagnement</span><span class="en" style="display:none;">Mentoring</span></span>
+    <span class="tag purple"><span class="fr">Coordination pédagogique</span><span class="en" style="display: none;">Training coordination</span></span>
+    <span class="tag green"><span class="fr">Accompagnement</span><span class="en" style="display: none;">Mentoring</span></span>
   </div>
   <div class="quote-box purple">
     <p class="quote-text">
       <span class="fr">« Chaque promotion est une nouvelle aventure humaine. Ce qui me porte au quotidien, c'est ce moment précis où un apprenti réalise qu'il est capable — capable de réussir un examen qu'il pensait hors de portée, capable d'occuper un poste qu'il n'osait pas imaginer. Nous ne formons pas seulement des préparateurs de commandes : nous révélons des potentiels. Et quand je vois nos apprentis recevoir leur titre professionnel, je sais que chaque heure investie, chaque doute surmonté ensemble, valait infiniment la peine. »</span>
-      <span class="en" style="display:none;">"Each new cohort is a new human adventure. What drives me every day is that precise moment when an apprentice realises they are capable — capable of passing an exam they thought was out of reach, capable of holding a position they didn't dare imagine. We don't just train warehouse order pickers: we reveal potential. And when I see our apprentices receive their professional certificate, I know that every hour invested, every doubt overcome together, was infinitely worth it."</span>
+      <span class="en" style="display: none;">"Each new cohort is a new human adventure. What drives me every day is that precise moment when an apprentice realises they are capable — capable of passing an exam they thought was out of reach, capable of holding a position they didn't dare imagine. We don't just train warehouse order pickers: we reveal potential. And when I see our apprentices receive their professional certificate, I know that every hour invested, every doubt overcome together, was infinitely worth it."</span>
     </p>
   </div>
 </div>
@@ -898,25 +1408,25 @@
 <!-- M'Paly -->
 <div class="card cfa">
   <div class="profile-row">
-    <img src="mpaly.png" alt="mpaly" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
+    <img src="mpaly.png" alt="mpaly" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
     <div>
       <div class="profile-name">M'Paly</div>
-      <div class="profile-detail"><span class="fr">Coordinateur de Formation · ORY4</span><span class="en" style="display:none;">Training Coordinator · ORY4</span></div>
+      <div class="profile-detail"><span class="fr">Coordinateur de Formation · ORY4</span><span class="en" style="display: none;">Training Coordinator · ORY4</span></div>
     </div>
   </div>
   <div class="tags-row">
-    <span class="tag purple"><span class="fr">Coordination pédagogique</span><span class="en" style="display:none;">Training coordination</span></span>
-    <span class="tag green"><span class="fr">Transformation</span><span class="en" style="display:none;">Transformation</span></span>
+    <span class="tag purple"><span class="fr">Coordination pédagogique</span><span class="en" style="display: none;">Training coordination</span></span>
+    <span class="tag green"><span class="fr">Transformation</span><span class="en" style="display: none;">Transformation</span></span>
   </div>
   <div class="quote-box purple">
     <p class="quote-text">
       <span class="fr">« Le CFA, c'est bien plus qu'un centre de formation — c'est un tremplin de vie. Beaucoup de nos apprentis arrivent avec des parcours cabossés, des doutes, parfois la conviction que le système n'est pas fait pour eux. Mon rôle, c'est de leur prouver le contraire. Les voir évoluer semaine après semaine, gagner en rigueur, en confiance, en fierté… c'est la plus belle récompense. À ORY4, on ne forme pas des numéros : on accompagne des personnes. Et quand l'un d'eux me dit "grâce au CFA, j'ai enfin un diplôme", je sais pourquoi je fais ce métier. »</span>
-      <span class="en" style="display:none;">"The CFA is much more than a training centre — it's a springboard for life. Many of our apprentices arrive with bumpy paths, doubts, sometimes the conviction that the system isn't made for them. My role is to prove them wrong. Watching them grow week after week, gaining rigour, confidence, pride… that's the greatest reward. At ORY4, we don't train numbers: we support people. And when one of them tells me 'thanks to the CFA, I finally have a diploma', I know why I do this job."</span>
+      <span class="en" style="display: none;">"The CFA is much more than a training centre — it's a springboard for life. Many of our apprentices arrive with bumpy paths, doubts, sometimes the conviction that the system isn't made for them. My role is to prove them wrong. Watching them grow week after week, gaining rigour, confidence, pride… that's the greatest reward. At ORY4, we don't train numbers: we support people. And when one of them tells me 'thanks to the CFA, I finally have a diploma', I know why I do this job."</span>
     </p>
   </div>
 </div>
 
-    <div class="section-title-bar"><div class="stbar-text">Parole d'apprenti·e</div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display: none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
     <div class="card apprenti">
       <div class="profile-row">
         <div class="placeholder-photo">👤</div>
@@ -925,7 +1435,7 @@
       <div class="quote-box blue"><p class="placeholder-text">Témoignage à venir...</p></div>
     </div>
 
-    <div class="section-title-bar"><div class="stbar-text">Parole de l'employeur</div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole de l'employeur</span><span class="en" style="display: none;">Employer's voice</span></div><div class="stbar-line"></div></div>
     <div class="card employeur">
       <div class="profile-row">
         <div class="placeholder-photo">👤</div>
@@ -934,7 +1444,7 @@
       <div class="quote-box orange"><p class="placeholder-text">Témoignage à venir...</p></div>
     </div>
 
-    <div class="section-title-bar"><div class="stbar-text">Parole du CFA</div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole du CFA</span><span class="en" style="display: none;">CFA's voice</span></div><div class="stbar-line"></div></div>
     <div class="card cfa">
       <div class="profile-row">
         <div class="placeholder-photo">👤</div>
@@ -950,7 +1460,7 @@
     <div class="site-page-title">📍 LYS1</div>
 
 
-    <div class="section-title-bar"><div class="stbar-text">Parole d'apprenti·e</div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display: none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
     <div class="card apprenti">
       <div class="profile-row">
         <div class="placeholder-photo">👤</div>
@@ -964,7 +1474,7 @@
           <p>Aujourd'hui je m'épanouis pleinement dans mon travail et j'ai des perspectives d'évolutions concrètes.</p>
           <p><strong>Si je devais donner un conseil à un nouvel apprenant au sein du CFA Amazon France, je dirais : Faites-vous confiance, quel que soit votre parcours !</strong></p>
         </div>
-        <div class="en" style="display:none;">
+        <div class="en" style="display: none;">
           <p>Initially, guided by my France Travail advisor, I was looking for a concrete job and didn't consider committing to a training programme. Once I started, I discovered a truly exceptional professional and human experience.</p>
           <p>This programme was a real opportunity for me. Within the CFA Amazon and more broadly with our employer, there are no distinctions. All backgrounds, all paths are accepted and valued, and disability is not an obstacle.</p>
           <p>Thanks to the caring and positive support from the teaching and supervisory team, thanks to this inclusive environment, I overcame my doubts, earned my PCE certification and signed a permanent contract.</p>
@@ -984,7 +1494,7 @@
           <p>L'expérience de la formation au CFA m'a permis d'améliorer ma confiance en moi. J'ai rencontré des collègues accueillants qui sont aujourd'hui de bons amis.</p>
           <p>Je me suis découvert des capacités que je ne me connaissais pas. Depuis, j'ai gagné en autonomie et en indépendance dans ma vie en général.</p>
         </div>
-        <div class="en" style="display:none;">
+        <div class="en" style="display: none;">
           <p>The training experience at the CFA helped me improve my self-confidence. I met welcoming colleagues who are now good friends.</p>
           <p>I discovered abilities I didn't know I had. Since then, I've gained autonomy and independence in my life overall.</p>
         </div>
@@ -994,7 +1504,7 @@
 
 
 
-    <div class="section-title-bar"><div class="stbar-text">Parole de l'employeur</div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole de l'employeur</span><span class="en" style="display: none;">Employer's voice</span></div><div class="stbar-line"></div></div>
     <div class="card employeur">
       <div class="profile-row">
         <div class="placeholder-photo">👤</div>
@@ -1003,7 +1513,7 @@
       <div class="quote-box orange"><p class="placeholder-text">Témoignage à venir...</p></div>
     </div>
 
-    <div class="section-title-bar"><div class="stbar-text">Parole du CFA</div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole du CFA</span><span class="en" style="display: none;">CFA's voice</span></div><div class="stbar-line"></div></div>
     <div class="card cfa">
       <div class="profile-row">
         <div class="placeholder-photo">👤</div>
@@ -1043,5 +1553,6 @@ function toggleLanguage() {
 }
 </script>
 
-</body>
-</html>
+
+
+</body></html>
