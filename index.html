@@ -87,91 +87,226 @@
 <body>
 <div class="wrap">
 
-<div class="header" style="position: relative; overflow: hidden;">
-    <!-- Mascotte en fond à droite, nette -->
-    <img src="mascotte_cfa.png" alt="Mascotte CFA Amazon" style="position: absolute; right: 60px; top: 50%; transform: translateY(-50%); width: 180px; height: auto; opacity: 1;">
-    
-    <div class="header-top" style="display: flex; align-items: center; gap: 20px;">
-   <img class="logo-img" src="logo_cfa_amazon.png" alt="Logo CFA Amazon" style="width: 220px; height: auto;">
-
+<!-- === BANNIERE LIVRE D'OR === -->
+<style>
+  .ldo-hero { position:relative; overflow:hidden; margin:0 0 10px; padding:44px 40px 52px;
+    background: radial-gradient(circle at 15% 20%, rgba(245,166,35,0.18) 0, transparent 35%),
+                radial-gradient(circle at 85% 85%, rgba(245,166,35,0.14) 0, transparent 40%),
+                linear-gradient(135deg, #0E1E45 0%, #152B5E 55%, #1E3C7E 100%); }
+  .ldo-hero::before { content:"★"; position:absolute; top:18px; left:24px; color:rgba(245,166,35,0.35); font-size:22px; }
+  .ldo-hero::after { content:"★"; position:absolute; bottom:20px; right:30px; color:rgba(245,166,35,0.35); font-size:30px; }
+  .ldo-grid { display:flex; align-items:center; justify-content:center; gap:56px; flex-wrap:wrap; max-width:1100px; margin:0 auto; }
+  .ldo-text { flex:1 1 360px; max-width:500px; text-align:center; color:#ffffff; }
+  .ldo-logo { width:150px; height:150px; margin:0 auto; border-radius:50%; overflow:hidden; border:4px solid #F5A623; box-shadow:0 0 0 6px rgba(245,166,35,0.18), 0 10px 26px rgba(0,0,0,0.45); background:#1E2F3F; }
+  .ldo-logo img { width:100%; height:100%; object-fit:cover; display:block; transform:scale(1.08); }
+  .ldo-title { font-family: Georgia, "Times New Roman", serif; font-size:4.2rem; line-height:1.05; font-weight:700; margin:18px 0 10px;
+    color:#F5A623; background:linear-gradient(180deg,#FFE29A 0%,#F5A623 55%,#C9820F 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.45)); }
+  .ldo-divider { display:flex; align-items:center; justify-content:center; gap:12px; color:#F5A623; font-size:1.1rem; margin:6px 0 14px; }
+  .ldo-divider span.l { width:70px; height:2px; background:linear-gradient(90deg,transparent,#F5A623); }
+  .ldo-divider span.r { width:70px; height:2px; background:linear-gradient(90deg,#F5A623,transparent); }
+  .ldo-sub { font-size:1.55rem; font-weight:600; line-height:1.3; }
+  .ldo-sub em { font-style:normal; color:#F5A623; }
+  .ldo-visual { position:relative; flex:1 1 380px; max-width:540px; }
+  .ldo-photo { display:block; width:100%; height:auto; border-radius:18px; opacity:0.55; -webkit-mask-image:radial-gradient(ellipse at center, #000 55%, transparent 100%); mask-image:radial-gradient(ellipse at center, #000 55%, transparent 100%); }
+  .ldo-mascotte { position:absolute; left:-64px; bottom:-38px; width:170px; height:auto; transform:rotate(-6deg); filter:drop-shadow(0 8px 14px rgba(0,0,0,0.45)); }
+  @media (max-width: 700px) {
+    .ldo-hero { padding:32px 18px 52px; }
+    .ldo-logo { width:120px; height:120px; }
+    .ldo-title { font-size:3rem; }
+    .ldo-sub { font-size:1.25rem; }
+    .ldo-mascotte { width:115px; left:-12px; bottom:-34px; }
+  }
+</style>
+<div class="ldo-hero">
+  <div class="ldo-grid">
+    <div class="ldo-text">
+      <div class="ldo-logo"><img src="logo_cfa_amazon.png" alt="Logo du Centre de Formation des Apprentis Amazon"></div>
+      <div class="ldo-title"><span class="fr">Livre d'or</span><span class="en" style="display:none;">Guestbook</span></div>
+      <div class="ldo-divider"><span class="l"></span>★ ★ ★<span class="r"></span></div>
+      <div class="ldo-sub"><span class="fr">Regards croisés<br>sur <em>l'apprentissage</em></span><span class="en" style="display:none;">Perspectives<br>on <em>apprenticeship</em></span></div>
     </div>
-<div class="header-title" style="font-size: 2.4rem;">
-  <div class="fr">Regards croisés<br>sur <span>l'apprentissage</span></div>
-  <div class="en" style="display:none;">Perspectives<br>on <span>apprenticeship</span></div>
+    <div class="ldo-visual">
+      <img class="ldo-photo" src="IMG_7211.jpg" alt="Photo de groupe des apprentis diplômés et de l'équipe du CFA Amazon sous le logo École Amazon">
+      <img class="ldo-mascotte" src="mascotte_cfa_transparente.png" alt="Mascotte du CFA Amazon brandissant un trophée et un diplôme">
+    </div>
+  </div>
 </div>
-
-      </div>
-<div style="text-align: center; margin: -10px 0 10px;">
-<span class="header-badge" style="font-size: 2.5rem; padding: 18px 44px; border-radius: 30px;"><span class="fr">⭐ LIVRE D'OR</span><span class="en" style="display:none;">⭐ GUESTBOOK</span></span>
-     </div>
+<!-- === FIN BANNIERE LIVRE D'OR === -->
 <!-- Bouton traduction -->
 <div style="text-align: right; padding: 10px 20px;">
   <button onclick="toggleLanguage()" id="btn-lang" style="background: #152B5E; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-size: 1rem; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">🇬🇧 English</button>
 </div>
 
-<div style="text-align: center; padding: 16px 0 4px; background: #152B5E;">
-  <span class="fr" style="font-size: 1.1rem; color: #9BB8D4; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;">📊 Le CFA France en chiffres</span>
-  <span class="en" style="display:none; font-size: 1.1rem; color: #9BB8D4; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;">📊 The CFA France in numbers</span>
+<!-- === CHIFFRES CLES === -->
+<style>
+  .ldo-stats { position:relative; overflow:hidden; padding:34px 20px 38px; background:linear-gradient(180deg,#152B5E 0%,#0E1E45 100%); }
+  .ldo-stats::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 50% 0%, rgba(245,166,35,0.20) 0, transparent 55%); pointer-events:none; }
+  .ldo-stats-head { position:relative; text-align:center; margin-bottom:26px; }
+  .ldo-stats-title { font-family:Georgia,"Times New Roman",serif; font-size:1.9rem; font-weight:700; color:#ffffff; }
+  .ldo-stats-title em { font-style:normal; color:#F5A623; }
+  .ldo-stats-line { width:90px; height:3px; margin:10px auto 0; border-radius:3px; background:linear-gradient(90deg,transparent,#F5A623,transparent); }
+  .ldo-stats-grid { position:relative; display:grid; grid-template-columns:repeat(5,1fr); gap:16px; max-width:1100px; margin:0 auto; }
+  .ldo-stat { text-align:center; padding:22px 12px 20px; border-radius:18px; background:rgba(255,255,255,0.06); border:1px solid rgba(245,166,35,0.35); transition:transform .2s, background .2s; }
+  .ldo-stat:hover { transform:translateY(-4px); background:rgba(255,255,255,0.10); }
+  .ldo-stat-icon { width:46px; height:46px; margin:0 auto 10px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:22px; background:rgba(245,166,35,0.15); border:1px solid rgba(245,166,35,0.5); }
+  .ldo-stat-num { font-family:Georgia,"Times New Roman",serif; font-size:2.8rem; font-weight:700; line-height:1; color:#F5A623;
+    background:linear-gradient(180deg,#FFE29A 0%,#F5A623 60%,#C9820F 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .ldo-stat-num span { font-size:1.6rem; }
+  .ldo-stat-label { margin-top:10px; font-size:0.85rem; line-height:1.35; color:#D6E2F3; font-weight:600; }
+  @media (max-width:900px) { .ldo-stats-grid { grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:560px) { .ldo-stats-grid { grid-template-columns:repeat(2,1fr); } .ldo-stats-title { font-size:1.5rem; } .ldo-stat-num { font-size:2.2rem; } }
+</style>
+<div class="ldo-stats">
+  <div class="ldo-stats-head">
+    <div class="ldo-stats-title"><span class="fr">Le CFA France <em>en chiffres</em></span><span class="en" style="display:none;">CFA France <em>in numbers</em></span></div>
+    <div class="ldo-stats-line"></div>
+  </div>
+  <div class="ldo-stats-grid">
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">📍</div>
+      <div class="ldo-stat-num">6<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Sites en France</span><span class="en" style="display:none;">Sites in France</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">👥</div>
+      <div class="ldo-stat-num">480<span></span></div>
+      <div class="ldo-stat-label"><span class="fr">Apprenants accueillis à travers les 6 sites</span><span class="en" style="display:none;">Learners welcomed across the 6 sites</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">🎓</div>
+      <div class="ldo-stat-num">90<span>%</span></div>
+      <div class="ldo-stat-label"><span class="fr">Taux de certification</span><span class="en" style="display:none;">Certification rate</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">💼</div>
+      <div class="ldo-stat-num">88<span>%</span></div>
+      <div class="ldo-stat-label"><span class="fr">Taux d'insertion dans la branche</span><span class="en" style="display:none;">Employment rate in the sector</span></div>
+    </div>
+    <div class="ldo-stat">
+      <div class="ldo-stat-icon">😊</div>
+      <div class="ldo-stat-num">98<span>%</span></div>
+      <div class="ldo-stat-label"><span class="fr">Apprentis satisfaits</span><span class="en" style="display:none;">Satisfied apprentices</span></div>
+    </div>
+  </div>
 </div>
-
-<div class="stats-banner" style="grid-template-columns: repeat(4, 1fr); padding: 1.5rem 2rem 2rem;">
-    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">6</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Sites en France</div><div class="en" style="display:none;">Sites in France</div></div></div>
-    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">94%</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Taux de certification</div><div class="en" style="display:none;">Certification rate</div></div></div>
-    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">88%</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Taux d'insertion professionnelle</div><div class="en" style="display:none;">Professional integration rate</div></div></div>
-    <div class="stat-item"><div class="stat-num" style="font-size: 38px;">98%</div><div class="stat-label" style="font-size: 13px;"><div class="fr">Apprentis satisfaits</div><div class="en" style="display:none;">Apprentice satisfaction</div></div></div>
-</div>
+<!-- === FIN CHIFFRES CLES === -->
 
 
 
   <!-- PAGE ACCUEIL -->
   <div id="page-accueil" class="page active">
-<div class="titre-pro-banner" style="padding: 18px 22px; gap: 16px;">
-      <div style="font-size: 36px;">📦</div>
-      <div>
-        <div class="titre-pro-label" style="font-size: 13px;"><div class="fr">Certification visée</div><div class="en" style="display:none;">Targeted certification</div></div>
-        <div class="titre-pro-name" style="font-size: 17px;"><div class="fr">Titre Professionnel Préparateur de Commandes en Entrepôt</div><div class="en" style="display:none;">Professional Certificate — Warehouse Order Picker</div></div>
-        <div class="titre-pro-rncp" style="font-size: 14px;"><div class="fr">Titre RNCP · Ministère du Travail · Niveau 3</div><div class="en" style="display:none;">RNCP Title · Ministry of Labour · Level 3</div></div>
-      </div>
+<!-- === CERTIFICATION VISEE === -->
+<style>
+  .ldo-certif { position:relative; margin:28px 16px 8px; padding:26px 28px; border-radius:20px; display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+    background:linear-gradient(135deg,#FFFFFF 0%,#FFF8EA 100%); border:2px solid #F5A623; box-shadow:0 10px 28px rgba(21,43,94,0.12); overflow:hidden; }
+  .ldo-certif::after { content:"★"; position:absolute; right:22px; top:10px; font-size:70px; color:rgba(245,166,35,0.12); }
+  .ldo-certif-seal { flex-shrink:0; width:96px; height:96px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:42px;
+    background:radial-gradient(circle at 35% 30%,#FFE29A 0%,#F5A623 55%,#C9820F 100%); border:4px solid #152B5E; box-shadow:0 0 0 5px rgba(245,166,35,0.25), 0 8px 18px rgba(0,0,0,0.2); }
+  .ldo-certif-body { flex:1 1 300px; position:relative; z-index:1; }
+  .ldo-certif-kicker { display:inline-block; font-size:0.8rem; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#ffffff; background:#152B5E; padding:5px 14px; border-radius:20px; }
+  .ldo-certif-name { font-family:Georgia,"Times New Roman",serif; font-size:1.75rem; font-weight:700; color:#152B5E; line-height:1.25; margin:10px 0 12px; }
+  .ldo-certif-tags { display:flex; flex-wrap:wrap; gap:8px; }
+  .ldo-certif-tag { font-size:0.85rem; font-weight:700; color:#8A6A2E; background:rgba(245,166,35,0.15); border:1px solid rgba(245,166,35,0.5); padding:5px 12px; border-radius:20px; }
+  @media (max-width:600px) { .ldo-certif { justify-content:center; text-align:center; } .ldo-certif-tags { justify-content:center; } .ldo-certif-name { font-size:1.35rem; } }
+</style>
+<div class="ldo-certif">
+  <div class="ldo-certif-seal">🎓</div>
+  <div class="ldo-certif-body">
+    <span class="ldo-certif-kicker"><span class="fr">Certification visée</span><span class="en" style="display:none;">Targeted certification</span></span>
+    <div class="ldo-certif-name"><span class="fr">Titre Professionnel Préparateur de Commandes en Entrepôt</span><span class="en" style="display:none;">Professional Certificate — Warehouse Order Picker</span></div>
+    <div class="ldo-certif-tags">
+      <span class="ldo-certif-tag"><span class="fr">📜 Titre RNCP</span><span class="en" style="display:none;">📜 RNCP Title</span></span>
+      <span class="ldo-certif-tag"><span class="fr">🏛️ Ministère du Travail</span><span class="en" style="display:none;">🏛️ Ministry of Labour</span></span>
+      <span class="ldo-certif-tag"><span class="fr">⭐ Niveau 3</span><span class="en" style="display:none;">⭐ Level 3</span></span>
     </div>
-
-       <div style="text-align: center; margin: 24px 0; padding: 20px 32px; background: linear-gradient(135deg, #f8faff 0%, #eef3fb 100%); border-radius: 12px; border-left: 4px solid #152B5E;">
-  <div class="fr" style="font-size: 1.3rem; color: #152B5E; margin: 0; font-weight: 700;">🎤 Découvrez les témoignages de nos apprentis, de leurs managers et de l'équipe pédagogique, site par site</div>
-  <div class="en" style="display:none; font-size: 1.3rem; color: #152B5E; margin: 0; font-weight: 700;">🎤 Discover testimonials from our apprentices, their managers and the teaching team, site by site</div>
+  </div>
 </div>
+<!-- === FIN CERTIFICATION VISEE === -->
 
- <div class="sites-grid">
+       <!-- === ENCART DECOUVREZ LES TEMOIGNAGES === -->
+<style>
+  .ldo-invite { position:relative; margin:32px 16px 18px; padding:30px 28px 26px; text-align:center; border-radius:20px;
+    background:linear-gradient(135deg,#FFF8EA 0%,#FFFFFF 50%,#EEF3FB 100%); border:2px solid #F5A623;
+    box-shadow:0 10px 28px rgba(21,43,94,0.12); }
+  .ldo-invite-icon { position:absolute; top:-26px; left:50%; transform:translateX(-50%); width:52px; height:52px; border-radius:50%;
+    background:linear-gradient(135deg,#152B5E,#1E3C7E); border:3px solid #F5A623; color:#fff; font-size:24px;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 6px 14px rgba(0,0,0,0.2); }
+  .ldo-invite-title { font-family:Georgia,"Times New Roman",serif; font-size:1.9rem; font-weight:700; color:#152B5E; margin:12px 0 8px; line-height:1.25; }
+  .ldo-invite-title em { font-style:normal; color:#C9820F; }
+  .ldo-invite-text { font-size:1.1rem; color:#3a4a5e; margin:0 auto 16px; max-width:640px; }
+  .ldo-invite-chips { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:14px; }
+  .ldo-chip { display:inline-block; padding:7px 16px; border-radius:30px; font-weight:700; font-size:0.95rem; }
+  .ldo-chip.a { background:#E3F2FF; color:#1565C0; }
+  .ldo-chip.m { background:#FFF3E0; color:#E65100; }
+  .ldo-chip.c { background:#EDE7F6; color:#4527A0; }
+  .ldo-invite-cta { display:inline-block; color:#152B5E; font-weight:700; font-size:1rem; letter-spacing:1px; animation:ldoBounce 1.8s ease-in-out infinite; }
+  @keyframes ldoBounce { 0%,100% { transform:translateY(0); } 50% { transform:translateY(6px); } }
+  @media (max-width:700px) { .ldo-invite-title { font-size:1.45rem; } }
+</style>
+<div class="ldo-invite">
+  <div class="ldo-invite-icon">🎤</div>
+  <div class="ldo-invite-title"><span class="fr">Découvrez nos <em>témoignages</em>, site par site</span><span class="en" style="display:none;">Discover our <em>testimonials</em>, site by site</span></div>
+  <p class="ldo-invite-text"><span class="fr">Des parcours, des rencontres et des réussites racontés par celles et ceux qui les vivent au quotidien.</span><span class="en" style="display:none;">Journeys, encounters and successes told by the people who live them every day.</span></p>
+  <div class="ldo-invite-chips">
+    <span class="ldo-chip a"><span class="fr">🎓 Nos apprentis</span><span class="en" style="display:none;">🎓 Our apprentices</span></span>
+    <span class="ldo-chip m"><span class="fr">💼 Leurs managers</span><span class="en" style="display:none;">💼 Their managers</span></span>
+    <span class="ldo-chip c"><span class="fr">🏫 L'équipe pédagogique</span><span class="en" style="display:none;">🏫 The teaching team</span></span>
+  </div>
+  <div class="ldo-invite-cta"><span class="fr">👇 Choisissez un site</span><span class="en" style="display:none;">👇 Choose a site</span></div>
+</div>
+<!-- === FIN ENCART DECOUVREZ === -->
+
+ <!-- === SITES AVEC CARTE DE FRANCE === -->
+<style>
+  .ldo-sites { position:relative; margin:0 16px; padding:10px 0; }
+  .ldo-map { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:min(560px,95%); height:auto; z-index:0; pointer-events:none; }
+  .ldo-sites .sites-grid { position:relative; z-index:1; }
+  .ldo-sites .site-card { background:rgba(255,255,255,0.82); -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px);
+    border:1px solid #D5DCE8; border-left:1px solid #D5DCE8; border-top:3px solid #152B5E; border-radius:14px; box-shadow:0 2px 10px rgba(21,43,94,0.06); }
+  .ldo-sites .site-card.has-content { border-left-color:#D5DCE8; }
+  .ldo-sites .site-card:hover { border-top-color:#F5A623; transform:translateY(-3px); box-shadow:0 8px 20px rgba(21,43,94,0.14); }
+  .ldo-sites .site-icon { font-size:20px; margin-bottom:4px; filter:grayscale(1); opacity:0.55; }
+  .ldo-sites .site-name { font-size:20px; letter-spacing:2px; color:#152B5E; }
+  .ldo-sites .site-status { color:#8A6A2E !important; font-size:12px; font-weight:600; margin-top:6px; letter-spacing:0.3px; }
+</style>
+<div class="ldo-sites">
+  <svg class="ldo-map" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 155"><path d="M75.7,8.0 L78.0,7.5 L84.0,12.3 L94.0,18.9 L100.5,21.0 L106.0,29.0 L111.0,30.5 L116.0,31.2 L122.0,35.5 L128.0,37.0 L134.0,38.1 L130.0,45.0 L127.5,53.7 L128.0,58.3 L122.0,60.2 L116.5,67.4 L113.0,73.2 L111.7,78.3 L120.0,75.4 L122.0,82.4 L118.5,94.2 L122.5,101.5 L121.0,107.3 L127.0,113.4 L122.0,116.7 L118.0,122.5 L112.0,123.5 L105.0,121.8 L98.0,119.6 L91.0,117.5 L84.5,121.1 L82.5,126.2 L83.5,132.7 L77.0,134.1 L69.0,132.0 L59.0,127.6 L49.0,127.6 L42.0,124.0 L34.2,119.6 L37.2,116.0 L39.5,101.5 L40.0,87.0 L36.5,77.6 L30.5,68.9 L27.0,62.4 L19.0,56.5 L8.5,54.4 L4.5,47.1 L7.0,42.8 L16.0,40.6 L24.0,43.5 L32.0,43.2 L36.5,42.8 L36.0,34.8 L33.0,27.5 L39.5,27.8 L40.5,32.6 L50.0,33.4 L53.5,30.9 L64.0,23.9 L68.0,18.1 L68.0,10.2 L75.7,8.0 Z" fill="#152B5E" fill-opacity="0.07" stroke="#152B5E" stroke-opacity="0.35" stroke-width="0.9" stroke-linejoin="round"/><path d="M146.0,124.7 L147.5,130.5 L147.5,137.8 L144.5,147.9 L140.5,145.7 L138.0,140.7 L138.5,134.1 L144.0,126.9 L146.0,124.7 Z" fill="#152B5E" fill-opacity="0.07" stroke="#152B5E" stroke-opacity="0.35" stroke-width="0.9"/><circle cx="82.6" cy="14.1" r="2.6" fill="#F5A623"/><circle cx="82.6" cy="14.1" r="5.5" fill="none" stroke="#F5A623" stroke-width="0.8" opacity="0.6"/><circle cx="72.8" cy="31.5" r="2.6" fill="#F5A623"/><circle cx="72.8" cy="31.5" r="5.5" fill="none" stroke="#F5A623" stroke-width="0.8" opacity="0.6"/><circle cx="113.8" cy="36.0" r="2.6" fill="#F5A623"/><circle cx="113.8" cy="36.0" r="5.5" fill="none" stroke="#F5A623" stroke-width="0.8" opacity="0.6"/><circle cx="75.6" cy="41.6" r="2.6" fill="#F5A623"/><circle cx="75.6" cy="41.6" r="5.5" fill="none" stroke="#F5A623" stroke-width="0.8" opacity="0.6"/><circle cx="100.5" cy="84.7" r="2.6" fill="#F5A623"/><circle cx="100.5" cy="84.7" r="5.5" fill="none" stroke="#F5A623" stroke-width="0.8" opacity="0.6"/></svg>
+  <div class="sites-grid">
       <div class="site-card has-content" onclick="showPage('LIL1')">
         <div class="site-icon">📍</div>
         <div class="site-name">LIL1</div>
-        <div class="site-status"style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
+        <div class="site-status" style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
       </div>
       <div class="site-card has-content" onclick="showPage('BVA1')">
         <div class="site-icon">📍</div>
         <div class="site-name">BVA1</div>
-        <div class="site-status"style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
+        <div class="site-status" style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
       </div>
       <div class="site-card" onclick="showPage('ETZ2')">
         <div class="site-icon">📍</div>
         <div class="site-name">ETZ2</div>
-        <div class="site-status"style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
+        <div class="site-status" style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
       </div>
       <div class="site-card" onclick="showPage('ORY1')">
         <div class="site-icon">📍</div>
         <div class="site-name">ORY1</div>
-        <div class="site-status"style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
+        <div class="site-status" style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
       </div>
       <div class="site-card has-content" onclick="showPage('ORY4')">
         <div class="site-icon">📍</div>
         <div class="site-name">ORY4</div>
-        <div class="site-status"style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
+        <div class="site-status" style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
       </div>
       <div class="site-card has-content" onclick="showPage('LYS1')">
         <div class="site-icon">📍</div>
         <div class="site-name">LYS1</div>
-        <div class="site-status"style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
+        <div class="site-status" style="color: green; font-weight: bold;"><div class="fr">✓ Témoignages disponibles</div><div class="en" style="display:none;">✓ Testimonials available</div></div>
       </div>
 
 </div>
+</div>
+<!-- === FIN SITES === -->
 
 <!-- === ENCART EVENEMENT : REMISE DES DIPLOMES 2025 === -->
     <div style="position:relative; margin:2em 0 1em; border-radius:12px; overflow:hidden; min-height:220px; display:flex; align-items:center; justify-content:center; background-color:#4a4a4a; background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('IMG_7205.jpg'); background-size:cover; background-position:center;">
@@ -184,16 +319,35 @@
         <div style="font-size:1.6rem; font-weight:800; color:#152B5E;"><span class="fr">🎓 Nos diplômés à l'honneur&nbsp;!</span><span class="en" style="display:none;">🎓 Celebrating our graduates!</span></div>
         <div style="display:inline-block; margin-top:10px; background:#152B5E; color:#fff; font-style:italic; padding:6px 20px; border-radius:20px;"><span class="fr">Remise des diplômes de la promotion 2025 · Siège CDG10 · 14 octobre 2026</span><span class="en" style="display:none;">2025 class graduation ceremony · CDG10 headquarters · 14 October 2026</span></div>
       </div>
-      <div style="background:white; border-radius:12px; padding:20px 24px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.06); color:#3a4a3a;">
-        <p class="fr" style="margin:0;">Le 14 octobre 2026, le siège de CDG10 a accueilli la cérémonie de remise des diplômes de nos apprentis. Nos trainers ont fait le déplacement aux côtés de leurs apprenants diplômés pour célébrer ensemble des mois d'engagement, d'apprentissage et de réussite. Un moment convivial et plein d'émotion, qui récompense le parcours de chacun et la fierté de toute l'équipe du CFA Amazon&nbsp;!</p>
-        <p class="en" style="display:none; margin:0;">On 14 October 2026, the CDG10 headquarters hosted the graduation ceremony for our apprentices. Our trainers travelled alongside their graduating learners to celebrate months of commitment, learning and success together. A warm and emotional moment, rewarding each person's journey and the pride of the whole CFA Amazon team!</p>
+      <style>
+        .ldo-evt-intro { display:flex; align-items:stretch; gap:0; margin:0 0 22px; border-radius:18px; overflow:hidden; background:#ffffff; border:2px solid #F5A623; box-shadow:0 10px 26px rgba(21,43,94,0.14); }
+        .ldo-evt-date { flex-shrink:0; width:120px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:18px 10px; text-align:center;
+          background:linear-gradient(160deg,#152B5E 0%,#0E1E45 100%); color:#ffffff; }
+        .ldo-evt-day { font-family:Georgia,"Times New Roman",serif; font-size:3rem; font-weight:700; line-height:1; color:#F5A623; }
+        .ldo-evt-month { font-size:1rem; font-weight:800; letter-spacing:3px; margin-top:4px; }
+        .ldo-evt-year { font-size:0.9rem; color:#9BB8D4; margin-top:2px; }
+        .ldo-evt-text { flex:1; padding:22px 26px; font-size:1.15rem; line-height:1.65; color:#1f2d45; position:relative; }
+        .ldo-evt-text::before { content:"“"; position:absolute; top:-6px; right:18px; font-family:Georgia,serif; font-size:90px; line-height:1; color:rgba(245,166,35,0.25); }
+        .ldo-evt-text strong { color:#152B5E; }
+        @media (max-width:600px) { .ldo-evt-intro { flex-direction:column; } .ldo-evt-date { width:auto; flex-direction:row; gap:10px; padding:12px; } .ldo-evt-day { font-size:2.2rem; } .ldo-evt-text { font-size:1.05rem; padding:18px; } }
+      </style>
+      <div class="ldo-evt-intro">
+        <div class="ldo-evt-date" aria-hidden="true">
+          <div class="ldo-evt-day">14</div>
+          <div class="ldo-evt-month"><span class="fr">OCT.</span><span class="en" style="display:none;">OCT.</span></div>
+          <div class="ldo-evt-year">2026</div>
+        </div>
+        <div class="ldo-evt-text">
+          <p class="fr" style="margin:0;"><strong>Le 14 octobre 2026</strong>, le siège de <strong>CDG10</strong> a accueilli la cérémonie de remise des diplômes de nos apprentis. Nos trainers ont fait le déplacement aux côtés de leurs apprenants diplômés pour célébrer ensemble des mois d'engagement, d'apprentissage et de réussite. <strong>Un moment convivial et plein d'émotion</strong>, qui récompense le parcours de chacun et la fierté de toute l'équipe du CFA Amazon&nbsp;!</p>
+          <p class="en" style="display:none; margin:0;"><strong>On 14 October 2026</strong>, the <strong>CDG10</strong> headquarters hosted the graduation ceremony for our apprentices. Our trainers travelled alongside their graduating learners to celebrate months of commitment, learning and success together. <strong>A warm and emotional moment</strong>, rewarding each person's journey and the pride of the whole CFA Amazon team!</p>
+        </div>
       </div>
       <div style="text-align:center; margin-bottom:16px;">
-        <img src="IMG_7226.jpg" alt="Trainers et apprentis diplômés lors de la remise des diplômes 2025 au siège CDG10" style="width:100%; max-width:700px; height:auto; border-radius:12px; box-shadow:0 3px 12px rgba(0,0,0,0.12);">
+        <img src="IMG_7226.jpg" alt="Trainers et apprentis diplômés lors de la remise des diplômes 2025 au siège CDG10" style="width:100%; max-width:450px; height:auto; border-radius:12px; box-shadow:0 3px 12px rgba(0,0,0,0.12);">
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:24px;">
-          <img src="cc3724b4-e94b-4357-9999-d2e27e2d086f.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 2" style="width:48%; min-width:160px; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="IMG_7211.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 3" style="width:48%; min-width:160px; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+          <img src="cc3724b4-e94b-4357-9999-d2e27e2d086f.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 2" style="width:45%; max-width:280px; min-width:140px; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+          <img src="IMG_7211.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 3" style="width:45%; max-width:280px; min-width:140px; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
       </div>
       <div class="section-title-bar"><div class="stbar-text"><span class="fr">💬 Paroles de trainers</span><span class="en" style="display:none;">💬 Trainers' words</span></div><div class="stbar-line"></div></div>
       <div style="text-align:center; margin:8px 0 16px;">
