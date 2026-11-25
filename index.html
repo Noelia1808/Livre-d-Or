@@ -31,8 +31,6 @@
   --insight-background-color: #78008A !important;
   --visualization-foreground-color: #FFFFFF !important;
   --global-navbar-foreground-color: #5A5A5B !important;
-  --chat-column-base: 720px !important;
-  --chat-column-max: 720px !important;
   --color-bg: #faf9fc !important;
   --color-navbar-bg: #f9f9fb !important;
   --color-navbar-fg: #131920 !important;
@@ -498,6 +496,8 @@
   --qs-yellow-950: #381f00 !important;
   --qs-duration-reorder: .125s !important;
   --qs-ease-reorder: ease-in-out !important;
+  --chat-column-base: 720px !important;
+  --chat-column-max: 720px !important;
   --z-subtask-modal: 10000 !important;
   --z-above-subtask-modal: 10001 !important;
   --react-pdf-text-layer: 1 !important;
@@ -514,7 +514,7 @@
 }</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Livre d'Or — CFA Amazon</title>
-<style nonce="Oe/dXIL52jyZ8l4dHNkyWw==">
+<style nonce="qZruzk8xaMLaOhwNRMW5oA==">
   * { box-sizing: border-box; margin: 0; padding: 0; }
   .wrap { font-family: 'Segoe UI', Arial, sans-serif; background: #F4F7FB; padding-bottom: 3rem; max-width: 100%; margin: 0; padding-left: 40px; padding-right: 40px; }
   .header { background: #152B5E; position: relative; overflow: hidden; padding: 1.5rem 1.5rem 2.5rem; }
@@ -592,12 +592,77 @@
   .placeholder-text { font-size:13px; color:#8898AA; font-style:italic; }
   .intro-text { font-size:14px; color:#4A5568; padding:1rem 1rem 0; line-height:1.6; }
 </style>
+
+<!-- === STYLE ILLUSTRÉ (25/11/2026) === -->
+<style nonce="qZruzk8xaMLaOhwNRMW5oA==">
+  /* A · Mise à l'honneur */
+  .ldo-honneur { position:relative; overflow:visible; border:3px double #C9A227 !important; box-shadow:0 0 0 6px #fff,0 0 0 8px #C9A227,0 14px 30px rgba(21,43,94,.15) !important; margin-top:2.2rem !important; padding-bottom:56px !important; background:linear-gradient(135deg,#fffaf0,#f7e7b8) !important; }
+  .ldo-ribbon { position:absolute; top:-17px; left:50%; transform:translateX(-50%); background:#152B5E; color:#F5A623; font-family:Georgia,serif; letter-spacing:2px; padding:6px 20px; border-radius:4px; font-size:.85em; white-space:nowrap; z-index:2; box-shadow:0 4px 10px rgba(0,0,0,.2); }
+  .ldo-cup-wrap { position:absolute; right:12px; bottom:6px; cursor:pointer; z-index:2; }
+  .ldo-laurels { position:relative; display:inline-block; padding:0 46px; }
+  .ldo-laurels .ldo-l, .ldo-laurels .ldo-r { position:absolute; top:50%; transform:translateY(-50%); pointer-events:none; }
+  .ldo-laurels .ldo-l { left:-14px; } .ldo-laurels .ldo-r { right:-14px; }
+  /* 1 · Reflet doré */
+  .ldo-shine { position:absolute; inset:0; overflow:hidden; border-radius:inherit; pointer-events:none; }
+  .ldo-shine::after { content:""; position:absolute; top:-50%; left:-60%; width:40%; height:200%; background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent); transform:rotate(12deg); }
+  @media (prefers-reduced-motion: no-preference) {
+    .ldo-shine::after { animation:ldoShine 6s ease-in-out infinite; }
+    @keyframes ldoShine { 0%,70% { left:-60%; } 100% { left:130%; } }
+    .ldo-cup { animation:ldoCup 3s ease-in-out infinite; transform-origin:50% 90%; }
+    @keyframes ldoCup { 0%,100% { transform:rotate(0); } 50% { transform:rotate(-6deg) scale(1.06); } }
+  }
+  /* C · Coins dorés sur les témoignages */
+  .card.employeur, .card.partenaire, .card.cfa, .card.apprenti { position:relative;
+    background-image:
+      linear-gradient(#C9A227,#C9A227),linear-gradient(#C9A227,#C9A227),linear-gradient(#C9A227,#C9A227),linear-gradient(#C9A227,#C9A227),
+      linear-gradient(#C9A227,#C9A227),linear-gradient(#C9A227,#C9A227),linear-gradient(#C9A227,#C9A227),linear-gradient(#C9A227,#C9A227);
+    background-repeat:no-repeat;
+    background-size:28px 2px,2px 28px,28px 2px,2px 28px,28px 2px,2px 28px,28px 2px,2px 28px;
+    background-position:8px 10px,8px 10px, calc(100% - 8px) 10px,calc(100% - 8px) 10px, 8px calc(100% - 8px),8px calc(100% - 8px), calc(100% - 8px) calc(100% - 8px),calc(100% - 8px) calc(100% - 8px); }
+  /* 5 · Sceau doré sur les partenaires */
+  .card.partenaire::after { content:"★"; position:absolute; top:-14px; right:18px; width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    background:radial-gradient(circle at 35% 30%,#F7D774,#C9A227 60%,#9A7614); color:#fff; font-size:20px; box-shadow:0 3px 8px rgba(0,0,0,.25), inset 0 0 0 3px rgba(255,255,255,.35); }
+  /* D · Médaillons sur les bandeaux */
+  .ldo-band { position:relative; padding-left:80px !important; padding-right:80px !important; cursor:pointer; }
+  .ldo-band::before, .ldo-band::after { content:""; position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; background:url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2064%2064%22%20width%3D%2264%22%20height%3D%2264%22%20aria-hidden%3D%22true%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22ldoG%22%20x1%3D%220%22%20x2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23F7D774%22/%3E%3Cstop%20offset%3D%22.5%22%20stop-color%3D%22%23F5A623%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23B8860B%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath%20d%3D%22M18%208h28v10a14%2014%200%200%201-28%200z%22%20fill%3D%22%23F5A623%22/%3E%3Cpath%20d%3D%22M18%2012H9a8%208%200%200%200%2010%2012M46%2012h9a8%208%200%200%201-10%2012%22%20stroke%3D%22%23C9A227%22%20stroke-width%3D%223%22%20fill%3D%22none%22/%3E%3Crect%20x%3D%2229%22%20y%3D%2232%22%20width%3D%226%22%20height%3D%2210%22%20fill%3D%22%23C9A227%22/%3E%3Crect%20x%3D%2221%22%20y%3D%2242%22%20width%3D%2222%22%20height%3D%226%22%20rx%3D%222%22%20fill%3D%22%23F5A623%22/%3E%3Crect%20x%3D%2217%22%20y%3D%2248%22%20width%3D%2230%22%20height%3D%227%22%20rx%3D%222%22%20fill%3D%22%23152B5E%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2223%22%20font-size%3D%2210%22%20text-anchor%3D%22middle%22%20fill%3D%22%23fff%22%20font-family%3D%22Georgia%22%3E%E2%98%85%3C/text%3E%3C/svg%3E") center/contain no-repeat; }
+  .ldo-band::before { left:18px; } .ldo-band::after { right:18px; }
+  @media (max-width:600px) { .ldo-band { padding-left:58px !important; padding-right:14px !important; } .ldo-band::after { display:none; } .ldo-band::before { left:8px; width:36px; height:36px; } }
+  /* B + 6 · Frise des sessions en polaroids */
+  .ldo-frise { position:relative; display:grid !important; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:34px 22px !important; padding:30px 8px 10px; }
+  .ldo-frise::before { content:""; position:absolute; left:0; right:0; top:14px; height:3px; background:linear-gradient(90deg,transparent,#C9A227 8%,#C9A227 92%,transparent); }
+  .ldo-frise figure, .ldo-gallery figure { background:#fff !important; padding:10px 10px 12px !important; border-radius:4px !important; box-shadow:0 8px 18px rgba(21,43,94,.22) !important; position:relative; transition:transform .3s; overflow:visible !important; }
+  .ldo-frise figure > div { border-radius:2px !important; box-shadow:none !important; }
+  .ldo-frise figure:nth-child(odd), .ldo-gallery figure:nth-child(odd) { transform:rotate(-2deg); }
+  .ldo-frise figure:nth-child(even), .ldo-gallery figure:nth-child(even) { transform:rotate(1.8deg); }
+  .ldo-frise figure:hover, .ldo-gallery figure:hover { transform:rotate(0) scale(1.04); z-index:2; }
+  .ldo-frise figure::before { content:""; position:absolute; top:-22px; left:50%; transform:translateX(-50%); width:16px; height:16px; border-radius:50%; background:radial-gradient(circle at 35% 30%,#F7D774,#C9A227); box-shadow:0 0 0 4px #fff,0 2px 6px rgba(0,0,0,.3); }
+  .ldo-gallery figure::before { content:""; position:absolute; top:-10px; left:50%; width:70px; height:20px; transform:translateX(-50%) rotate(-3deg); background:rgba(245,166,35,.7); z-index:1; }
+  .ldo-frise figcaption { font-family:'Segoe Print','Bradley Hand','Comic Sans MS',cursive; color:#333 !important; }
+  /* 7 · Agrandissement des photos */
+  .ldo-zoomable { cursor:zoom-in; }
+  #ldo-lightbox { position:fixed; inset:0; background:rgba(10,18,40,.92); display:none; align-items:center; justify-content:center; z-index:9999; flex-direction:column; }
+  #ldo-lightbox.open { display:flex; }
+  #ldo-lightbox img { max-width:92vw; max-height:80vh; border:8px solid #fff; border-radius:4px; box-shadow:0 10px 40px rgba(0,0,0,.5); }
+  #ldo-lightbox p { color:#fff; font-style:italic; margin:12px 20px 0; text-align:center; }
+  #ldo-lightbox button { position:absolute; background:rgba(255,255,255,.15); color:#fff; border:0; font-size:2rem; width:52px; height:52px; border-radius:50%; cursor:pointer; }
+  #ldo-lightbox .lb-x { top:16px; right:16px; font-size:1.6rem; } #ldo-lightbox .lb-p { left:12px; top:50%; } #ldo-lightbox .lb-n { right:12px; top:50%; }
+  /* 2 · Apparition au défilement (uniquement si JavaScript actif) */
+  @media (prefers-reduced-motion: no-preference) {
+    .ldo-js .ldo-reveal { opacity:0; translate:0 18px; transition:opacity .5s ease-out, translate .5s ease-out; }
+    .ldo-js .ldo-reveal.ldo-in { opacity:1; translate:0 0; }
+    /* 9 · Points de la carte qui pulsent */
+    .ldo-map circle[r="5.5"] { animation:ldoPulse 2.4s ease-out infinite; transform-box:fill-box; transform-origin:center; }
+    @keyframes ldoPulse { 0% { transform:scale(.6); opacity:.9; } 100% { transform:scale(1.8); opacity:0; } }
+  }
+  /* 3 · Confettis */
+  .ldo-confetti { position:fixed; width:9px; height:14px; z-index:9998; pointer-events:none; border-radius:2px; }
+</style>
 </head>
 <body>
 <div class="wrap">
 
 <!-- === BANNIERE LIVRE D'OR === -->
-<style nonce="Oe/dXIL52jyZ8l4dHNkyWw==">
+<style nonce="qZruzk8xaMLaOhwNRMW5oA==">
   .ldo-hero { position:relative; overflow:hidden; margin:0 0 10px; padding:44px 40px 52px;
     background: radial-gradient(circle at 15% 20%, rgba(245,166,35,0.18) 0, transparent 35%),
                 radial-gradient(circle at 85% 85%, rgba(245,166,35,0.14) 0, transparent 40%),
@@ -653,13 +718,13 @@
 
   <!-- PAGE ACCUEIL -->
   <div id="page-accueil" class="page active">
-<style nonce="Oe/dXIL52jyZ8l4dHNkyWw==">
+<style nonce="qZruzk8xaMLaOhwNRMW5oA==">
   .ldo-stats-grid.three { grid-template-columns:repeat(3,1fr); max-width:820px; }
   .ldo-stat-sub { margin-top:6px; font-size:0.78rem; color:#9BB8D4; }
   @media (max-width:560px) { .ldo-stats-grid.three { grid-template-columns:1fr; } }
 </style>
 <!-- === CHIFFRES CLES === -->
-<style nonce="Oe/dXIL52jyZ8l4dHNkyWw==">
+<style nonce="qZruzk8xaMLaOhwNRMW5oA==">
   .ldo-stats { position:relative; overflow:hidden; padding:34px 20px 38px; background:linear-gradient(180deg,#152B5E 0%,#0E1E45 100%); }
   .ldo-stats::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 50% 0%, rgba(245,166,35,0.20) 0, transparent 55%); pointer-events:none; }
   .ldo-stats-head { position:relative; text-align:center; margin-bottom:26px; }
@@ -715,7 +780,7 @@
 </div>
 <!-- === FIN CHIFFRES CLES === -->
 <!-- === CERTIFICATION VISEE === -->
-<style nonce="Oe/dXIL52jyZ8l4dHNkyWw==">
+<style nonce="qZruzk8xaMLaOhwNRMW5oA==">
   .ldo-certif { position:relative; max-width:640px; margin:22px auto 8px; padding:14px 20px; border-radius:16px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;
     background:linear-gradient(135deg,#FFE29A 0%,#F5A623 60%,#E09415 100%); border:1px solid #C9820F; box-shadow:0 6px 18px rgba(201,130,15,0.30); overflow:hidden; }
   .ldo-certif::after { content:"★"; position:absolute; right:14px; top:2px; font-size:46px; color:rgba(255,255,255,0.25); }
@@ -743,7 +808,7 @@
 <!-- === FIN CERTIFICATION VISEE === -->
 
        <!-- === ENCART DECOUVREZ LES TEMOIGNAGES === -->
-<style nonce="Oe/dXIL52jyZ8l4dHNkyWw==">
+<style nonce="qZruzk8xaMLaOhwNRMW5oA==">
   .ldo-invite { position:relative; margin:32px 16px 18px; padding:30px 28px 26px; text-align:center; border-radius:20px;
     background:linear-gradient(135deg,#FFF8EA 0%,#FFFFFF 50%,#EEF3FB 100%); border:2px solid #F5A623;
     box-shadow:0 10px 28px rgba(21,43,94,0.12); }
@@ -776,7 +841,7 @@
 <!-- === FIN ENCART DECOUVREZ === -->
 
  <!-- === SITES AVEC CARTE DE FRANCE === -->
-<style nonce="Oe/dXIL52jyZ8l4dHNkyWw==">
+<style nonce="qZruzk8xaMLaOhwNRMW5oA==">
   .ldo-sites { position:relative; margin:0 16px; padding:10px 0; }
   .ldo-map { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:min(560px,95%); height:auto; z-index:0; pointer-events:none; }
   .ldo-sites .sites-grid { position:relative; z-index:1; }
@@ -837,7 +902,7 @@
         <div style="font-size: 1.6rem; font-weight: 800; color: rgb(21, 43, 94);"><span class="fr">🎓 Nos diplômés à l'honneur&nbsp;!</span><span class="en" style="display: none;">🎓 Celebrating our graduates!</span></div>
         <div style="display: inline-block; margin-top: 10px; background: rgb(21, 43, 94); color: rgb(255, 255, 255); font-style: italic; padding: 6px 20px; border-radius: 20px;"><span class="fr">Remise des diplômes de la promotion 2025 · Siège d'Amazon France · 14 octobre 2026</span><span class="en" style="display: none;">2025 class graduation ceremony · Amazon France headquarters · 14 October 2026</span></div>
       </div>
-      <style nonce="Oe/dXIL52jyZ8l4dHNkyWw==">
+      <style nonce="qZruzk8xaMLaOhwNRMW5oA==">
         .ldo-evt-intro { display:flex; align-items:stretch; gap:0; margin:0 0 22px; border-radius:18px; overflow:hidden; background:#ffffff; border:2px solid #F5A623; box-shadow:0 10px 26px rgba(21,43,94,0.14); }
         .ldo-evt-date { flex-shrink:0; width:120px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:18px 10px; text-align:center;
           background:linear-gradient(160deg,#152B5E 0%,#0E1E45 100%); color:#ffffff; }
@@ -860,7 +925,7 @@
           <p class="en" style="display: none; margin: 0px;"><strong>On 14 October 2026</strong>, <strong>Amazon France's headquarters</strong> hosted the graduation ceremony for our apprentices. Our trainers travelled alongside their graduating learners to celebrate months of commitment, learning and success together. <strong>A warm and emotional moment</strong>, rewarding each person's journey and the pride of the whole CFA Amazon team!</p>
         </div>
       </div>
-      <style nonce="Oe/dXIL52jyZ8l4dHNkyWw==">
+      <style nonce="qZruzk8xaMLaOhwNRMW5oA==">
   .ldo-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 28px; }
   .ldo-gallery figure { margin:0; overflow:hidden; border-radius:14px; aspect-ratio:4 / 3; background:#0E1E45; box-shadow:0 6px 16px rgba(21,43,94,0.15); }
   .ldo-gallery img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s; }
@@ -882,15 +947,15 @@
   @media (max-width:700px) { .ldo-gallery { grid-template-columns:1fr; } .ldo-trainers { padding:20px 16px; } .ldo-bubble::before { display:none; } }
 </style>
       <div class="ldo-gallery">
-        <figure><img src="IMG_7226.jpg" alt="Trainers et apprentis diplômés lors de la remise des diplômes 2025 au siège CDG10"></figure>
-        <figure class="contain"><img src="cc3724b4-e94b-4357-9999-d2e27e2d086f.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 2"></figure>
-        <figure><img src="IMG_7211.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 3"></figure>
+        <figure><img class="ldo-zoomable" src="IMG_7226.jpg" alt="Trainers et apprentis diplômés lors de la remise des diplômes 2025 au siège CDG10"></figure>
+        <figure class="contain"><img class="ldo-zoomable" src="cc3724b4-e94b-4357-9999-d2e27e2d086f.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 2"></figure>
+        <figure><img class="ldo-zoomable" src="IMG_7211.jpg" alt="Remise des diplômes 2025 au siège CDG10 – photo 3"></figure>
       </div>
       <div class="ldo-trainers">
         <div class="ldo-trainers-title"><span class="fr">💬 Paroles de <em>trainers</em></span><span class="en" style="display: none;">💬 <em>Trainers'</em> words</span></div>
         <div class="ldo-trainers-grid">
           <div class="ldo-trainers-photo">
-            <img src="IMG_0813.jpg" alt="Amandine, Pierrick et M'Paly, trainers du CFA Amazon, à la remise des diplômes">
+            <img class="ldo-zoomable" src="IMG_0813.jpg" alt="Amandine, Pierrick et M'Paly, trainers du CFA Amazon, à la remise des diplômes">
             <p><span class="fr">Amandine, Pierrick et M'Paly, nos trainers 💙</span><span class="en" style="display: none;">Amandine, Pierrick and M'Paly, our trainers 💙</span></p>
           </div>
           <div class="ldo-bubbles">
@@ -1067,7 +1132,7 @@
     </div>
 
 <!-- Bandeau Success Story LIL1 -->
-<div style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
+<div class="ldo-band" style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
   🌟 SUCCESS STORY 🌟
   <div style="font-size: 0.75em; font-weight: normal; letter-spacing: 0px; margin-top: 0.3em;"><span class="fr">Inclusion en action au CFA LIL1</span><span class="en" style="display: none;">Inclusion in action at CFA LIL1</span></div>
 </div>
@@ -1083,8 +1148,8 @@
 
         <!-- Photos accompagnants -->
         <div style="display: flex; justify-content: space-between; margin-bottom: 28px; flex-wrap: wrap;">
-          <img src="lil1.jpeg" style="width: 420px; height: auto; border-radius: 12px;" alt="Nicolas et ses accompagnants LIL1">
-          <img src="lil12.jpeg" style="width: 420px; height: auto; border-radius: 12px;" alt="Nicolas et ses accompagnants LIL1 - 2">
+          <img class="ldo-zoomable" src="lil1.jpeg" style="width: 420px; height: auto; border-radius: 12px;" alt="Nicolas et ses accompagnants LIL1">
+          <img class="ldo-zoomable" src="lil12.jpeg" style="width: 420px; height: auto; border-radius: 12px;" alt="Nicolas et ses accompagnants LIL1 - 2">
         </div>
 
         <!-- Témoignage Nicolas -->
@@ -1173,28 +1238,27 @@
 <!-- === FIN CHIFFRES BVA1 === -->
     <button class="btn-back" onclick="showPage('accueil')"><span class="fr">← Retour</span><span class="en" style="display: none;">← Back</span></button>
     <div class="site-page-title">📍 BVA1</div>
-	  
 <!-- Photo diplômés BVA1 2025 + apprentis en formation -->
-    <div style="margin:1.5rem 1rem; padding:26px 20px 20px; text-align:center; border-radius:20px; background:linear-gradient(135deg,#152B5E 0%,#1E3C7E 100%); box-shadow:0 10px 26px rgba(21,43,94,0.18);">
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:28px;">
-      <figure style="margin:0; flex:1 1 260px; max-width:272px;">
-        <div style="display:inline-block; padding:8px; background:#ffffff; border-radius:16px; border:3px solid #F5A623; box-shadow:0 6px 16px rgba(0,0,0,0.25);">
-          <img src="bva1diplome.png" alt="Apprentis diplômés de la première promotion 2025 de BVA1" style="display:block; width:100%; max-width:250px; height:auto; border-radius:10px;">
+    <div style="margin: 1.5rem 1rem; padding: 26px 20px 20px; text-align: center; border-radius: 20px; background: linear-gradient(135deg, rgb(21, 43, 94) 0%, rgb(30, 60, 126) 100%); box-shadow: rgba(21, 43, 94, 0.18) 0px 10px 26px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 28px;">
+      <figure style="margin: 0px; flex: 1 1 260px; max-width: 272px;">
+        <div style="display: inline-block; padding: 8px; background: rgb(255, 255, 255); border-radius: 16px; border: 3px solid rgb(245, 166, 35); box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 16px;">
+          <img class="ldo-zoomable" src="bva1diplome.png" alt="Apprentis diplômés de la première promotion 2025 de BVA1" style="display: block; width: 100%; max-width: 250px; height: auto; border-radius: 10px;">
         </div>
-        <figcaption style="margin:14px auto 0; font-style:italic; color:#ffffff; font-size:1.05rem;"><span class="fr">Nos apprentis de la première promotion 2025 de BVA1, diplômés et aujourd'hui en CDI chez Amazon 🎓</span><span class="en" style="display:none;">Our apprentices from BVA1's first 2025 class, now qualified and on permanent contracts at Amazon 🎓</span></figcaption>
+        <figcaption style="margin: 14px auto 0px; font-style: italic; color: rgb(255, 255, 255); font-size: 1.05rem;"><span class="fr">Nos apprentis de la première promotion 2025 de BVA1, diplômés et aujourd'hui en CDI chez Amazon 🎓</span><span class="en" style="display: none;">Our apprentices from BVA1's first 2025 class, now qualified and on permanent contracts at Amazon 🎓</span></figcaption>
       </figure>
-      <figure style="margin:0; flex:1 1 260px; max-width:420px;">
-        <div style="display:inline-block; padding:8px; background:#ffffff; border-radius:16px; border:3px solid #F5A623; box-shadow:0 6px 16px rgba(0,0,0,0.25);">
-          <img src="20261124_110451.jpg" alt="Apprentis BVA1 en gilets orange en formation pratique dans l'entrepôt" style="display:block; width:100%; max-width:398px; height:auto; border-radius:10px;">
+      <figure style="margin: 0px; flex: 1 1 260px; max-width: 420px;">
+        <div style="display: inline-block; padding: 8px; background: rgb(255, 255, 255); border-radius: 16px; border: 3px solid rgb(245, 166, 35); box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 16px;">
+          <img class="ldo-zoomable" src="20261124_110451.jpg" alt="Apprentis BVA1 en gilets orange en formation pratique dans l'entrepôt" style="display: block; width: 100%; max-width: 398px; height: auto; border-radius: 10px;">
         </div>
-        <figcaption style="margin:14px auto 0; font-style:italic; color:#ffffff; font-size:1.05rem;"><span class="fr">Nos apprentis BVA1 en pleine formation pratique sur le plateau logistique 💪</span><span class="en" style="display:none;">Our BVA1 apprentices in the middle of hands-on training on the logistics floor 💪</span></figcaption>
+        <figcaption style="margin: 14px auto 0px; font-style: italic; color: rgb(255, 255, 255); font-size: 1.05rem;"><span class="fr">Nos apprentis BVA1 en pleine formation pratique sur le plateau logistique 💪</span><span class="en" style="display: none;">Our BVA1 apprentices in the middle of hands-on training on the logistics floor 💪</span></figcaption>
       </figure>
     </div>
     </div>
 <!-- BVA1 — Paroles de Maîtres d'Apprentissage -->
 <div class="section-title-bar">
   <div class="stbar-line"></div>
-  <div class="stbar-text"><span class="fr">🎓 Paroles de Maîtres d'Apprentissage</span><span class="en" style="display:none;">🎓 Apprenticeship Mentors' Words</span></div>
+  <div class="stbar-text"><span class="fr">🎓 Paroles de Maîtres d'Apprentissage</span><span class="en" style="display: none;">🎓 Apprenticeship Mentors' Words</span></div>
   <div class="stbar-line"></div>
 </div>
 
@@ -1308,14 +1372,14 @@
 </div>
 
 <!-- Bandeau Success Story BVA1 -->
-<div style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
+<div class="ldo-band" style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
   🌟 SUCCESS STORY 🌟
   <div style="font-size: 0.75em; font-weight: normal; letter-spacing: 0px; margin-top: 0.3em;"><span class="fr">Première session POEI · BVA1 · Juillet 2026</span><span class="en" style="display: none;">First POEI session · BVA1 · July 2026</span></div>
 </div>
 
 <!-- Photo session POEI BVA1 -->
     <div class="card" style="text-align: center; padding: 20px;">
-      <img src="bva11.jpg" alt="Apprenants de la première session POEI de BVA1" style="width: 100%; max-width: 600px; border-radius: 8px;">
+      <img class="ldo-zoomable" src="bva11.jpg" alt="Apprenants de la première session POEI de BVA1" style="width: 100%; max-width: 600px; border-radius: 8px;">
       <p style="margin-top: 10px; font-style: italic; color: rgb(85, 85, 85);"><span class="fr">Les apprenants de la première session POEI de BVA1, lancée en juillet 2026 🎉</span><span class="en" style="display: none;">The learners of BVA1's first POEI session, launched in July 2026 🎉</span></p>
     </div>
 
@@ -1331,23 +1395,26 @@
         </div>
       </div>
     </div>
-       <!-- Donnel · POEI BVA1 -->
-    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:24px; margin:1.5rem 0; padding:24px; border-radius:16px; background:linear-gradient(135deg,#fdf6e3 0%,#f7e7b8 100%);">
-      <figure style="flex:0 0 240px; margin:0 auto; text-align:center;">
-        <img src="bva1poei.jpeg" alt="Pierrick, trainer, et Donnel , apprenant de la session POEI de BVA1" style="width:240px; max-width:100%; border:6px solid #ffffff; border-radius:6px; box-shadow:0 6px 16px rgba(0,0,0,0.18); transform:rotate(-2deg);">
-        <figcaption style="margin-top:10px; font-size:0.85em; font-style:italic; color:#555;"><span class="fr">Pierrick et Donnel · POEI BVA1 🤝</span><span class="en" style="display:none;">Pierrick and Donnel· POEI BVA1 🤝</span></figcaption>
+
+    <!-- Donnel · POEI BVA1 -->
+    <div class="ldo-honneur" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin: 1.5rem 0px; padding: 24px; border-radius: 16px; background: linear-gradient(135deg, rgb(253, 246, 227) 0%, rgb(247, 231, 184) 100%);">
+      <span class="ldo-shine"></span><div class="ldo-ribbon"><span class="fr">★ MISE À L'HONNEUR ★</span><span class="en" style="display: none;">★ IN THE SPOTLIGHT ★</span></div>
+      <figure style="flex: 0 0 300px; margin: 0px auto; text-align: center;">
+        <span class="ldo-laurels"><span class="ldo-l"><svg viewBox="0 0 120 120" width="110" height="110" aria-hidden="true"><g><ellipse cx="13.0" cy="42.9" rx="4" ry="10" fill="#C9A227" transform="rotate(325 13.0 42.9)"></ellipse><ellipse cx="13.0" cy="42.9" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(255 13.0 42.9)"></ellipse><ellipse cx="19.5" cy="30.6" rx="4" ry="10" fill="#C9A227" transform="rotate(341 19.5 30.6)"></ellipse><ellipse cx="19.5" cy="30.6" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(271 19.5 30.6)"></ellipse><ellipse cx="29.2" cy="20.6" rx="4" ry="10" fill="#C9A227" transform="rotate(357 29.2 20.6)"></ellipse><ellipse cx="29.2" cy="20.6" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(287 29.2 20.6)"></ellipse><ellipse cx="41.3" cy="13.6" rx="4" ry="10" fill="#C9A227" transform="rotate(373 41.3 13.6)"></ellipse><ellipse cx="41.3" cy="13.6" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(303 41.3 13.6)"></ellipse><ellipse cx="54.8" cy="10.3" rx="4" ry="10" fill="#C9A227" transform="rotate(389 54.8 10.3)"></ellipse><ellipse cx="54.8" cy="10.3" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(319 54.8 10.3)"></ellipse><ellipse cx="68.7" cy="10.8" rx="4" ry="10" fill="#C9A227" transform="rotate(405 68.7 10.8)"></ellipse><ellipse cx="68.7" cy="10.8" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(335 68.7 10.8)"></ellipse><ellipse cx="81.9" cy="15.1" rx="4" ry="10" fill="#C9A227" transform="rotate(421 81.9 15.1)"></ellipse><ellipse cx="81.9" cy="15.1" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(351 81.9 15.1)"></ellipse><ellipse cx="93.5" cy="22.8" rx="4" ry="10" fill="#C9A227" transform="rotate(437 93.5 22.8)"></ellipse><ellipse cx="93.5" cy="22.8" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(367 93.5 22.8)"></ellipse><ellipse cx="102.4" cy="33.5" rx="4" ry="10" fill="#C9A227" transform="rotate(453 102.4 33.5)"></ellipse><ellipse cx="102.4" cy="33.5" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(383 102.4 33.5)"></ellipse></g></svg></span><img class="ldo-zoomable" src="bva1poei.jpeg" alt="Pierrick, trainer, et Donnel, apprenant de la session POEI de BVA1" style="width: 240px; max-width: 100%; border: 6px solid rgb(255, 255, 255); border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.18) 0px 6px 16px; transform: rotate(-2deg);"><span class="ldo-r"><svg viewBox="0 0 120 120" width="110" height="110" aria-hidden="true"><g transform="scale(-1,1) translate(-120,0)"><ellipse cx="13.0" cy="42.9" rx="4" ry="10" fill="#C9A227" transform="rotate(325 13.0 42.9)"></ellipse><ellipse cx="13.0" cy="42.9" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(255 13.0 42.9)"></ellipse><ellipse cx="19.5" cy="30.6" rx="4" ry="10" fill="#C9A227" transform="rotate(341 19.5 30.6)"></ellipse><ellipse cx="19.5" cy="30.6" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(271 19.5 30.6)"></ellipse><ellipse cx="29.2" cy="20.6" rx="4" ry="10" fill="#C9A227" transform="rotate(357 29.2 20.6)"></ellipse><ellipse cx="29.2" cy="20.6" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(287 29.2 20.6)"></ellipse><ellipse cx="41.3" cy="13.6" rx="4" ry="10" fill="#C9A227" transform="rotate(373 41.3 13.6)"></ellipse><ellipse cx="41.3" cy="13.6" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(303 41.3 13.6)"></ellipse><ellipse cx="54.8" cy="10.3" rx="4" ry="10" fill="#C9A227" transform="rotate(389 54.8 10.3)"></ellipse><ellipse cx="54.8" cy="10.3" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(319 54.8 10.3)"></ellipse><ellipse cx="68.7" cy="10.8" rx="4" ry="10" fill="#C9A227" transform="rotate(405 68.7 10.8)"></ellipse><ellipse cx="68.7" cy="10.8" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(335 68.7 10.8)"></ellipse><ellipse cx="81.9" cy="15.1" rx="4" ry="10" fill="#C9A227" transform="rotate(421 81.9 15.1)"></ellipse><ellipse cx="81.9" cy="15.1" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(351 81.9 15.1)"></ellipse><ellipse cx="93.5" cy="22.8" rx="4" ry="10" fill="#C9A227" transform="rotate(437 93.5 22.8)"></ellipse><ellipse cx="93.5" cy="22.8" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(367 93.5 22.8)"></ellipse><ellipse cx="102.4" cy="33.5" rx="4" ry="10" fill="#C9A227" transform="rotate(453 102.4 33.5)"></ellipse><ellipse cx="102.4" cy="33.5" rx="3.5" ry="9" fill="#C9A227" opacity=".8" transform="rotate(383 102.4 33.5)"></ellipse></g></svg></span></span>
+        <figcaption style="margin-top: 10px; font-size: 0.85em; font-style: italic; color: rgb(85, 85, 85);"><span class="fr">Pierrick et Donnel · POEI BVA1 🤝</span><span class="en" style="display: none;">Pierrick and Donnel · POEI BVA1 🤝</span></figcaption>
       </figure>
-      <blockquote style="flex:1 1 300px; margin:0; position:relative; padding:8px 8px 8px 48px;">
-        <span aria-hidden="true" style="position:absolute; left:0; top:-18px; font-size:4.5em; line-height:1; color:#c9a227; font-family:Georgia,serif;">“</span>
-        <p style="margin:0 0 14px; font-size:1.05em; line-height:1.6; font-style:italic; color:#152B5E;">
+      <blockquote style="flex: 1 1 300px; margin: 0px; position: relative; padding: 8px 8px 8px 48px;">
+        <span aria-hidden="true" style="position: absolute; left: 0px; top: -18px; font-size: 4.5em; line-height: 1; color: rgb(201, 162, 39); font-family: Georgia, serif;">“</span>
+        <p style="margin: 0px 0px 14px; font-size: 1.05em; line-height: 1.6; font-style: italic; color: rgb(21, 43, 94);">
           <span class="fr">Accompagner un groupe, c'est donner à chacun les clés pour réussir. Mais il arrive qu'un apprenant se démarque par son état d'esprit. Donnel a abordé la POEI avec sérieux, curiosité et une envie d'apprendre qui a tiré tout le groupe vers le haut. Son parcours montre qu'avec de l'engagement et un accompagnement de proximité, tout devient possible. Je suis fier de l'avoir accompagné et heureux de le mettre à l'honneur aujourd'hui.</span>
-          <span class="en" style="display:none;">Supporting a group means giving everyone the keys to succeed. But sometimes one learner stands out through their attitude. Donnel approached the POEI with dedication, curiosity and an eagerness to learn that lifted the whole group. His journey shows that with commitment and close support, anything is possible. I'm proud to have supported him and happy to honour him today.</span>
+          <span class="en" style="display: none;">Supporting a group means giving everyone the keys to succeed. But sometimes one learner stands out through their attitude. Donnel approached the POEI with dedication, curiosity and an eagerness to learn that lifted the whole group. His journey shows that with commitment and close support, anything is possible. I'm proud to have supported him and happy to honour him today.</span>
         </p>
-        <footer style="display:flex; align-items:center; gap:10px;">
-          <img src="pierrick.png" alt="Pierrick, trainer BVA1" style="width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid #c9a227;">
-          <div><strong style="color:#152B5E;">Pierrick</strong><br><span style="font-size:0.85em; color:#555;"><span class="fr">Trainer · BVA1</span><span class="en" style="display:none;">Trainer · BVA1</span></span></div>
+        <footer style="display: flex; align-items: center; gap: 10px;">
+          <img src="pierrick.png" alt="Pierrick, trainer BVA1" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid rgb(201, 162, 39);">
+          <div><strong style="color: rgb(21, 43, 94);">Pierrick</strong><br><span style="font-size: 0.85em; color: rgb(85, 85, 85);"><span class="fr">Trainer · BVA1</span><span class="en" style="display: none;">Trainer · BVA1</span></span></div>
         </footer>
       </blockquote>
+      <div class="ldo-cup-wrap" title="Bravo !"><svg class="ldo-cup" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><defs><linearGradient id="ldoG" x1="0" x2="1"><stop offset="0" stop-color="#F7D774"></stop><stop offset=".5" stop-color="#F5A623"></stop><stop offset="1" stop-color="#B8860B"></stop></linearGradient></defs><path d="M18 8h28v10a14 14 0 0 1-28 0z" fill="url(#ldoG)"></path><path d="M18 12H9a8 8 0 0 0 10 12M46 12h9a8 8 0 0 1-10 12" stroke="#C9A227" stroke-width="3" fill="none"></path><rect x="29" y="32" width="6" height="10" fill="#C9A227"></rect><rect x="21" y="42" width="22" height="6" rx="2" fill="url(#ldoG)"></rect><rect x="17" y="48" width="30" height="7" rx="2" fill="#152B5E"></rect><text x="32" y="23" font-size="10" text-anchor="middle" fill="#fff" font-family="Georgia">★</text></svg></div>
     </div>
 
         <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display: none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
@@ -1464,7 +1531,7 @@
 </p>
 
 
-<style nonce="Oe/dXIL52jyZ8l4dHNkyWw==">
+<style nonce="qZruzk8xaMLaOhwNRMW5oA==">
   .ldo-ma-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:0 1rem 1.5rem; }
   .ldo-ma { display:flex; flex-direction:column; gap:12px; background:#ffffff; border-radius:16px; padding:18px; border-top:4px solid #F5A623; box-shadow:0 2px 10px rgba(21,43,94,0.08); }
   .ldo-ma-head { display:flex; align-items:center; gap:12px; }
@@ -1605,12 +1672,13 @@
 </div>
 
 <!-- Bandeau Success Story -->
-<div style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
+<div class="ldo-band" style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
   🌟 SUCCESS STORY 🌟
 </div>
 
     <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display: none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
-    <div class="card apprenti">
+    <div class="card apprenti ldo-honneur" style="padding-top: 2rem;">
+      <span class="ldo-shine"></span><div class="ldo-ribbon"><span class="fr">★ MISE À L'HONNEUR ★</span><span class="en" style="display: none;">★ IN THE SPOTLIGHT ★</span></div>
       <div class="profile-row">
         <div class="avatar apprenti">EP</div>
         <div><div class="profile-name">Eray Palta</div><div class="profile-detail"><span class="fr">Apprenti Préparateur de Commandes en Entrepôt · CFA Amazon ETZ2</span><span class="en" style="display: none;">Warehouse Order Picker Apprentice · CFA Amazon ETZ2</span></div></div>
@@ -1639,6 +1707,7 @@
           <p>"Be curious, don't hesitate to ask questions. And if you run into difficulties, talk to the CFA team: they'll be there to support you."</p>
         </div>
       </div>
+      <div class="ldo-cup-wrap" title="Bravo !"><svg class="ldo-cup" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><defs><linearGradient id="ldoG" x1="0" x2="1"><stop offset="0" stop-color="#F7D774"></stop><stop offset=".5" stop-color="#F5A623"></stop><stop offset="1" stop-color="#B8860B"></stop></linearGradient></defs><path d="M18 8h28v10a14 14 0 0 1-28 0z" fill="url(#ldoG)"></path><path d="M18 12H9a8 8 0 0 0 10 12M46 12h9a8 8 0 0 1-10 12" stroke="#C9A227" stroke-width="3" fill="none"></path><rect x="29" y="32" width="6" height="10" fill="#C9A227"></rect><rect x="21" y="42" width="22" height="6" rx="2" fill="url(#ldoG)"></rect><rect x="17" y="48" width="30" height="7" rx="2" fill="#152B5E"></rect><text x="32" y="23" font-size="10" text-anchor="middle" fill="#fff" font-family="Georgia">★</text></svg></div>
     </div>
 
     <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole de l'employeur</span><span class="en" style="display: none;">Employer's voice</span></div><div class="stbar-line"></div></div>
@@ -1828,7 +1897,7 @@
       </div>
 	</div>
 <!-- Bandeau Success Story -->
-<div style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
+<div class="ldo-band" style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
   🌟 SUCCESS STORY 🌟
 </div>
     <div class="card" style="text-align: center; padding: 20px;">
@@ -1918,15 +1987,17 @@
 </div>
 
 <!-- Bandeau Success Story ORY4 -->
-<div style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
+<div class="ldo-band" style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
   🌟 SUCCESS STORY 🌟
   <div style="font-size: 0.75em; font-weight: normal; letter-spacing: 0px; margin-top: 0.3em;">Merrick &amp; Naomie · Pick Late ORY4</div>
 </div>
 
 <!-- Photo Merrick et Naomie -->
-    <div class="card" style="text-align: center; padding: 20px;">
-      <img src="ory4leta.jpg" alt="Merrick et Naomie Dorcelus, Pick Late ORY4" style="width: 100%; max-width: 600px; border-radius: 8px;">
+    <div class="card ldo-honneur" style="text-align: center; padding: 34px 20px 20px; border-radius: 16px;">
+      <span class="ldo-shine"></span><div class="ldo-ribbon"><span class="fr">★ MISE À L'HONNEUR ★</span><span class="en" style="display: none;">★ IN THE SPOTLIGHT ★</span></div>
+      <img class="ldo-zoomable" src="ory4leta.jpg" alt="Merrick et Naomie Dorcelus, Pick Late ORY4" style="width: 100%; max-width: 600px; border-radius: 8px;">
       <p style="margin-top: 10px; font-style: italic; color: rgb(85, 85, 85);"><span class="fr">Merrick et Naomie Dorcelus · Pick Late ORY4 🎉</span><span class="en" style="display: none;">Merrick and Naomie Dorcelus · Pick Late ORY4 🎉</span></p>
+      <div class="ldo-cup-wrap" title="Bravo !"><svg class="ldo-cup" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><defs><linearGradient id="ldoG" x1="0" x2="1"><stop offset="0" stop-color="#F7D774"></stop><stop offset=".5" stop-color="#F5A623"></stop><stop offset="1" stop-color="#B8860B"></stop></linearGradient></defs><path d="M18 8h28v10a14 14 0 0 1-28 0z" fill="url(#ldoG)"></path><path d="M18 12H9a8 8 0 0 0 10 12M46 12h9a8 8 0 0 1-10 12" stroke="#C9A227" stroke-width="3" fill="none"></path><rect x="29" y="32" width="6" height="10" fill="#C9A227"></rect><rect x="21" y="42" width="22" height="6" rx="2" fill="url(#ldoG)"></rect><rect x="17" y="48" width="30" height="7" rx="2" fill="#152B5E"></rect><text x="32" y="23" font-size="10" text-anchor="middle" fill="#fff" font-family="Georgia">★</text></svg></div>
     </div>
 
     <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole de l'employeur</span><span class="en" style="display: none;">Employer's voice</span></div><div class="stbar-line"></div></div>
@@ -1967,23 +2038,23 @@
       </div>
     </div>
 
-       <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole des partenaires</span><span class="en" style="display:none;">Partner's voices</span></div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole des partenaires</span><span class="en" style="display: none;">Partner's voices</span></div><div class="stbar-line"></div></div>
     <div class="card partenaire">
       <div class="profile-row">
-        <img src="epide.png" alt="Logo du Centre EPIDE de Brétigny" class="profile-photo" style="width: 180px; height: auto; border-radius: 8px;" />
-        <div><div class="profile-name"><span class="fr">François Christmann · Centre EPIDE de Brétigny</span><span class="en" style="display:none;">François Christmann · EPIDE Centre, Brétigny</span></div><div class="profile-detail"><span class="fr">Partenaire · CFA Amazon ORY4</span><span class="en" style="display:none;">Partner · CFA Amazon ORY4</span></div></div>
+        <img src="epide.png" alt="Logo du Centre EPIDE de Brétigny" class="profile-photo" style="width: 180px; height: auto; border-radius: 8px;">
+        <div><div class="profile-name"><span class="fr">François Christmann · Centre EPIDE de Brétigny</span><span class="en" style="display: none;">François Christmann · EPIDE Centre, Brétigny</span></div><div class="profile-detail"><span class="fr">Partenaire · CFA Amazon ORY4</span><span class="en" style="display: none;">Partner · CFA Amazon ORY4</span></div></div>
       </div>
       <div class="quote-box blue">
         <div class="fr">
           <p>«&nbsp;Nous travaillons avec l'équipe Amazon ORY4 depuis 2025, et des jeunes du Centre EPIDE de Brétigny ont pu profiter de la formation «&nbsp;Préparateur de commandes en entrepôt&nbsp;». Nous saluons la compétence de l'équipe Candidate Engagement – Workforce Staffing tout comme celle du CFA&nbsp;: du dépôt de la candidature à la certification, les jeunes ont toujours été accompagnés et soutenus.&nbsp;»</p>
         </div>
-        <div class="en" style="display:none;">
+        <div class="en" style="display: none;">
           <p>"We have been working with the Amazon ORY4 team since 2025, and young people from the EPIDE Centre in Brétigny have benefited from the 'Warehouse Order Picker' training programme. We commend the expertise of the Candidate Engagement – Workforce Staffing team as well as that of the CFA: from application to certification, the young people were always supported and guided."</p>
         </div>
       </div>
     </div>
 
-	  <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display: none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
+    <div class="section-title-bar"><div class="stbar-text"><span class="fr">Parole d'apprenti·e</span><span class="en" style="display: none;">Apprentice's voice</span></div><div class="stbar-line"></div></div>
     <div class="card apprenti">
       <div class="profile-row">
         <div class="placeholder-photo">👤</div>
@@ -2000,47 +2071,46 @@
       </div>
       <div class="quote-box purple"><p class="placeholder-text">Témoignage à venir...</p></div>
     </div>
-  
-    <!-- Galerie Nos sessions en images ORY4 -->
-    <div style="background:#4a4a4a; color:#ffffff; text-align:center; padding:0.8em 1em; margin:2em 0; border-radius:6px; font-size:1.3em; font-weight:bold; letter-spacing:1px;">
-      📸 <span class="fr">NOS SESSIONS EN IMAGES</span><span class="en" style="display:none;">OUR SESSIONS IN PICTURES</span> 📸
-      <div style="font-size:0.75em; font-weight:normal; letter-spacing:0; margin-top:0.3em;"><span class="fr">Promotions ORY4 · 2025–2026</span><span class="en" style="display:none;">ORY4 cohorts · 2025–2026</span></div>
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; margin:0 0 28px;">
-      <figure style="margin:0;">
-        <div style="overflow:hidden; border-radius:14px; aspect-ratio:4 / 3; background:#0E1E45; box-shadow:0 6px 16px rgba(21,43,94,0.15);"><img src="ory4_session_2026-09-07.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Session du 7 septembre 2026" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <figcaption style="text-align:center; font-size:0.85em; color:#152B5E; margin-top:6px;"><span class="fr">Session du 7 septembre 2026</span><span class="en" style="display:none;">Session of 7 September 2026</span></figcaption>
-      </figure>
-      <figure style="margin:0;">
-        <div style="overflow:hidden; border-radius:14px; aspect-ratio:4 / 3; background:#0E1E45; box-shadow:0 6px 16px rgba(21,43,94,0.15);"><img src="ory4_session_2026-05-18.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Session du 18 mai 2026" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <figcaption style="text-align:center; font-size:0.85em; color:#152B5E; margin-top:6px;"><span class="fr">Session du 18 mai 2026</span><span class="en" style="display:none;">Session of 18 May 2026</span></figcaption>
-      </figure>
-      <figure style="margin:0;">
-        <div style="overflow:hidden; border-radius:14px; aspect-ratio:4 / 3; background:#0E1E45; box-shadow:0 6px 16px rgba(21,43,94,0.15);"><img src="ory4_session_2026-04-27.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Session du 27 avril 2026" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <figcaption style="text-align:center; font-size:0.85em; color:#152B5E; margin-top:6px;"><span class="fr">Session du 27 avril 2026</span><span class="en" style="display:none;">Session of 27 April 2026</span></figcaption>
-      </figure>
-      <figure style="margin:0;">
-        <div style="overflow:hidden; border-radius:14px; aspect-ratio:4 / 3; background:#0E1E45; box-shadow:0 6px 16px rgba(21,43,94,0.15);"><img src="ory4_session_2026-04-07.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Fin de session · 7 avril 2026" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <figcaption style="text-align:center; font-size:0.85em; color:#152B5E; margin-top:6px;"><span class="fr">Fin de session · 7 avril 2026</span><span class="en" style="display:none;">End of session · 7 April 2026</span></figcaption>
-      </figure>
-      <figure style="margin:0;">
-        <div style="overflow:hidden; border-radius:14px; aspect-ratio:4 / 3; background:#0E1E45; box-shadow:0 6px 16px rgba(21,43,94,0.15);"><img src="ory4_session_2025-10-27.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Fin de session · 27 octobre 2025" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <figcaption style="text-align:center; font-size:0.85em; color:#152B5E; margin-top:6px;"><span class="fr">Fin de session · 27 octobre 2025</span><span class="en" style="display:none;">End of session · 27 October 2025</span></figcaption>
-      </figure>
-      <figure style="margin:0;">
-        <div style="overflow:hidden; border-radius:14px; aspect-ratio:4 / 3; background:#0E1E45; box-shadow:0 6px 16px rgba(21,43,94,0.15);"><img src="ory4_session_2025-10.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Session d'octobre 2025" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <figcaption style="text-align:center; font-size:0.85em; color:#152B5E; margin-top:6px;"><span class="fr">Session d'octobre 2025</span><span class="en" style="display:none;">October 2025 session</span></figcaption>
-      </figure>
-      <figure style="margin:0;">
-        <div style="overflow:hidden; border-radius:14px; aspect-ratio:4 / 3; background:#0E1E45; box-shadow:0 6px 16px rgba(21,43,94,0.15);"><img src="ory4_session_2025-09-29.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Session du 29 septembre 2025" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <figcaption style="text-align:center; font-size:0.85em; color:#152B5E; margin-top:6px;"><span class="fr">Session du 29 septembre 2025</span><span class="en" style="display:none;">Session of 29 September 2025</span></figcaption>
-      </figure>
-      <figure style="margin:0;">
-        <div style="overflow:hidden; border-radius:14px; aspect-ratio:4 / 3; background:#0E1E45; box-shadow:0 6px 16px rgba(21,43,94,0.15);"><img src="ory4_session_2025-09-11.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Fin de session · 11 septembre 2025" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <figcaption style="text-align:center; font-size:0.85em; color:#152B5E; margin-top:6px;"><span class="fr">Fin de session · 11 septembre 2025</span><span class="en" style="display:none;">End of session · 11 September 2025</span></figcaption>
-      </figure>
-    </div>
 
+    <!-- Galerie Nos sessions en images ORY4 -->
+    <div class="ldo-band" style="background: rgb(74, 74, 74); color: rgb(255, 255, 255); text-align: center; padding: 0.8em 1em; margin: 2em 0px; border-radius: 6px; font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">
+      📸 <span class="fr">NOS SESSIONS EN IMAGES</span><span class="en" style="display: none;">OUR SESSIONS IN PICTURES</span> 📸
+      <div style="font-size: 0.75em; font-weight: normal; letter-spacing: 0px; margin-top: 0.3em;"><span class="fr">Promotions ORY4 · 2025–2026</span><span class="en" style="display: none;">ORY4 cohorts · 2025–2026</span></div>
+    </div>
+    <div class="ldo-frise" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 0px 0px 28px;">
+      <figure style="margin: 0px;">
+        <div style="overflow: hidden; border-radius: 14px; aspect-ratio: 4 / 3; background: rgb(14, 30, 69); box-shadow: rgba(21, 43, 94, 0.15) 0px 6px 16px;"><img class="ldo-zoomable" src="ory4_session_2026-09-07.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Session du 7 septembre 2026" style="display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;"></div>
+        <figcaption style="text-align: center; font-size: 0.85em; color: rgb(21, 43, 94); margin-top: 6px;"><span class="fr">Session du 7 septembre 2026</span><span class="en" style="display: none;">Session of 7 September 2026</span></figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="overflow: hidden; border-radius: 14px; aspect-ratio: 4 / 3; background: rgb(14, 30, 69); box-shadow: rgba(21, 43, 94, 0.15) 0px 6px 16px;"><img class="ldo-zoomable" src="ory4_session_2026-05-18.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Session du 18 mai 2026" style="display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;"></div>
+        <figcaption style="text-align: center; font-size: 0.85em; color: rgb(21, 43, 94); margin-top: 6px;"><span class="fr">Session du 18 mai 2026</span><span class="en" style="display: none;">Session of 18 May 2026</span></figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="overflow: hidden; border-radius: 14px; aspect-ratio: 4 / 3; background: rgb(14, 30, 69); box-shadow: rgba(21, 43, 94, 0.15) 0px 6px 16px;"><img class="ldo-zoomable" src="ory4_session_2026-04-27.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Session du 27 avril 2026" style="display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;"></div>
+        <figcaption style="text-align: center; font-size: 0.85em; color: rgb(21, 43, 94); margin-top: 6px;"><span class="fr">Session du 27 avril 2026</span><span class="en" style="display: none;">Session of 27 April 2026</span></figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="overflow: hidden; border-radius: 14px; aspect-ratio: 4 / 3; background: rgb(14, 30, 69); box-shadow: rgba(21, 43, 94, 0.15) 0px 6px 16px;"><img class="ldo-zoomable" src="ory4_session_2026-04-07.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Fin de session · 7 avril 2026" style="display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;"></div>
+        <figcaption style="text-align: center; font-size: 0.85em; color: rgb(21, 43, 94); margin-top: 6px;"><span class="fr">Fin de session · 7 avril 2026</span><span class="en" style="display: none;">End of session · 7 April 2026</span></figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="overflow: hidden; border-radius: 14px; aspect-ratio: 4 / 3; background: rgb(14, 30, 69); box-shadow: rgba(21, 43, 94, 0.15) 0px 6px 16px;"><img class="ldo-zoomable" src="ory4_session_2025-10-27.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Fin de session · 27 octobre 2025" style="display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;"></div>
+        <figcaption style="text-align: center; font-size: 0.85em; color: rgb(21, 43, 94); margin-top: 6px;"><span class="fr">Fin de session · 27 octobre 2025</span><span class="en" style="display: none;">End of session · 27 October 2025</span></figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="overflow: hidden; border-radius: 14px; aspect-ratio: 4 / 3; background: rgb(14, 30, 69); box-shadow: rgba(21, 43, 94, 0.15) 0px 6px 16px;"><img class="ldo-zoomable" src="ory4_session_2025-10.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Session d'octobre 2025" style="display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;"></div>
+        <figcaption style="text-align: center; font-size: 0.85em; color: rgb(21, 43, 94); margin-top: 6px;"><span class="fr">Session d'octobre 2025</span><span class="en" style="display: none;">October 2025 session</span></figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="overflow: hidden; border-radius: 14px; aspect-ratio: 4 / 3; background: rgb(14, 30, 69); box-shadow: rgba(21, 43, 94, 0.15) 0px 6px 16px;"><img class="ldo-zoomable" src="ory4_session_2025-09-29.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Session du 29 septembre 2025" style="display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;"></div>
+        <figcaption style="text-align: center; font-size: 0.85em; color: rgb(21, 43, 94); margin-top: 6px;"><span class="fr">Session du 29 septembre 2025</span><span class="en" style="display: none;">Session of 29 September 2025</span></figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="overflow: hidden; border-radius: 14px; aspect-ratio: 4 / 3; background: rgb(14, 30, 69); box-shadow: rgba(21, 43, 94, 0.15) 0px 6px 16px;"><img class="ldo-zoomable" src="ory4_session_2025-09-11.jpg" alt="Photo de groupe des apprentis et trainers ORY4 – Fin de session · 11 septembre 2025" style="display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;"></div>
+        <figcaption style="text-align: center; font-size: 0.85em; color: rgb(21, 43, 94); margin-top: 6px;"><span class="fr">Fin de session · 11 septembre 2025</span><span class="en" style="display: none;">End of session · 11 September 2025</span></figcaption>
+      </figure>
+    </div>
   </div>
 
   <!-- PAGE LYS1 -->
@@ -2076,7 +2146,7 @@
     <div class="site-page-title">📍 LYS1</div>
 <!-- Photo nouvelle session LYS1 -->
     <div class="card" style="text-align: center; padding: 20px;">
-      <img src="lyssession3.png" alt="Apprenants de la nouvelle session LYS1 débutée le 28 septembre" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;">
+      <img class="ldo-zoomable" src="lyssession3.png" alt="Apprenants de la nouvelle session LYS1 débutée le 28 septembre" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;">
       <p style="margin-top: 10px; font-style: italic; color: rgb(85, 85, 85);"><span class="fr">Nouvelle session débutant le 28 septembre, pleine de bonne humeur et d'engagement&nbsp;:)</span><span class="en" style="display: none;">New session starting on 28 September, full of good spirits and commitment :)</span></p>
     </div>
 
@@ -2121,10 +2191,11 @@
         </div>
       </div>
     </div>
+
     <div class="card apprenti">
       <div class="profile-row">
         <div class="placeholder-photo" role="img" aria-label="Pas de photo">👤</div>
-        <div><div class="profile-name">Girot Calista</div><div class="profile-detail"><span class="fr">Apprentie Préparatrice de Commandes · Promo avril 2026</span><span class="en" style="display:none;">Order Picker Apprentice · April 2026 cohort</span></div></div>
+        <div><div class="profile-name">Girot Calista</div><div class="profile-detail"><span class="fr">Apprentie Préparatrice de Commandes · Promo avril 2026</span><span class="en" style="display: none;">Order Picker Apprentice · April 2026 cohort</span></div></div>
       </div>
       <div class="quote-box blue">
         <div class="fr">
@@ -2133,7 +2204,7 @@
           <p>Ce que j'ai particulièrement apprécié, c'est l'ambiance et l'accompagnement : des collègues et une équipe encadrante bienveillants, toujours prêts à aider et à pousser vers le haut. Quand on est motivé et régulier, les opportunités sont là, jusqu'à une possible embauche à la fin.</p>
           <p>Je recommande vraiment cette opportunité à toute personne qui souhaite découvrir la logistique.</p>
         </div>
-        <div class="en" style="display:none;">
+        <div class="en" style="display: none;">
           <p><strong>"At Amazon, I didn't just come to learn a trade. I found an environment that gives me the means to grow, reveal my potential and build my future."</strong></p>
           <p>My apprenticeship at Amazon was a great experience and, above all, a real career opportunity. I discovered the world of logistics, developed my skills and worked in different roles.</p>
           <p>What I appreciated most was the atmosphere and the support: caring colleagues and managers, always ready to help and push you forward. When you're motivated and consistent, the opportunities are there, including a possible job offer at the end.</p>
@@ -2141,6 +2212,7 @@
         </div>
       </div>
     </div>
+
 
 
 
@@ -2193,6 +2265,43 @@ function toggleLanguage() {
 }
 </script>
 
+
+<script>document.documentElement.classList.add('ldo-js');</script>
+<div id="ldo-lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie"><button class="lb-x" aria-label="Fermer">✕</button><button class="lb-p" aria-label="Photo précédente">‹</button><img alt=""><p></p><button class="lb-n" aria-label="Photo suivante">›</button></div>
+<script>
+(function(){
+  // 2 · apparition au défilement
+  var els=document.querySelectorAll('.card, .ldo-frise figure, .ldo-gallery figure, .ldo-honneur, .ldo-stat');
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('ldo-in');io.unobserve(e.target);}});},{threshold:.12}):null;
+  els.forEach(function(el){ if(io){el.classList.add('ldo-reveal');io.observe(el);} });
+  // 10 · chiffres qui défilent
+  var nums=document.querySelectorAll('.ldo-stat-num');
+  var io2=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return; io2.unobserve(e.target);
+    var t=e.target.firstChild; if(!t||t.nodeType!==3)return; var end=parseInt(t.nodeValue,10); if(isNaN(end))return;
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var s=null; function step(ts){ if(!s)s=ts; var p=Math.min((ts-s)/1200,1); t.nodeValue=Math.round(end*(1-Math.pow(1-p,3))); if(p<1)requestAnimationFrame(step);} requestAnimationFrame(step);
+  });},{threshold:.5}):null;
+  if(io2) nums.forEach(function(n){io2.observe(n);});
+  // 3 · confettis dorés
+  function confetti(x,y){ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var cols=['#F5A623','#C9A227','#F7D774','#152B5E','#ffffff'];
+    for(var i=0;i<40;i++){ (function(){ var c=document.createElement('div'); c.className='ldo-confetti'; c.style.background=cols[i%cols.length]; c.style.left=x+'px'; c.style.top=y+'px'; document.body.appendChild(c);
+      var a=Math.random()*Math.PI*2, v=4+Math.random()*6, dx=Math.cos(a)*v, dy=Math.sin(a)*v-6, r=0, px=x, py=y, life=0;
+      (function f(){ life++; dy+=.35; px+=dx; py+=dy; r+=12; c.style.left=px+'px'; c.style.top=py+'px'; c.style.transform='rotate('+r+'deg)'; c.style.opacity=1-life/70; if(life<70)requestAnimationFrame(f); else c.remove(); })(); })(); } }
+  document.querySelectorAll('.ldo-cup-wrap, .ldo-band').forEach(function(el){ el.addEventListener('click',function(e){confetti(e.clientX,e.clientY);}); });
+  // 7 · agrandissement des photos
+  var lb=document.getElementById('ldo-lightbox'), lbImg=lb.querySelector('img'), lbTxt=lb.querySelector('p'), list=[], idx=0;
+  function show(i){ idx=(i+list.length)%list.length; var im=list[idx]; lbImg.src=im.src; lbImg.alt=im.alt; var cap=im.closest('figure')?im.closest('figure').querySelector('figcaption'):null; lbTxt.textContent=cap?cap.innerText:im.alt; }
+  document.querySelectorAll('.ldo-zoomable').forEach(function(im){ im.addEventListener('click',function(){ var pg=im.closest('.page')||document; list=Array.prototype.slice.call(pg.querySelectorAll('.ldo-zoomable')); show(list.indexOf(im)); lb.classList.add('open'); }); });
+  lb.querySelector('.lb-x').onclick=function(){lb.classList.remove('open');};
+  lb.querySelector('.lb-p').onclick=function(e){e.stopPropagation();show(idx-1);};
+  lb.querySelector('.lb-n').onclick=function(e){e.stopPropagation();show(idx+1);};
+  lb.addEventListener('click',function(e){ if(e.target===lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown',function(e){ if(!lb.classList.contains('open'))return; if(e.key==='Escape')lb.classList.remove('open'); if(e.key==='ArrowLeft')show(idx-1); if(e.key==='ArrowRight')show(idx+1); });
+})();
+</script>
+<!-- === FIN STYLE ILLUSTRÉ === -->
 
 
 </body></html>
